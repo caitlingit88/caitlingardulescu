@@ -1,0 +1,68 @@
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# IDE & Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+*.sublime-project
+*.sublime-workspace
+
+# Node.js (if used for build process)
+node_modules/
+npm-debug.log
+yarn-error.log
+pnpm-debug.log
+
+# Build artifacts
+/dist
+/build
+/.next
+/out
+
+# Logs
+logs/
+*.log
+
+# OS files
+.DS_Store
+.AppleDouble
+.LSOverride
+*.cab
+*.msi
+Thumbs.db
+ehthumbs.db
+
+# Backup files
+*.bak
+*.backup
+*~
+
+# Temporary files
+.tmp/
+temp/
+tmp/
+
+# Cache
+.cache/
+.eslintcache
+
+# Local development
+.claude/local.json
+.claude/settings.local.json
+
+# Documentation (local storage)
+md/
+
+# Sensitive data
+*.pem
+*.key
+*.cert
+secrets.txt
+credentials.json

@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creative Work | Caitlin Gardulescu</title>
+    <meta name="description" content="Creative writing, visual storytelling, and brand expression. Explore essays, photography, and artistic practice at the intersection of art and commerce.">
+    <meta property="og:title" content="Creative Work | Caitlin Gardulescu">
+    <meta property="og:description" content="Creative writing, visual storytelling, and brand expression. Explore essays, photography, and artistic practice at the intersection of art and commerce.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.caitlingardulescu.com/pages/creative.html">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Creative Work | Caitlin Gardulescu">
+    <meta name="twitter:description" content="Creative writing, visual storytelling, and brand expression. Explore essays, photography, and artistic practice at the intersection of art and commerce.">
+    <link rel="canonical" href="https://www.caitlingardulescu.com/pages/creative.html">
+    <style>
+        /* Local Fonts */
+        @font-face {
+            font-family: 'Playfair Display';
+            font-style: normal;
+            font-weight: 600;
+            font-display: swap;
+            src: url('../fonts/playfair-display-600.woff2') format('woff2');
+        }
+        @font-face {
+            font-family: 'Playfair Display';
+            font-style: normal;
+            font-weight: 700;
+            font-display: swap;
+            src: url('../fonts/playfair-display-700.woff2') format('woff2');
+        }
+
+        :root {
+            --gold: #CA9C1F;
+            --light-gold: #f5ead3;
+            --cream: #faf6f1;
+            --dark: #1a1a1a;
+            --text-secondary: #666666;
+            --bg-light: #fafafa;
+            --bg-white: #ffffff;
+            --border: #e0e0e0;
+
+            --spacing-xs: 2px;
+            --spacing-sm: 4px;
+            --spacing-md: 8px;
+            --spacing-lg: 12px;
+            --spacing-xl: 16px;
+            --spacing-2xl: 24px;
+            --spacing-3xl: 32px;
+
+            --font-system: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            --font-heading: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            --font-size-xs: 13px;
+            --font-size-sm: 14px;
+            --font-size-base: 16px;
+            --font-size-lg: 18px;
+            --font-size-xl: 20px;
+            --font-size-2xl: 28px;
+            --font-size-3xl: 36px;
+            --font-size-4xl: 48px;
+
+            --line-height-tight: 1.3;
+            --line-height-normal: 1.6;
+            --line-height-relaxed: 1.8;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: var(--font-system); font-size: 16px; line-height: 1.6; color: var(--dark); background: var(--bg-white); }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 var(--spacing-lg); }
+        .section { padding: var(--spacing-3xl) 0; }
+        h1 { font-family: var(--font-heading); font-size: 36px; font-weight: 600; margin-bottom: var(--spacing-lg); }
+        h2 { font-family: var(--font-heading); font-size: 28px; font-weight: 600; margin-bottom: var(--spacing-lg); }
+        h3 { font-family: var(--font-heading); font-size: 20px; font-weight: 600; margin-bottom: var(--spacing-md); }
+        p { margin-bottom: var(--spacing-md); color: var(--text-secondary); }
+        a { color: var(--gold); text-decoration: none; }
+
+        header { background-color: #000000; border-bottom: 1px solid rgba(255, 255, 255, 0.1); z-index: 100; }
+        nav { display: flex; justify-content: space-between; align-items: center; padding: var(--spacing-lg) 0; }
+        .logo a { font-size: 20px; font-weight: 600; color: var(--bg-white); }
+        .nav-links { display: flex; list-style: none; gap: var(--spacing-2xl); align-items: center; }
+        .nav-links a { color: rgba(255, 255, 255, 0.8); font-size: var(--font-size-sm); font-weight: 500; text-transform: uppercase; letter-spacing: 0.05em; }
+        .nav-links a:hover { color: var(--gold); }
+        .nav-cta { background-color: var(--gold); color: var(--bg-white); padding: var(--spacing-md) var(--spacing-xl); border-radius: 4px; font-weight: 600; font-size: var(--font-size-sm); text-decoration: none; text-transform: uppercase; letter-spacing: 0.05em; transition: all 0.2s ease; }
+        .nav-links .nav-cta:hover { opacity: 0.9; color: var(--bg-white) !important; box-shadow: 0 4px 12px rgba(202, 156, 31, 0.3); }
+
+        .portfolio-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--spacing-2xl); margin: var(--spacing-2xl) 0; }
+        .portfolio-item { padding: var(--spacing-2xl); background: var(--bg-light); border: 1px solid var(--border); border-radius: 8px; }
+        .portfolio-item h3 { color: var(--dark); margin-bottom: var(--spacing-md); }
+        .portfolio-item-meta { font-size: 14px; color: var(--text-secondary); margin-bottom: var(--spacing-md); }
+
+        .cta-box { text-align: center; padding: var(--spacing-2xl); background: var(--bg-light); border-radius: 8px; margin-top: var(--spacing-2xl); }
+        .btn { display: inline-flex; align-items: center; gap: var(--spacing-sm); background: var(--gold); color: var(--bg-white); padding: var(--spacing-md) var(--spacing-xl); border-radius: 4px; font-weight: 600; font-size: var(--font-size-sm); text-transform: uppercase; letter-spacing: 0.05em; cursor: pointer; border: none; transition: opacity 0.2s ease; font-family: var(--font-system); }
+        .btn:hover { opacity: 0.9; }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: var(--bg-white);
+            padding: var(--spacing-3xl) 0;
+        }
+
+        footer p {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--spacing-2xl);
+            margin-bottom: var(--spacing-2xl);
+        }
+
+        .footer-section {
+            text-align: center;
+        }
+
+        .footer-section h4 {
+            color: var(--bg-white);
+            margin-bottom: var(--spacing-md);
+            font-size: calc(var(--font-size-base) + 4px);
+            font-weight: 600;
+        }
+
+        .footer-section ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: var(--spacing-sm);
+        }
+
+        .footer-section a {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .footer-section a:hover {
+            color: var(--gold);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: var(--spacing-2xl);
+            text-align: center;
+            font-size: var(--font-size-sm);
+        }
+
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .portfolio-grid { grid-template-columns: 1fr; }
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+<header>
+<div class="container">
+<nav>
+<div class="logo"><a href="../index.html" style="color: inherit; text-decoration: none;"><img src="../images/caitlin gardulescu caitlingardulescu logo.webp" alt="Caitlin Gardulescu" style="height: 40px; width: auto;"/></a></div>
+<ul class="nav-links">
+<li><a href="about.html">About</a></li>
+<li><a href="services.html">Services</a></li>
+<li><a href="../index.html#experience">Experience</a></li>
+<li><a href="cv.html">CV</a></li>
+<li><a class="nav-cta" href="https://calendly.com/caitlingardulescu/" target="_blank">Book a Call</a></li>
+</ul>
+</nav>
+</div>
+</header>
+
+    <main>
+        <section class="section">
+            <div class="container">
+                <h1>Creative Work</h1>
+                <p>Beyond business strategy, I'm a creative writer and artist with an exceptional eye for color. My creative practice explores storytelling, visual expression, and the intersection of art and commerce.</p>
+
+                <div class="portfolio-grid">
+                    <div class="portfolio-item">
+                        <h3>Creative Writing</h3>
+                        <p class="portfolio-item-meta">Essays & Narrative</p>
+                        <p>Exploring stories at the intersection of business, consumer culture, and personal identity. Focus on narrative-driven insights and authentic voice.</p>
+                    </div>
+
+                    <div class="portfolio-item">
+                        <h3>Visual Storytelling</h3>
+                        <p class="portfolio-item-meta">Photography & Composition</p>
+                        <p>Building visual narratives through photography, focusing on color, composition, and the human connection to products and brands.</p>
+                    </div>
+
+                    <div class="portfolio-item">
+                        <h3>Brand Expression</h3>
+                        <p class="portfolio-item-meta">Creative Strategy & Design</p>
+                        <p>Exploring how creative expression intersects with brand building. Color theory, visual identity, and emotional resonance in consumer engagement.</p>
+                    </div>
+
+                    <div class="portfolio-item">
+                        <h3>Artist Statement</h3>
+                        <p class="portfolio-item-meta">Philosophy & Practice</p>
+                        <p>My creative practice is built on understanding people deeply—what moves them, what they're drawn to, and why. The same insights that drive product strategy inform my art.</p>
+                    </div>
+                </div>
+
+                <div class="cta-box">
+                    <h2 style="color: var(--dark);">Interested in my creative work?</h2>
+                    <p style="margin-bottom: var(--spacing-lg);">Portfolio coming soon. In the meantime, reach out if you'd like to discuss creative collaboration or commissions.</p>
+                    <a href="mailto:caitlin@caitlingardulescu.com" class="btn">Get in Touch</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.caitlingardulescu.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Creative Work",
+      "item": "https://www.caitlingardulescu.com/pages/creative.html"
+    }
+  ]
+}
+</script>
+
+<footer>
+<div class="container">
+<div class="footer-content">
+<div class="footer-section">
+<h4>Work</h4>
+<ul>
+<li><a href="services.html">Services</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="../index.html#experience">Experience</a></li>
+<li><a href="cv.html">CV</a></li>
+</ul>
+</div>
+<div class="footer-section">
+<h4>Connect</h4>
+<ul>
+<li><a href="https://linkedin.com/in/caitlin-gardulescu/" target="_blank">LinkedIn</a></li>
+<li><a href="mailto:caitlin@caitlingardulescu.com">Email</a></li>
+<li><a href="https://calendly.com/caitlingardulescu/" target="_blank">Calendly</a></li>
+</ul>
+</div>
+<div class="footer-section">
+<h4>Also</h4>
+<ul>
+<li><a href="vo.html">Voice Over</a></li>
+<li><a href="creative.html">Creative Work</a></li>
+</ul>
+</div>
+</div>
+<div class="footer-bottom">
+<p>© 2026 Caitlin Gardulescu. All rights reserved.</p>
+</div>
+</div>
+</footer>
+</body>
+</html>

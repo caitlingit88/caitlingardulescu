@@ -1,0 +1,378 @@
+/* Animation Enhancements for Caitlin's Website */
+
+/* ============================================
+   Keyframe Animations
+   ============================================ */
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUpFade {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes parallaxFloat {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(-30px);
+  }
+}
+
+/* ============================================
+   Hero Section
+   ============================================ */
+
+.hero-content {
+  animation: fadeInUp 0.7s ease-out;
+}
+
+.hero-image {
+  animation: fadeInUp 0.9s ease-out 0.1s both;
+}
+
+.hero-image img {
+  transition: transform 0.6s ease-out;
+}
+
+/* Parallax effect for hero image */
+.hero-image.parallax img {
+  transform: translateY(var(--parallax-offset, 0px));
+}
+
+/* ============================================
+   Section Scroll Animations
+   ============================================ */
+
+.section {
+  opacity: 0;
+}
+
+.section.on-scroll {
+  animation: slideUpFade 0.6s ease-out forwards;
+}
+
+/* Stagger animation for grid items */
+.value-props .value-prop,
+.services-grid .service-card {
+  opacity: 0;
+  animation: slideUpFade 0.6s ease-out forwards;
+}
+
+/* Stagger delay for grid children */
+.value-props .value-prop:nth-child(1),
+.services-grid .service-card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.value-props .value-prop:nth-child(2),
+.services-grid .service-card:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.value-props .value-prop:nth-child(3),
+.services-grid .service-card:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.services-grid .service-card:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+/* ============================================
+   Enhanced Hover States
+   ============================================ */
+
+/* Value Prop Cards - Enhanced Lift & Glow */
+.value-prop {
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1),
+              box-shadow 0.3s ease-out,
+              border-color 0.3s ease-out;
+}
+
+.value-prop:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.15),
+              inset 0 0 20px rgba(202, 156, 31, 0.15);
+  border-color: rgba(202, 156, 31, 0.4);
+}
+
+/* Service Cards - Enhanced Hover */
+.service-card {
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1),
+              box-shadow 0.3s ease-out,
+              background-color 0.3s ease-out;
+}
+
+.service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+  background-color: #dfd6cb;
+}
+
+/* ============================================
+   Button Micro-Interactions
+   ============================================ */
+
+.btn {
+  transition: all 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  opacity: 0;
+  transition: opacity 0.2s ease-out;
+  pointer-events: none;
+}
+
+.btn:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 16px rgba(202, 156, 31, 0.3);
+  background-color: #b88d1a;
+}
+
+.btn:hover::before {
+  opacity: 1;
+}
+
+.btn:active {
+  transform: scale(0.98);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.btn-secondary {
+  transition: all 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.btn-secondary:hover {
+  border-color: var(--gold);
+  transform: scale(1.02);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* ============================================
+   Navigation Enhancements
+   ============================================ */
+
+.nav-links a {
+  position: relative;
+  transition: color 0.2s ease-out;
+}
+
+.nav-links a:not(.nav-cta)::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--gold);
+  transition: width 0.3s ease-out;
+}
+
+.nav-links a:not(.nav-cta):hover::after {
+  width: 100%;
+}
+
+.nav-cta {
+  transition: all 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+  box-shadow: 0 2px 8px rgba(202, 156, 31, 0.2);
+  position: relative;
+}
+
+.nav-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(202, 156, 31, 0.3);
+  color: #000000 !important;
+}
+
+/* ============================================
+   Testimonial Enhancement
+   ============================================ */
+
+.testimonial {
+  transition: box-shadow 0.3s ease-out, transform 0.3s ease-out;
+}
+
+.testimonial:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1),
+              inset 0 0 12px rgba(202, 156, 31, 0.15);
+}
+
+/* ============================================
+   Link Transitions
+   ============================================ */
+
+a {
+  transition: color 0.2s ease-out, opacity 0.2s ease-out;
+}
+
+.footer-section a:hover {
+  opacity: 1;
+  color: var(--gold);
+  text-shadow: 0 0 8px rgba(202, 156, 31, 0.3);
+}
+
+/* ============================================
+   Accessibility - Respect Reduced Motion
+   ============================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .parallax img {
+    transform: none !important;
+  }
+}
+
+/* ============================================
+   Section-Specific Animations
+   ============================================ */
+
+.cta-section {
+  transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+}
+
+.cta-section:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* ============================================
+   Text & Heading Animations
+   ============================================ */
+
+h1,
+h2,
+h3 {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+h2 {
+  animation-delay: 0.1s;
+}
+
+h3 {
+  animation-delay: 0.05s;
+}
+
+/* ============================================
+   Banner Animation
+   ============================================ */
+
+.banner {
+  animation: fadeInUp 0.7s ease-out;
+  animation-delay: 0.2s;
+}
+
+/* ============================================
+   Mobile Hamburger Menu
+   ============================================ */
+
+/* Hamburger Button */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  width: 44px;
+  height: 44px;
+  align-items: center;
+  justify-content: center;
+}
+
+.hamburger span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 1px;
+  transition: all 0.3s ease-out;
+}
+
+.hamburger:hover span {
+  background-color: var(--gold);
+}
+
+/* Hamburger visible at mobile breakpoint */
+@media (max-width: 640px) {
+  .hamburger {
+    display: flex;
+  }
+}
+
+/* Close Button */
+.nav-close {
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: var(--font-size-2xl);
+  cursor: pointer;
+  padding: var(--spacing-sm);
+  align-self: flex-end;
+  margin-bottom: var(--spacing-lg);
+  transition: color 0.2s ease-out;
+}
+
+.nav-close:hover {
+  color: var(--gold);
+}
+
+/* Overlay */
+.menu-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 100;
+  opacity: 0;
+  transition: opacity 0.3s ease-out;
+}
+
+@media (max-width: 640px) {
+  nav[data-menu-open="true"] + .menu-overlay,
+  .menu-overlay[data-menu-overlay] {
+    display: block;
+  }
+
+  nav[data-menu-open="true"] ~ .menu-overlay {
+    opacity: 1;
+  }
+}

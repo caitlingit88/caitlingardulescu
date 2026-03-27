@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Caitlin | Strategic Leader & Consultant</title>
+    <meta name="description" content="15+ years scaling consumer brands. Strategic leadership in product, category management, and go-to-market.">
+    <meta property="og:title" content="About Caitlin | Strategic Leader & Consultant">
+    <meta property="og:description" content="15+ years scaling consumer brands. Strategic leadership in product, category management, and go-to-market.">
+    <meta property="og:type" content="profile">
+    <meta property="og:url" content="https://www.caitlingardulescu.com/pages/about.html">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="About Caitlin | Strategic Leader & Consultant">
+    <meta name="twitter:description" content="15+ years scaling consumer brands. Strategic leadership in product, category management, and go-to-market.">
+    <link rel="canonical" href="https://www.caitlingardulescu.com/pages/about.html">
+    <style>
+        /* Local Fonts */
+        @font-face {
+            font-family: 'Playfair Display';
+            font-style: normal;
+            font-weight: 600;
+            font-display: swap;
+            src: url('../fonts/playfair-display-600.woff2') format('woff2');
+        }
+        @font-face {
+            font-family: 'Playfair Display';
+            font-style: normal;
+            font-weight: 700;
+            font-display: swap;
+            src: url('../fonts/playfair-display-700.woff2') format('woff2');
+        }
+
+        :root {
+            --gold: #CA9C1F;
+            --dark: #1a1a1a;
+            --text-secondary: #666666;
+            --bg-light: #fafafa;
+            --bg-white: #ffffff;
+            --border: #e0e0e0;
+            --spacing-xs: 2px;
+            --spacing-sm: 4px;
+            --spacing-md: 8px;
+            --spacing-lg: 12px;
+            --spacing-xl: 16px;
+            --spacing-2xl: 24px;
+            --spacing-3xl: 32px;
+            --font-system: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            --font-heading: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            --font-size-xs: 13px;
+            --font-size-sm: 14px;
+            --font-size-base: 16px;
+            --font-size-lg: 18px;
+            --font-size-xl: 20px;
+            --font-size-2xl: 28px;
+            --font-size-3xl: 36px;
+            --font-size-4xl: 48px;
+            --line-height-tight: 1.3;
+            --line-height-normal: 1.6;
+            --line-height-relaxed: 1.8;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-system);
+            font-size: var(--font-size-base);
+            line-height: var(--line-height-normal);
+            color: var(--dark);
+            background-color: var(--bg-white);
+        }
+
+        h1 {
+            font-family: var(--font-heading);
+            font-size: var(--font-size-4xl);
+            line-height: var(--line-height-tight);
+            font-weight: 600;
+            letter-spacing: -0.02em;
+        }
+
+        h2 {
+            font-family: var(--font-heading);
+            font-size: var(--font-size-3xl);
+            line-height: var(--line-height-tight);
+            font-weight: 600;
+            letter-spacing: -0.01em;
+            margin-bottom: var(--spacing-lg);
+        }
+
+        h3 {
+            font-family: var(--font-heading);
+            font-size: var(--font-size-2xl);
+            line-height: var(--line-height-tight);
+            font-weight: 600;
+            margin-bottom: var(--spacing-md);
+        }
+
+        p {
+            margin-bottom: var(--spacing-md);
+            color: var(--text-secondary);
+            line-height: var(--line-height-relaxed);
+        }
+
+        a {
+            color: var(--gold);
+            text-decoration: none;
+            transition: opacity 0.2s ease;
+        }
+
+        a:hover {
+            opacity: 0.8;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-lg);
+        }
+
+        .section {
+            padding: var(--spacing-3xl) 0;
+        }
+
+        .section--light {
+            background-color: var(--bg-light);
+        }
+
+        /* Header */
+        header {
+            position: sticky;
+            top: 0;
+            background-color: #000000;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            z-index: 100;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: var(--spacing-lg) 0;
+        }
+
+        .logo {
+            font-size: var(--font-size-xl);
+            font-weight: 600;
+            color: var(--bg-white);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: var(--spacing-2xl);
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: var(--font-size-sm);
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .nav-links a:hover {
+            color: var(--gold);
+        }
+
+        .nav-cta {
+            background-color: var(--gold);
+            color: var(--bg-white);
+            padding: var(--spacing-md) var(--spacing-xl);
+            border-radius: 4px;
+            font-weight: 600;
+            font-size: var(--font-size-sm);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            transition: all 0.2s ease;
+        }
+
+        .nav-links .nav-cta:hover {
+            opacity: 0.9;
+            color: var(--bg-white) !important;
+            box-shadow: 0 4px 12px rgba(202, 156, 31, 0.3);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: var(--bg-white);
+            padding: var(--spacing-3xl) 0;
+        }
+
+        footer p {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--spacing-2xl);
+            margin-bottom: var(--spacing-2xl);
+        }
+
+        .footer-section {
+            text-align: center;
+        }
+
+        .footer-section h4 {
+            color: var(--bg-white);
+            margin-bottom: var(--spacing-md);
+            font-size: calc(var(--font-size-base) + 4px);
+            font-weight: 600;
+        }
+
+        .footer-section ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: var(--spacing-sm);
+        }
+
+        .footer-section a {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .footer-section a:hover {
+            color: var(--gold);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: var(--spacing-2xl);
+            text-align: center;
+            font-size: var(--font-size-sm);
+        }
+
+        /* Hero Section */
+        .hero {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--spacing-3xl);
+            align-items: center;
+            padding: var(--spacing-3xl) 0;
+        }
+
+        .hero-image {
+            width: 100%;
+            aspect-ratio: 3/4;
+            background-color: var(--bg-light);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .hero h1 {
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .hero-subtext {
+            font-size: var(--font-size-lg);
+            color: var(--text-secondary);
+            margin-bottom: var(--spacing-2xl);
+        }
+
+        /* Timeline */
+        .timeline {
+            position: relative;
+            padding: var(--spacing-2xl) 0;
+        }
+
+        .timeline-item {
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            gap: var(--spacing-2xl);
+            margin-bottom: var(--spacing-3xl);
+            padding-bottom: var(--spacing-2xl);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .timeline-item:last-child {
+            border-bottom: none;
+        }
+
+        .timeline-date {
+            font-weight: 600;
+            color: var(--gold);
+            font-size: var(--font-size-sm);
+        }
+
+        .timeline-content h4 {
+            font-size: var(--font-size-xl);
+            font-weight: 600;
+            margin-bottom: var(--spacing-sm);
+            color: var(--dark);
+        }
+
+        .timeline-role {
+            color: var(--text-secondary);
+            font-size: var(--font-size-sm);
+            margin-bottom: var(--spacing-md);
+        }
+
+        .timeline-bullets {
+            list-style: none;
+        }
+
+        .timeline-bullets li {
+            padding: var(--spacing-sm) 0;
+            color: var(--text-secondary);
+        }
+
+        .timeline-bullets li:before {
+            content: "→ ";
+            color: var(--gold);
+            font-weight: 600;
+            margin-right: var(--spacing-sm);
+        }
+
+        /* Skills Section */
+        .skills {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: var(--spacing-2xl);
+            margin: var(--spacing-3xl) 0;
+        }
+
+        .skill-group h4 {
+            font-size: var(--font-size-base);
+            font-weight: 600;
+            margin-bottom: var(--spacing-md);
+            color: var(--dark);
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--spacing-sm);
+        }
+
+        .skill-tag {
+            background-color: var(--bg-light);
+            padding: var(--spacing-sm) var(--spacing-md);
+            border-radius: 4px;
+            font-size: var(--font-size-sm);
+            color: var(--dark);
+        }
+
+        /* Button */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--spacing-sm);
+            padding: var(--spacing-md) var(--spacing-xl);
+            background-color: var(--gold);
+            color: var(--bg-white);
+            border: none;
+            border-radius: 4px;
+            font-size: var(--font-size-sm);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            cursor: pointer;
+            transition: opacity 0.2s ease;
+            font-family: var(--font-system);
+        }
+
+        .btn:hover {
+            opacity: 0.9;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: var(--bg-white);
+            padding: var(--spacing-3xl) 0;
+            margin-top: var(--spacing-3xl);
+        }
+
+        footer p {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--spacing-2xl);
+            margin-bottom: var(--spacing-2xl);
+        }
+
+        .footer-section {
+            text-align: center;
+        }
+
+        .footer-section h4 {
+            color: var(--bg-white);
+            margin-bottom: var(--spacing-md);
+            font-size: calc(var(--font-size-base) + 4px);
+            font-weight: 600;
+        }
+
+        .footer-section ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            padding: 0;
+            gap: var(--spacing-sm);
+        }
+
+        .footer-section a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+        }
+
+        .footer-section a:hover {
+            color: var(--gold);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: var(--spacing-2xl);
+            text-align: center;
+            font-size: var(--font-size-sm);
+        }
+
+        /* CTA */
+        .cta-section {
+            background-color: var(--dark);
+            color: var(--bg-white);
+            text-align: center;
+            padding: var(--spacing-3xl);
+            border-radius: 8px;
+            margin: var(--spacing-3xl) 0;
+        }
+
+        .cta-section h2 {
+            color: var(--bg-white);
+            margin-bottom: var(--spacing-xl);
+        }
+
+        .cta-section p {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: var(--font-size-lg);
+            margin-bottom: var(--spacing-2xl);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: var(--font-size-2xl);
+            }
+
+            .nav-links {
+                display: none;
+            align-items: center;
+        }
+
+            .hero {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-image {
+                order: -1;
+            }
+
+            .timeline-item {
+                grid-template-columns: 1fr;
+            }
+
+            .skills {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+<!-- Header -->
+<header>
+<div class="container">
+<nav>
+<div class="logo"><a href="../index.html" style="color: inherit; text-decoration: none;"><img src="../images/caitlin gardulescu caitlingardulescu logo.webp" alt="Caitlin Gardulescu" style="height: 40px; width: auto;"/></a></div>
+<ul class="nav-links">
+<li><a href="about.html">About</a></li>
+<li><a href="services.html">Services</a></li>
+<li><a href="../index.html#experience">Experience</a></li>
+<li><a href="cv.html">CV</a></li>
+<li><a class="nav-cta" href="https://calendly.com/caitlingardulescu/" target="_blank">Book a Call</a></li>
+</ul>
+</nav>
+</div>
+</header>
+
+    <!-- Hero -->
+    <section class="section">
+        <div class="container">
+            <div class="hero" id="about">
+                <div class="hero-image">
+                    <img src="../images/caitlin-consulting-hero.png" alt="Caitlin Gardulescu">
+                </div>
+                <div class="hero-content">
+                    <h1>Caitlin Gardulescu</h1>
+                    <p class="hero-subtext">Strategic brand, category, and product leader with 15+ years of experience launching and scaling consumer brands across food, grocery, retail, and DTC.</p>
+                    <p>I love understanding what people buy, why they buy it, and how businesses can meet them with products that feel meaningful, useful, and exciting.</p>
+                    <p style="margin-top: var(--spacing-xl);">My broad product background allows me to understand the consumer as a whole person, not just a single-category shopper. This comprehensive perspective helps me build launch strategies that connect with a customer's identity, preferences, and lifestyle across all aspects of their life.</p>
+                    <p style="margin-top: var(--spacing-xl);">Today, I run a global consulting practice supporting founders and teams with product strategy and operational execution.</p>
+                    <a href="index.html#contact" class="btn" style="margin-top: var(--spacing-xl);">Get in Touch</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Competencies -->
+    <section class="section section--light">
+        <div class="container">
+            <h2>Core Competencies</h2>
+            <div class="skills">
+                <div class="skill-group">
+                    <h4>Strategy & Planning</h4>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Go-to-Market Strategy</span>
+                        <span class="skill-tag">Product Development</span>
+                        <span class="skill-tag">Category Expansion</span>
+                        <span class="skill-tag">Strategic Planning</span>
+                        <span class="skill-tag">Competitive Analysis</span>
+                    </div>
+                </div>
+
+                <div class="skill-group">
+                    <h4>Operations & Partnerships</h4>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Vendor Partnerships</span>
+                        <span class="skill-tag">Strategic Negotiations</span>
+                        <span class="skill-tag">Supply Chain Management</span>
+                        <span class="skill-tag">Cost Optimization</span>
+                        <span class="skill-tag">Process Improvement</span>
+                    </div>
+                </div>
+
+                <div class="skill-group">
+                    <h4>Leadership & Execution</h4>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Cross-Functional Leadership</span>
+                        <span class="skill-tag">Team Development</span>
+                        <span class="skill-tag">Project Management</span>
+                        <span class="skill-tag">Launch Execution</span>
+                        <span class="skill-tag">Change Management</span>
+                    </div>
+                </div>
+
+                <div class="skill-group">
+                    <h4>Category Management</h4>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Category Analysis</span>
+                        <span class="skill-tag">Merchandising Strategy</span>
+                        <span class="skill-tag">Pricing Strategy</span>
+                        <span class="skill-tag">Trend Forecasting</span>
+                        <span class="skill-tag">Sales Analytics</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience -->
+    <section class="section" id="experience">
+        <div class="container">
+            <h2>Professional Background</h2>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div>
+                        <div class="timeline-date">2023 – Present<br>3 years</div>
+                    </div>
+                    <div>
+                        <h4>Owner, Caitlin Gardulescu Consulting</h4>
+                        <div class="timeline-role">Global / Remote</div>
+                        <p>Strategy, product, and go-to-market guidance for consumer brands across food, retail, DTC, and lifestyle categories. I help teams strengthen their product vision, build strategic launch plans, and create the operational systems needed for sustainable growth.</p>
+                        <ul class="timeline-bullets">
+                            <li>Product strategy, concept development, and assortment planning</li>
+                            <li>Category expansion and trend-informed product roadmapping</li>
+                            <li>GTM planning, positioning, and cross-functional launch support</li>
+                            <li>Vendor sourcing, cost negotiations, and supply chain management</li>
+                            <li>Process optimization across supply chain, merchandising, and product operations</li>
+                            <li>Based in Barcelona and working globally with founder-led brands and fast-growing teams</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div>
+                        <div class="timeline-date">2024<br>5 months</div>
+                    </div>
+                    <div>
+                        <h4>Director of Vendor Operations, bitewell</h4>
+                        <div class="timeline-role">New York, New York (Hybrid)</div>
+                        <p>Cross-functional leader of vendor strategy and product expansion.</p>
+                        <ul class="timeline-bullets">
+                            <li>Vendor strategy reevaluation and expansion planning</li>
+                            <li>Position ended due to company-wide restructuring</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div>
+                        <div class="timeline-date">2022<br>9 months</div>
+                    </div>
+                    <div>
+                        <h4>Senior Vendor Manager (L6), Amazon Fresh</h4>
+                        <div class="timeline-role">New York, New York</div>
+                        <p>Led comprehensive clearance and seasonal strategies for all Amazon Fresh locations.</p>
+                        <ul class="timeline-bullets">
+                            <li>Championed creation and implementation of clearance program reducing shrink risk in 2022</li>
+                            <li>Crafted business cases driving strategic growth across categories for seasonal events</li>
+                            <li>Streamlined processes for clearance and seasonal, reducing product lead times</li>
+                            <li>Led 40+ person cross-functional team for store and online clearance and seasonal operations</li>
+                            <li>Identified and integrated new seasonal vendors for innovative product offerings</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div>
+                        <div class="timeline-date">2020 – 2022<br>1 year 6 months</div>
+                    </div>
+                    <div>
+                        <h4>Category Manager, Wakefern Food Corp</h4>
+                        <div class="timeline-role">New York, New York</div>
+                        <p>Directed private label production and brand development across 360+ stores.</p>
+                        <ul class="timeline-bullets">
+                            <li>Directed end-to-end CPG private label production for fresh produce, deli, and appetizers</li>
+                            <li>Spearheaded brand development of all private label conventional and organic products</li>
+                            <li>Strategic lead for total Fairway private label transition into Own Brands</li>
+                            <li>Optimized operational efficiency, resulting in 33% reduction in lead time to floor</li>
+                            <li>Introduced novel product categories driven by internal sales and external industry trends</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div>
+                        <div class="timeline-date">2014 – 2020<br>9 years 2 months</div>
+                    </div>
+                    <div>
+                        <h4>Product Management, Kohl's</h4>
+                        <div class="timeline-role">New York / Milwaukee</div>
+                        <p>Progressed through multiple product management roles, managing $100M+ brands and leading cross-functional teams.</p>
+                        <ul class="timeline-bullets">
+                            <li><strong>Product Management – Jewelry Accessories (2019-2020):</strong> Drove strategy for key brands, created test-and-react plan generating $5M sales increase</li>
+                            <li><strong>Product Management – Dana Buchman Women's Apparel (2017-2019):</strong> Led 15-person cross-functional team, updated testing strategy for informed business decisions</li>
+                            <li><strong>Associate Product Manager – Legwear Accessories (2016-2017):</strong> Executed strategic decisions resulting in 20% comp sales increase, led eCommerce growth across all categories</li>
+                            <li><strong>Brand Developer – Men's/Boy's Active Apparel (2014-2016):</strong> Spearheaded launch of stand-alone FILA outlet stores, propelled $300M annual sales growth</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div>
+                        <div class="timeline-date">2011 – 2014<br>3 years 7 months</div>
+                    </div>
+                    <div>
+                        <h4>Product Development Coordinator, Kohl's</h4>
+                        <div class="timeline-role">Milwaukee, Wisconsin</div>
+                        <p>Coordinated planning, design, and production of children's products.</p>
+                        <ul class="timeline-bullets">
+                            <li>Coordinated planning, conceptualization, design, and placement of children's products</li>
+                            <li>Created comprehensive Kid's Swim business plan with 5-year $3M growth strategy</li>
+                            <li>Developed Boy's and Girl's products across multiple brands</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education -->
+    <section class="section section--light">
+        <div class="container">
+            <h2>Education & Certifications</h2>
+
+            <div style="display: grid; gap: var(--spacing-2xl);">
+                <div style="padding: var(--spacing-2xl); background-color: var(--bg-white); border: 1px solid var(--border); border-radius: 8px;">
+                    <h4 style="margin-bottom: var(--spacing-sm);">Bachelor of Science in Consumer Science; Retail</h4>
+                    <p style="color: var(--text-secondary); margin-bottom: var(--spacing-sm);">University of Wisconsin-Madison (2006 – 2010)</p>
+                    <p style="color: var(--text-secondary); font-size: var(--font-size-sm);">Activities: Retail Club Board Member, FBLA-PBL</p>
+                </div>
+
+                <div style="padding: var(--spacing-2xl); background-color: var(--bg-white); border: 1px solid var(--border); border-radius: 8px;">
+                    <h4 style="margin-bottom: var(--spacing-sm);">Successful Negotiation: Essential Strategies and Skills</h4>
+                    <p style="color: var(--text-secondary); margin-bottom: var(--spacing-sm);">University of Michigan (Issued June 2020)</p>
+                </div>
+
+                <div style="padding: var(--spacing-2xl); background-color: var(--bg-white); border: 1px solid var(--border); border-radius: 8px;">
+                    <h4 style="margin-bottom: var(--spacing-sm);">Volunteer Work</h4>
+                    <p style="color: var(--text-secondary);">Lead instructor for New York Cares after-school art program for elementary students (2019 – Present)</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section">
+        <div class="container">
+            <div class="cta-section">
+                <h2>Interested in working together?</h2>
+                <p>Let's discuss your strategic challenges and opportunities.</p>
+                <a href="index.html#contact" class="btn">Schedule a Consultation</a>
+            </div>
+        </div>
+    </section>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.caitlingardulescu.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "About",
+      "item": "https://www.caitlingardulescu.com/pages/about.html"
+    }
+  ]
+}
+</script>
+
+<footer>
+<div class="container">
+<div class="footer-content">
+<div class="footer-section">
+<h4>Work</h4>
+<ul>
+<li><a href="services.html">Services</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="../index.html#experience">Experience</a></li>
+<li><a href="cv.html">CV</a></li>
+</ul>
+</div>
+<div class="footer-section">
+<h4>Connect</h4>
+<ul>
+<li><a href="https://linkedin.com/in/caitlin-gardulescu/" target="_blank">LinkedIn</a></li>
+<li><a href="mailto:caitlin@caitlingardulescu.com">Email</a></li>
+<li><a href="https://calendly.com/caitlingardulescu/" target="_blank">Calendly</a></li>
+</ul>
+</div>
+<div class="footer-section">
+<h4>Also</h4>
+<ul>
+<li><a href="vo.html">Voice Over</a></li>
+<li><a href="creative.html">Creative Work</a></li>
+</ul>
+</div>
+</div>
+<div class="footer-bottom">
+<p>© 2026 Caitlin Gardulescu. All rights reserved.</p>
+</div>
+</div>
+</footer>
+</body>
+</html>

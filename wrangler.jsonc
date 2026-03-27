@@ -1,0 +1,11 @@
+{
+  "name": "caitlingardulescu",
+  "type": "javascript",
+  "account_id": "",
+  "workers_dev": true,
+  "routes": [],
+  "build": {
+    "command": "",
+    "cwd": ""
+  }
+}
