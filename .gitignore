@@ -14,7 +14,7 @@ Thumbs.db
 *.sublime-project
 *.sublime-workspace
 
-# Node.js (if used for build process)
+# Node.js
 node_modules/
 npm-debug.log
 yarn-error.log
@@ -31,20 +31,15 @@ logs/
 *.log
 
 # OS files
-.DS_Store
 .AppleDouble
 .LSOverride
 *.cab
 *.msi
-Thumbs.db
 ehthumbs.db
 
-# Backup files
+# Backup & temporary files
 *.bak
 *.backup
-*~
-
-# Temporary files
 .tmp/
 temp/
 tmp/
@@ -53,12 +48,13 @@ tmp/
 .cache/
 .eslintcache
 
-# Local development
-.claude/local.json
+# Claude Code local configuration
 .claude/settings.local.json
 
 # Documentation (local storage)
 md/
+docs/
+logos/
 
 # Sensitive data
 *.pem

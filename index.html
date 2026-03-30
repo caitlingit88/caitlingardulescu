@@ -71,6 +71,7 @@
 
         html {
             scroll-behavior: smooth;
+            scrollbar-gutter: stable;
         }
 
         body {
@@ -79,6 +80,7 @@
             line-height: var(--line-height-normal);
             color: var(--dark);
             background-color: var(--bg-white);
+            overflow-y: scroll;
         }
 
         /* Typography */
@@ -193,6 +195,10 @@
 
         .nav-links a:hover {
             color: var(--gold);
+        }
+
+        .nav-close {
+            display: none;
         }
 
         .nav-cta {
@@ -545,6 +551,19 @@
 
             nav[data-menu-open="true"] .nav-links {
                 transform: translateX(0);
+            }
+
+            .nav-close {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: none;
+                border: none;
+                color: rgba(255, 255, 255, 0.8);
+                font-size: 24px;
+                cursor: pointer;
+                padding: 8px;
+                margin-top: auto;
             }
 
             .footer-content {
