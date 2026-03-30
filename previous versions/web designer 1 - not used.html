@@ -4,7 +4,7 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Caitlin Gardulescu | Strategic Brand &amp; Product Consultant</title>
-<link rel="icon" href="images/CG-logo-new.webp" type="image/webp"/>
+<link rel="icon" href="images/caitlin gardulescu caitlingardulescu logo.webp" type="image/webp"/>
 <meta content="Strategic brand, category, and product leader. 15+ years scaling consumer brands. Consulting for founders and teams." name="description"/>
 <meta content="Caitlin Gardulescu | Strategic Consultant" property="og:title"/>
 <meta content="15+ years of strategic experience scaling brands. Consulting for product strategy, go-to-market, and category expansion." property="og:description"/>
@@ -37,6 +37,7 @@
             --bg-light: #fafafa;
             --bg-white: #ffffff;
             --border: #e0e0e0;
+            --shadow-soft: 0 12px 30px rgba(43, 43, 45, 0.1);
 
             --spacing-xs: 2px;
             --spacing-sm: 4px;
@@ -46,8 +47,8 @@
             --spacing-2xl: 24px;
             --spacing-3xl: 32px;
 
-            --font-system: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
-            --font-heading: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            --font-system: 'Source Sans 3', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            --font-heading: 'Source Sans 3', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
             --font-size-xs: 13px;
             --font-size-sm: 14px;
             --font-size-base: 16px;
@@ -79,7 +80,7 @@
             font-size: var(--font-size-base);
             line-height: var(--line-height-normal);
             color: var(--dark);
-            background-color: var(--bg-white);
+            background-color: #fcfbf8;
             overflow-y: scroll;
             overflow-x: hidden;
         }
@@ -177,12 +178,6 @@
             font-size: var(--font-size-xl);
             font-weight: 600;
             color: var(--bg-white);
-            background-color: #2b2b2d;
-            padding: 8px 12px;
-            border-radius: 4px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
         }
 
         .nav-links {
@@ -270,10 +265,25 @@
         /* Hero */
         .hero {
             display: grid;
-            grid-template-columns: 2.6fr 1.4fr;
+            grid-template-columns: 3fr 1fr;
             gap: var(--spacing-2xl);
-            align-items: start;
+            align-items: center;
             padding: 25px 0;
+            position: relative;
+            isolation: isolate;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            width: 360px;
+            height: 360px;
+            right: -120px;
+            top: -120px;
+            background: radial-gradient(circle, rgba(202, 156, 31, 0.2) 0%, rgba(202, 156, 31, 0) 70%);
+            z-index: -1;
+            pointer-events: none;
+            animation: heroGlow 15s ease-in-out infinite;
         }
 
         .hero-content h1 {
@@ -283,19 +293,35 @@
 
         .hero-subtext {
             font-size: var(--font-size-lg);
-            color: var(--text-secondary);
-            margin-bottom: var(--spacing-xl);
+            color: var(--dark);
+            margin-bottom: var(--spacing-2xl);
             line-height: var(--line-height-relaxed);
+        }
+
+        .trust-chips {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--spacing-md);
+            margin-bottom: var(--spacing-2xl);
+        }
+
+        .trust-chip {
+            border: 1px solid rgba(43, 43, 45, 0.2);
+            border-radius: 999px;
+            padding: 6px 12px;
+            font-size: var(--font-size-xs);
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            color: var(--dark);
+            background-color: rgba(255, 255, 255, 0.8);
         }
 
         .hero-image {
             width: 100%;
-            height: auto;
             aspect-ratio: 1/1;
             background-color: var(--bg-light);
             border-radius: 8px;
             overflow: hidden;
-            justify-self: end;
         }
 
         .hero-image img {
@@ -347,10 +373,11 @@
 
         .value-prop {
             padding: var(--spacing-2xl);
-            background-color: rgba(255, 255, 255, 0.6);
-            border: 1px solid rgba(202, 156, 31, 0.2);
+            background-color: rgba(255, 255, 255, 0.92);
+            border: 1px solid rgba(43, 43, 45, 0.12);
             border-radius: 8px;
             transition: transform 0.2s ease, box-shadow 0.2s ease;
+            box-shadow: var(--shadow-soft);
         }
 
         .value-prop:hover {
@@ -387,8 +414,8 @@
 
         .service-card {
             padding: var(--spacing-xl);
-            background-color: #e8e0d5;
-            border: 2px solid var(--dark);
+            background-color: #ffffff;
+            border: 1px solid rgba(43, 43, 45, 0.18);
             border-radius: 0;
             transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
@@ -514,12 +541,14 @@
 
         /* CTA Section */
         .cta-section {
-            background-color: var(--dark);
+            background: linear-gradient(135deg, #2b2b2d 0%, #3a3a3d 100%);
             color: var(--bg-white);
             text-align: center;
             padding: var(--spacing-3xl);
-            border-radius: 8px;
+            border-radius: 14px;
             margin: var(--spacing-3xl) 0;
+            box-shadow: 0 18px 32px rgba(43, 43, 45, 0.28);
+            border: 1px solid rgba(202, 156, 31, 0.35);
         }
 
         .cta-section h2 {
@@ -528,9 +557,46 @@
         }
 
         .cta-section p {
-            color: rgba(255, 255, 255, 0.8);
+            color: rgba(255, 255, 255, 0.9);
             font-size: var(--font-size-lg);
             margin-bottom: var(--spacing-2xl);
+        }
+
+        .outcome-strip {
+            margin: var(--spacing-2xl) 0 var(--spacing-3xl);
+        }
+
+        .outcome-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: var(--spacing-lg);
+        }
+
+        .outcome-card {
+            background: #ffffff;
+            border: 1px solid rgba(43, 43, 45, 0.12);
+            border-radius: 10px;
+            padding: var(--spacing-xl);
+            text-align: center;
+            box-shadow: var(--shadow-soft);
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        .outcome-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 14px 28px rgba(43, 43, 45, 0.14);
+        }
+
+        .outcome-card strong {
+            display: block;
+            color: var(--dark);
+            font-size: var(--font-size-lg);
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .outcome-card span {
+            color: var(--text-secondary);
+            font-size: var(--font-size-sm);
         }
 
         /* Contact Experience */
@@ -694,6 +760,15 @@
             }
         }
 
+        @keyframes heroGlow {
+            0%, 100% {
+                transform: translate(0, 0);
+            }
+            50% {
+                transform: translate(-18px, 10px);
+            }
+        }
+
         /* Banner */
         .banner {
             text-align: center;
@@ -731,12 +806,14 @@
 
             .hero-image {
                 order: -1;
-                height: auto;
-                aspect-ratio: 1/1;
             }
 
             .value-props {
                 grid-template-columns: 1fr;
+            }
+
+            .outcome-grid {
+                grid-template-columns: repeat(2, 1fr);
             }
 
             .services-grid {
@@ -814,18 +891,29 @@
 
         @media (prefers-reduced-motion: reduce) {
             .contact-modern::before,
-            .contact-modern::after {
+            .contact-modern::after,
+            .hero::after {
                 animation: none;
             }
         }
+
+        @media (max-width: 480px) {
+            .outcome-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .trust-chip {
+                font-size: 12px;
+            }
+        }
     </style>
-<meta content="website" property="og:type"/><meta content="https://www.caitlingardulescu.com/" property="og:url"/><meta content="summary_large_image" name="twitter:card"/><meta content="Caitlin Gardulescu | Strategic Brand &amp; Product Consultant" name="twitter:title"/><meta content="Strategic brand, category, and product leader. 15+ years scaling consumer brands. Consulting for founders and teams." name="twitter:description"/><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Cormorant+Garamond:wght@600;700&display=swap" rel="stylesheet"/><link href="css/animations.css" rel="stylesheet"/></head>
+<meta content="website" property="og:type"/><meta content="https://www.caitlingardulescu.com/" property="og:url"/><meta content="summary_large_image" name="twitter:card"/><meta content="Caitlin Gardulescu | Strategic Brand &amp; Product Consultant" name="twitter:title"/><meta content="Strategic brand, category, and product leader. 15+ years scaling consumer brands. Consulting for founders and teams." name="twitter:description"/><link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&family=Playfair+Display:wght@600;700&family=Cormorant+Garamond:wght@600;700&display=swap" rel="stylesheet"/><link href="css/animations.css" rel="stylesheet"/></head>
 <body>
 <!-- Header -->
 <header>
 <div class="container">
 <nav data-menu-open="false">
-<div class="logo"><a href="index.html" style="color: inherit; text-decoration: none;"><img src="images/CG-logo-new.webp" alt="Caitlin Gardulescu" style="height: 40px; width: auto;"/></a></div>
+<div class="logo"><a href="index.html" style="color: inherit; text-decoration: none;"><img src="images/caitlin gardulescu caitlingardulescu logo.webp" alt="Caitlin Gardulescu" style="height: 40px; width: auto;"/></a></div>
 <div class="nav-header-cta">
 <a class="btn" href="https://calendly.com/caitlingardulescu/" target="_blank">Book a Call</a>
 </div>
@@ -835,9 +923,10 @@
   <span></span>
 </button>
 <ul class="nav-links">
-<li><a href="pages/services.html">Services</a></li>
-<li><a href="pages/cv.html">Experience</a></li>
 <li><a href="pages/about.html">About</a></li>
+<li><a href="pages/services.html">Services</a></li>
+<li><a href="#experience">Experience</a></li>
+<li><a href="pages/cv.html">CV</a></li>
 <li><a class="nav-cta" href="https://calendly.com/caitlingardulescu/" target="_blank">Book a Call</a></li>
 </ul>
 <div class="menu-overlay" data-menu-overlay></div>
@@ -850,9 +939,15 @@
 <div class="banner">Building brands that resonate, perform, and scale</div>
 <div class="hero">
 <div class="hero-content">
-<p class="hero-subtext" style="font-size: var(--font-size-base); margin-bottom: var(--spacing-2xl);">With 15+ years <strong>shaping and scaling consumer brands</strong> across a wide range of categories, I bring a deep understanding of how to reach customers through thoughtful assortment planning and intentional product design. I help teams define clear strategies, build scalable category and pricing structures, and execute GTM plans that drive brand awareness and market impact.</p>
-<p class="hero-subtext" style="font-size: var(--font-size-base); margin-bottom: var(--spacing-2xl);">I partner with founder-led brands, fast-growing teams, and established organizations to <strong>strengthen decision-making, unify execution, and streamline processes</strong> that support long-term performance growth.</p>
-<p class="hero-subtext" style="font-size: var(--font-size-base); margin-bottom: var(--spacing-2xl);">Based in Barcelona and working globally, I support organizations through fractional, project-based, advisory, and full-time engagements. I help brands <strong>build product assortments that resonate, perform, and scale.</strong></p>
+<p class="hero-subtext" style="font-size: var(--font-size-base); margin-bottom: var(--spacing-2xl);">I help <strong>small to mid-sized food, grocery, and retail companies</strong> make smarter sourcing decisions, strengthen vendor partnerships, and build assortment strategies that improve both customer relevance and margin performance.</p>
+<p class="hero-subtext" style="font-size: var(--font-size-base); margin-bottom: var(--spacing-2xl);">With 15+ years leading product, category, and operational initiatives, I work with teams that want clear priorities, streamlined execution, and measurable business outcomes.</p>
+<p class="hero-subtext" style="font-size: var(--font-size-base); margin-bottom: var(--spacing-xl);">Engagements are collaborative and practical: strategic depth, operational rigor, and clear action plans your team can execute with confidence.</p>
+<div class="trust-chips">
+<span class="trust-chip">Sourcing Support</span>
+<span class="trust-chip">Operational Clarity</span>
+<span class="trust-chip">Vendor Partnerships</span>
+<span class="trust-chip">Assortment Strategy</span>
+</div>
 <div style="text-align: center;">
 <a class="btn" href="https://calendly.com/caitlingardulescu/" target="_blank">Book a Consultation</a>
 </div>
@@ -865,14 +960,41 @@
 </section>
 
 <!-- Logo Banner Section -->
-<section class="section" style="background: var(--bg-white); padding: 0; margin-top: -16px;">
-<img alt="Caitlin Gardulescu consulting logo and branding" src="images/caitlin-gardulescu-logo-banner.webp" style="width: 100vw; max-width: 100vw; height: auto; display: block; margin: 0 calc(50% - 50vw);"/>
+<section class="section" style="background: var(--bg-white); padding: 25px 0;">
+<div class="container">
+<div style="text-align: center; padding: 25px 0;">
+<img alt="Caitlin Gardulescu consulting logo and branding" src="images/caitlin-gardulescu-logo-banner.webp" style="max-width: min(117%, calc(100vw - 40px)); height: auto; display: block; margin: 0 auto;"/>
+</div>
+</div>
+</section>
+
+<section class="section outcome-strip">
+<div class="container">
+<div class="outcome-grid">
+<div class="outcome-card">
+<strong>Strategic Focus</strong>
+<span>Clear priorities for category and product decisions</span>
+</div>
+<div class="outcome-card">
+<strong>Operational Flow</strong>
+<span>Simplified workflows that reduce execution friction</span>
+</div>
+<div class="outcome-card">
+<strong>Vendor Alignment</strong>
+<span>Partnership structures that improve reliability and margin</span>
+</div>
+<div class="outcome-card">
+<strong>Actionable Plans</strong>
+<span>Practical next steps teams can implement immediately</span>
+</div>
+</div>
+</div>
 </section>
 
 <!-- Value Propositions -->
 <section class="section section--gradient-gold">
 <div class="container">
-<h2 style="text-align: center; margin-bottom: var(--spacing-3xl);">What I Do</h2>
+<h2 style="text-align: center; margin-bottom: var(--spacing-3xl);">How I Support Growing Food, Grocery &amp; Retail Teams</h2>
 <div class="value-props">
 <div class="value-prop">
 <div class="value-prop-icon">
@@ -1015,10 +1137,10 @@
 <section class="section">
 <div class="container">
 <div class="cta-section" style="text-align: center;">
-<h2>Ready to strengthen your product vision?</h2>
-<p>Book a 30-minute consultation to discuss your challenges and explore how I can help.</p>
+<h2>Ready for clearer strategy and smoother execution?</h2>
+<p>If you are evaluating next steps, we can start with a focused conversation and identify practical priorities for your team.</p>
 <div style="margin-top: var(--spacing-2xl);">
-<a class="btn" href="https://calendly.com/caitlingardulescu/" target="_blank">Schedule a Call</a>
+<a class="btn" href="#contact">Schedule a Call</a>
 </div>
 </div>
 </div>
@@ -1026,20 +1148,41 @@
 <!-- Contact Section -->
 <section class="section section--gold" id="contact">
 <div class="container">
-<div style="max-width: 980px; margin: 0 auto;">
-<div style="background: #f1f1f1; border: 1px solid rgba(43, 43, 45, 0.12); border-radius: 12px; padding: var(--spacing-2xl);">
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: var(--spacing-xl) var(--spacing-2xl); text-align: center;">
-<div>
-<p style="margin: 0 0 var(--spacing-sm); color: var(--dark); font-weight: 700;">Email</p>
-<p style="margin: 0;"><a href="mailto:caitlin@caitlingardulescu.com">caitlin@caitlingardulescu.com</a></p>
+<div class="contact-shell">
+<div class="contact-modern">
+<div class="contact-content">
+<div class="contact-intro">
+<h2>Get in Touch</h2>
+<div class="contact-badges">
+<span class="contact-badge">Food</span>
+<span class="contact-badge">Grocery</span>
+<span class="contact-badge">Retail</span>
 </div>
-<div>
-<p style="margin: 0 0 var(--spacing-sm); color: var(--dark); font-weight: 700;">Phone</p>
-<p style="margin: 0;"><a href="tel:+17348461006">+1 734-846-1006</a></p>
+<p>If your company needs sourcing support, streamlined operations, stronger vendor partnerships, and a clearer assortment strategy, I can help you map the right next steps and execute with confidence.</p>
+<ul class="contact-focus-list">
+<li>Assortment and pricing strategy grounded in category performance.</li>
+<li>Operational process design that removes friction and improves speed.</li>
+<li>Vendor partnership structures built for long-term growth.</li>
+</ul>
 </div>
-<div>
-<p style="margin: 0 0 var(--spacing-sm); color: var(--dark); font-weight: 700;">Location</p>
-<p style="margin: 0; color: var(--text-secondary);">Barcelona, Spain (GMT+1)</p>
+<div class="contact-details">
+<div class="contact-detail">
+<strong>Email</strong>
+<a href="mailto:caitlin@caitlingardulescu.com">caitlin@caitlingardulescu.com</a>
+</div>
+<div class="contact-detail">
+<strong>Phone</strong>
+<a href="tel:+17348461006">+1 734-846-1006</a>
+</div>
+<div class="contact-detail">
+<strong>Location</strong>
+<p>Barcelona, Spain (GMT+1)</p>
+</div>
+<div class="contact-actions">
+<a class="btn" href="https://calendly.com/caitlingardulescu/" target="_blank">Book on Calendly</a>
+<a class="btn btn-neutral" href="mailto:caitlin@caitlingardulescu.com">Email Directly</a>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -1066,7 +1209,7 @@
 </script>
 
 <!-- Scroll Animations -->
-<script src="js/scroll-animations-no-parallax.js" defer></script>
+<script src="js/scroll-animations.js" defer></script>
 
 <!-- Chaty Widget -->
 <script src="js/chaty-config.js" defer></script>
@@ -1083,8 +1226,9 @@
 <h4>Work</h4>
 <ul>
 <li><a href="pages/services.html">Services</a></li>
-<li><a href="pages/cv.html">Experience</a></li>
 <li><a href="pages/about.html">About</a></li>
+<li><a href="index.html#experience">Experience</a></li>
+<li><a href="pages/cv.html">CV</a></li>
 </ul>
 </div>
 <div class="footer-section">
