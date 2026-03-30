@@ -37,12 +37,16 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     }
 
-    // Close menu - nav link click
+    // Close menu - nav link click (but allow navigation to happen first)
     navLinks.forEach(link => {
       link.addEventListener('click', function(e) {
-        // Don't close if clicking the close button itself
+        // Check if this is an external link or CTA
+        const isExternal = link.target === '_blank' || link.href.startsWith('http');
+        const isCTA = link.classList.contains('nav-cta');
+
+        // Close menu after a brief delay to allow navigation
         if (!link.classList.contains('nav-close')) {
-          toggleMenu(false);
+          setTimeout(() => toggleMenu(false), 100);
         }
       });
     });
