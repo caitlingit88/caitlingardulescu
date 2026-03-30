@@ -74,7 +74,7 @@
       "left:" + tooltipLeft + "px",
       "transform:translateY(50%)"
     ].join(";");
-    tooltipEl.textContent = "Contact Us";
+    tooltipEl.textContent = "Contact";
     document.body.appendChild(tooltipEl);
 
     var triggerEl = document.createElement("div");
@@ -95,7 +95,6 @@
 
     triggerEl.onmouseenter = function() {
       triggerEl.style.transform = "scale(1.1)";
-      if (!isOpen) openWidget();
     };
     triggerEl.onmouseleave = function() { triggerEl.style.transform = "scale(1)"; };
 
@@ -210,12 +209,12 @@
       }
     });
 
-    // Show "Contact Us" when mouse in bottom-left 30% of screen
+    // Show "Contact" when mouse in bottom-left 30% of screen
     document.addEventListener("mousemove", function(e) {
       var inZone = e.clientX < window.innerWidth * 0.3 && e.clientY > window.innerHeight * 0.7;
 
       if (inZone && !isOpen) {
-        tooltipEl.textContent = "Contact Us";
+        tooltipEl.textContent = "Contact";
         tooltipEl.style.bottom = bottomOffset + iconSize / 2 + "px";
         tooltipEl.style.opacity = "1";
       } else if (!isOpen) {

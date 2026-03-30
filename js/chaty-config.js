@@ -18,13 +18,13 @@ window.CHATY_CONFIG = {
       name: "Email",
       label: "Email",
       url: "mailto:caitlin@caitlingardulescu.com",
-      svg: '<svg viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="19.4395" cy="19.4395" r="19.4395" fill="#EA4335"/><path d="M10.5 13.5H28.5C29.328 13.5 30 14.172 30 15V25C30 25.828 29.328 26.5 28.5 26.5H10.5C9.672 26.5 9 25.828 9 25V15C9 14.172 9.672 13.5 10.5 13.5ZM28.5 15L19.5 20.625L10.5 15H28.5ZM28.5 25V17.625L19.5 23.25L10.5 17.625V25H28.5Z" fill="white"/></svg>'
+      svg: '<svg viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="19.4395" cy="19.4395" r="19.4395" fill="#2B2B2D"/><path d="M10.5 13.5H28.5C29.328 13.5 30 14.172 30 15V25C30 25.828 29.328 26.5 28.5 26.5H10.5C9.672 26.5 9 25.828 9 25V15C9 14.172 9.672 13.5 10.5 13.5ZM28.5 15L19.5 20.625L10.5 15H28.5ZM28.5 25V17.625L19.5 23.25L10.5 17.625V25H28.5Z" fill="white"/></svg>'
     },
     {
       name: "Phone",
       label: "Phone",
       url: "tel:+17348461006",
-      svg: '<svg viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="19.4395" cy="19.4395" r="19.4395" fill="#4CAF50"/><path d="M11.5 11.5H14L17.5 26.5H12.5L11.5 11.5ZM25.5 11.5H28L27 26.5H22L25.5 11.5ZM16.5 13L15 26.5H24L22.5 13H16.5Z" fill="white"/></svg>'
+      svg: '<svg viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="19.5" cy="19.5" r="19.5" fill="#B8891D"/><g transform="translate(7.5 7.5)"><path d="M15.05 5A5 5 0 0 1 19 8.95" stroke="white" stroke-width="2" stroke-linecap="round"/><path d="M15.05 1A9 9 0 0 1 23 8.95" stroke="white" stroke-width="2" stroke-linecap="round"/><path d="M22 16.92V20a2 2 0 0 1-2.18 2A19.77 19.77 0 0 1 11.19 19.74 19.5 19.5 0 0 1 4.26 12.81 19.77 19.77 0 0 1 2 4.18 2 2 0 0 1 3.92 2h3.1a2 2 0 0 1 2 1.72c.12.9.36 1.77.7 2.59a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.49-1.18a2 2 0 0 1 2.11-.45c.82.34 1.69.58 2.59.7A2 2 0 0 1 22 16.92Z" fill="white"/></g></svg>'
     }
   ]
 };
