@@ -17,9 +17,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Only initialize if hamburger exists (mobile view)
   if (hamburger) {
-    // Open menu
+    // Toggle menu - hamburger click
     hamburger.addEventListener('click', function() {
-      toggleMenu(true);
+      const isOpen = nav.getAttribute('data-menu-open') === 'true';
+      toggleMenu(!isOpen);
     });
 
     // Close menu - overlay click
