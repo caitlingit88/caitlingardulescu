@@ -525,6 +525,167 @@
             margin-bottom: var(--spacing-2xl);
         }
 
+        /* Contact Experience */
+        .contact-shell {
+            max-width: 980px;
+            margin: 0 auto;
+        }
+
+        .contact-modern {
+            position: relative;
+            background: linear-gradient(145deg, #ffffff 0%, #faf6f1 100%);
+            border: 1px solid rgba(43, 43, 45, 0.15);
+            border-radius: 16px;
+            padding: var(--spacing-3xl);
+            overflow: hidden;
+            box-shadow: 0 18px 35px rgba(43, 43, 45, 0.08);
+        }
+
+        .contact-modern::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, var(--gold) 0%, var(--dark) 50%, var(--gold) 100%);
+            background-size: 200% 100%;
+            animation: contactSweep 10s linear infinite;
+        }
+
+        .contact-modern::after {
+            content: '';
+            position: absolute;
+            width: 320px;
+            height: 320px;
+            right: -120px;
+            top: -140px;
+            background: radial-gradient(circle, rgba(202, 156, 31, 0.22) 0%, rgba(202, 156, 31, 0) 68%);
+            pointer-events: none;
+            animation: contactFloat 14s ease-in-out infinite;
+        }
+
+        .contact-content {
+            position: relative;
+            z-index: 1;
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: var(--spacing-3xl);
+            align-items: start;
+        }
+
+        .contact-intro h2 {
+            margin-bottom: var(--spacing-lg);
+            color: var(--dark);
+        }
+
+        .contact-intro p {
+            color: var(--dark);
+        }
+
+        .contact-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--spacing-md);
+            margin-bottom: var(--spacing-xl);
+        }
+
+        .contact-badge {
+            padding: 6px 10px;
+            border-radius: 999px;
+            border: 1px solid rgba(202, 156, 31, 0.4);
+            background-color: rgba(202, 156, 31, 0.16);
+            color: var(--dark);
+            font-size: var(--font-size-xs);
+            font-weight: 600;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+        }
+
+        .contact-focus-list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: grid;
+            gap: var(--spacing-md);
+        }
+
+        .contact-focus-list li {
+            padding-left: var(--spacing-lg);
+            border-left: 3px solid var(--gold);
+            color: var(--dark);
+            font-size: var(--font-size-sm);
+            line-height: var(--line-height-normal);
+        }
+
+        .contact-details {
+            display: grid;
+            gap: var(--spacing-lg);
+        }
+
+        .contact-detail {
+            background-color: rgba(255, 255, 255, 0.88);
+            border: 1px solid rgba(43, 43, 45, 0.14);
+            border-radius: 10px;
+            padding: var(--spacing-lg);
+        }
+
+        .contact-detail strong {
+            display: block;
+            color: var(--dark);
+            margin-bottom: var(--spacing-sm);
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            font-size: var(--font-size-xs);
+        }
+
+        .contact-detail a,
+        .contact-detail p {
+            color: var(--dark);
+            margin: 0;
+            line-height: var(--line-height-normal);
+        }
+
+        .contact-detail a:hover {
+            color: var(--gold);
+        }
+
+        .contact-actions {
+            display: flex;
+            gap: var(--spacing-md);
+            flex-wrap: wrap;
+            margin-top: var(--spacing-md);
+        }
+
+        .btn-neutral {
+            background-color: transparent;
+            color: var(--dark);
+            border: 1px solid var(--dark);
+        }
+
+        .btn-neutral:hover {
+            border-color: var(--gold);
+            color: var(--gold);
+        }
+
+        @keyframes contactSweep {
+            from {
+                background-position: 0% 50%;
+            }
+            to {
+                background-position: 200% 50%;
+            }
+        }
+
+        @keyframes contactFloat {
+            0%, 100% {
+                transform: translate(0, 0);
+            }
+            50% {
+                transform: translate(-20px, 14px);
+            }
+        }
+
         /* Banner */
         .banner {
             text-align: center;
@@ -629,6 +790,22 @@
 
             .footer-content {
                 grid-template-columns: 1fr;
+            }
+
+            .contact-modern {
+                padding: var(--spacing-2xl);
+            }
+
+            .contact-content {
+                grid-template-columns: 1fr;
+                gap: var(--spacing-2xl);
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .contact-modern::before,
+            .contact-modern::after {
+                animation: none;
             }
         }
     </style>
@@ -836,7 +1013,7 @@
 <h2>Ready to strengthen your product vision?</h2>
 <p>Book a 30-minute consultation to discuss your challenges and explore how I can help.</p>
 <div style="margin-top: var(--spacing-2xl);">
-<a class="btn" href="#contact">Schedule a Call</a>
+<a class="btn" href="https://calendly.com/caitlingardulescu/" target="_blank">Schedule a Call</a>
 </div>
 </div>
 </div>
@@ -844,25 +1021,20 @@
 <!-- Contact Section -->
 <section class="section section--gold" id="contact">
 <div class="container">
-<div style="max-width: 600px; margin: 0 auto; text-align: center;">
-<h2>Get in Touch</h2>
-<div style="background-color: var(--bg-white); padding: var(--spacing-2xl); border: 1px solid var(--border); border-radius: 8px; text-align: center;">
-<p style="margin-bottom: var(--spacing-2xl);">Book a consultation or reach out directly:</p>
-<div style="margin-bottom: var(--spacing-2xl);">
-<p style="color: var(--dark); margin-bottom: var(--spacing-sm);"><strong>Email</strong></p>
-<p><a href="mailto:caitlin@caitlingardulescu.com">caitlin@caitlingardulescu.com</a></p>
+<div style="max-width: 980px; margin: 0 auto;">
+<div style="background: #f1f1f1; border: 1px solid rgba(43, 43, 45, 0.12); border-radius: 12px; padding: var(--spacing-2xl);">
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: var(--spacing-xl) var(--spacing-2xl); text-align: center;">
+<div>
+<p style="margin: 0 0 var(--spacing-sm); color: var(--dark); font-weight: 700;">Email</p>
+<p style="margin: 0;"><a href="mailto:caitlin@caitlingardulescu.com">caitlin@caitlingardulescu.com</a></p>
 </div>
-<div style="margin-bottom: var(--spacing-2xl);">
-<p style="color: var(--dark); margin-bottom: var(--spacing-sm);"><strong>Phone</strong></p>
-<p><a href="tel:+17348461006">+1 734-846-1006</a></p>
+<div>
+<p style="margin: 0 0 var(--spacing-sm); color: var(--dark); font-weight: 700;">Phone</p>
+<p style="margin: 0;"><a href="tel:+17348461006">+1 734-846-1006</a></p>
 </div>
-<div style="margin-bottom: var(--spacing-2xl);">
-<p style="color: var(--dark); margin-bottom: var(--spacing-sm);"><strong>Location</strong></p>
-<p>Barcelona, Spain (GMT+1)</p>
-</div>
-<div style="padding-top: var(--spacing-2xl); border-top: 1px solid var(--border);">
-<p style="margin-bottom: var(--spacing-md);">Prefer a calendar booking?</p>
-<a class="btn" href="https://calendly.com/caitlingardulescu/" target="_blank">Book on Calendly</a>
+<div>
+<p style="margin: 0 0 var(--spacing-sm); color: var(--dark); font-weight: 700;">Location</p>
+<p style="margin: 0; color: var(--text-secondary);">Barcelona, Spain (GMT+1)</p>
 </div>
 </div>
 </div>
@@ -889,7 +1061,7 @@
 </script>
 
 <!-- Scroll Animations -->
-<script src="js/scroll-animations.js" defer></script>
+<script src="js/scroll-animations-no-parallax.js" defer></script>
 
 <!-- Chaty Widget -->
 <script src="js/chaty-config.js" defer></script>
