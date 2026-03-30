@@ -264,9 +264,9 @@
         /* Hero */
         .hero {
             display: grid;
-            grid-template-columns: 3fr 1fr;
+            grid-template-columns: 2.6fr 1.4fr;
             gap: var(--spacing-2xl);
-            align-items: center;
+            align-items: start;
             padding: 25px 0;
         }
 
@@ -278,16 +278,18 @@
         .hero-subtext {
             font-size: var(--font-size-lg);
             color: var(--text-secondary);
-            margin-bottom: var(--spacing-2xl);
+            margin-bottom: var(--spacing-xl);
             line-height: var(--line-height-relaxed);
         }
 
         .hero-image {
             width: 100%;
+            height: auto;
             aspect-ratio: 1/1;
             background-color: var(--bg-light);
             border-radius: 8px;
             overflow: hidden;
+            justify-self: end;
         }
 
         .hero-image img {
@@ -723,6 +725,8 @@
 
             .hero-image {
                 order: -1;
+                height: auto;
+                aspect-ratio: 1/1;
             }
 
             .value-props {
