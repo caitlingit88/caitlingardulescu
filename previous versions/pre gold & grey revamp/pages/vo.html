@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <base href="../../../">
     <title>Voice Over | Caitlin Gardulescu</title>
     <meta name="description" content="Professional voice over services. Commercial and narration demos from strategic consultant with warm, expressive, and conversational voice. Perfect for brands seeking authentic storytelling.">
     <meta property="og:title" content="Voice Over | Caitlin Gardulescu">
@@ -81,13 +82,12 @@
             background: var(--bg-white);
             display: flex;
             flex-direction: column;
-            overflow-x: hidden;
-            overflow-y: auto;
+            overflow: hidden;
         }
 
         main {
             flex: 1;
-            overflow: visible;
+            overflow: hidden;
             display: flex;
             flex-direction: column;
         }
@@ -221,50 +221,10 @@
             padding-right: var(--spacing-lg);
         }
 
-        .page-banner {
-            text-align: left;
+        .hero-vo-content h1 {
             font-family: 'Playfair Display', serif;
-            font-size: calc(var(--font-size-2xl) + 10px);
-            font-weight: 700;
-            letter-spacing: 0.01em;
-            color: var(--dark);
-            margin-bottom: 18px;
-            padding-bottom: 18px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .page-banner::after {
-            content: '';
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            width: 100%;
-            height: 2px;
-            background: linear-gradient(
-                90deg,
-                rgba(202, 156, 31, 0.15) 0%,
-                rgba(202, 156, 31, 0.95) 45%,
-                rgba(255, 238, 194, 0.95) 55%,
-                rgba(202, 156, 31, 0.95) 65%,
-                rgba(202, 156, 31, 0.15) 100%
-            );
-            background-size: 220% 100%;
-            transform-origin: left center;
-            transform: scaleX(0);
-            animation:
-                pageBannerSatinReveal 1.2s ease-out 0.08s forwards,
-                pageBannerSatinShine 2.2s linear 0.5s forwards;
-        }
-
-        @keyframes pageBannerSatinReveal {
-            from { transform: scaleX(0); }
-            to { transform: scaleX(1); }
-        }
-
-        @keyframes pageBannerSatinShine {
-            from { background-position: 0% 0; }
-            to { background-position: 100% 0; }
+            font-size: var(--font-size-2xl);
+            margin-bottom: var(--spacing-md);
         }
 
         .hero-vo-content p {
@@ -395,10 +355,6 @@
 
         /* Responsive */
         @media (max-width: 768px) {
-            .page-banner {
-                font-size: var(--font-size-2xl);
-            }
-
             .hero-vo {
                 grid-template-columns: 1fr;
             }
@@ -424,7 +380,7 @@
 <header>
 <div class="container">
 <nav data-menu-open="false">
-<div class="logo"><a href="../index.html" style="color: inherit; text-decoration: none;"><img src="../images/CG-logo-new.webp" alt="Caitlin Gardulescu" style="height: 48px; width: auto;"/></a></div>
+<div class="logo"><a href="../index.html" style="color: inherit; text-decoration: none;"><img src="../images/CG-logo-new.webp" alt="Caitlin Gardulescu" style="height: 40px; width: auto;"/></a></div>
 <div class="nav-header-cta">
 <a class="btn" href="https://calendly.com/caitlingardulescu/" target="_blank">Book a Call</a>
 </div>
@@ -449,7 +405,7 @@
             <div class="container" style="flex: 1; display: flex; flex-direction: column;">
                 <div class="hero-vo">
                     <div class="hero-vo-content">
-                        <h1 class="page-banner">Voice Over</h1>
+                        <h1>Voice Over</h1>
                         <p>I've always been a natural storyteller! Today, that love of speaking has grown into a voice that is warm, expressive, and effortlessly conversational. I specialize in commercial and narration work, creating polished, relatable reads that connect with audiences and elevate brand messaging with authenticity and ease.</p>
 
                         <p>Drawing on years of public speaking and experience presenting on video, along with professionally produced commercial and narration demos, I bring emotional depth, strong pacing, and a clear storytelling instinct to every script. Explore my demos to hear how my voice can elevate your brand and capture attention.</p>

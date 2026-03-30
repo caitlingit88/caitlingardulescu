@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <base href="../../../">
     <title>Consulting Services | Caitlin Gardulescu</title>
     <meta name="description" content="Product strategy, go-to-market planning, and operational excellence consulting services.">
     <meta property="og:title" content="Consulting Services | Caitlin Gardulescu">
@@ -378,57 +379,15 @@
             padding: var(--spacing-3xl) 0;
         }
 
+        .hero h1 {
+            margin-bottom: var(--spacing-lg);
+        }
+
         .hero-subtext {
             font-size: var(--font-size-lg);
             color: var(--text-secondary);
             max-width: 700px;
             margin: 0 auto var(--spacing-2xl);
-        }
-
-        .page-banner {
-            text-align: center;
-            font-family: 'Playfair Display', serif;
-            font-size: calc(var(--font-size-2xl) + 10px);
-            font-weight: 700;
-            letter-spacing: 0.01em;
-            color: var(--dark);
-            margin-bottom: 18px;
-            padding-bottom: 18px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .page-banner::after {
-            content: '';
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            width: 100%;
-            height: 2px;
-            background: linear-gradient(
-                90deg,
-                rgba(202, 156, 31, 0.15) 0%,
-                rgba(202, 156, 31, 0.95) 45%,
-                rgba(255, 238, 194, 0.95) 55%,
-                rgba(202, 156, 31, 0.95) 65%,
-                rgba(202, 156, 31, 0.15) 100%
-            );
-            background-size: 220% 100%;
-            transform-origin: left center;
-            transform: scaleX(0);
-            animation:
-                pageBannerSatinReveal 1.2s ease-out 0.08s forwards,
-                pageBannerSatinShine 2.2s linear 0.5s forwards;
-        }
-
-        @keyframes pageBannerSatinReveal {
-            from { transform: scaleX(0); }
-            to { transform: scaleX(1); }
-        }
-
-        @keyframes pageBannerSatinShine {
-            from { background-position: 0% 0; }
-            to { background-position: 100% 0; }
         }
 
         /* Service Deep Dive */
@@ -594,10 +553,6 @@
 
         /* Responsive */
         @media (max-width: 768px) {
-            .page-banner {
-                font-size: var(--font-size-2xl);
-            }
-
             h1 {
                 font-size: var(--font-size-2xl);
             }
@@ -626,7 +581,7 @@
 <header>
 <div class="container">
 <nav data-menu-open="false">
-<div class="logo"><a href="../index.html" style="color: inherit; text-decoration: none;"><img src="../images/CG-logo-new.webp" alt="Caitlin Gardulescu" style="height: 48px; width: auto;"/></a></div>
+<div class="logo"><a href="../index.html" style="color: inherit; text-decoration: none;"><img src="../images/CG-logo-new.webp" alt="Caitlin Gardulescu" style="height: 40px; width: auto;"/></a></div>
 <div class="nav-header-cta">
 <a class="btn" href="https://calendly.com/caitlingardulescu/" target="_blank">Book a Call</a>
 </div>
@@ -649,7 +604,7 @@
     <!-- Hero -->
     <section class="section hero">
         <div class="container">
-            <h1 class="page-banner">Strategic consulting tailored to your business</h1>
+            <h1>Strategic consulting tailored to your business</h1>
             <p class="hero-subtext">I work with founder-led brands and fast-growing teams across food, retail, DTC, and consumer categories. Whether you need a thought partner on strategy or hands-on execution support, I'm here to help.</p>
         </div>
     </section>

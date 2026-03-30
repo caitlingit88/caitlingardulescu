@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <base href="../../../">
     <title>Creative Work | Caitlin Gardulescu</title>
     <meta name="description" content="Creative writing, visual storytelling, and brand expression. Explore essays, photography, and artistic practice at the intersection of art and commerce.">
     <meta property="og:title" content="Creative Work | Caitlin Gardulescu">
@@ -110,52 +111,6 @@
         .btn { display: inline-flex; align-items: center; gap: var(--spacing-sm); background: var(--gold); color: var(--bg-white); padding: var(--spacing-md) var(--spacing-xl); border-radius: 4px; font-weight: 600; font-size: var(--font-size-sm); text-transform: uppercase; letter-spacing: 0.05em; cursor: pointer; border: none; transition: opacity 0.2s ease; font-family: var(--font-system); }
         .btn:hover { opacity: 0.9; }
 
-        .page-banner {
-            text-align: center;
-            font-family: 'Playfair Display', serif;
-            font-size: calc(var(--font-size-2xl) + 10px);
-            font-weight: 700;
-            letter-spacing: 0.01em;
-            color: var(--dark);
-            margin-bottom: 18px;
-            padding-bottom: 18px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .page-banner::after {
-            content: '';
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            width: 100%;
-            height: 2px;
-            background: linear-gradient(
-                90deg,
-                rgba(202, 156, 31, 0.15) 0%,
-                rgba(202, 156, 31, 0.95) 45%,
-                rgba(255, 238, 194, 0.95) 55%,
-                rgba(202, 156, 31, 0.95) 65%,
-                rgba(202, 156, 31, 0.15) 100%
-            );
-            background-size: 220% 100%;
-            transform-origin: left center;
-            transform: scaleX(0);
-            animation:
-                pageBannerSatinReveal 1.2s ease-out 0.08s forwards,
-                pageBannerSatinShine 2.2s linear 0.5s forwards;
-        }
-
-        @keyframes pageBannerSatinReveal {
-            from { transform: scaleX(0); }
-            to { transform: scaleX(1); }
-        }
-
-        @keyframes pageBannerSatinShine {
-            from { background-position: 0% 0; }
-            to { background-position: 100% 0; }
-        }
-
         /* Footer */
         footer {
             background-color: var(--dark);
@@ -209,7 +164,6 @@
         }
 
         @media (max-width: 768px) {
-            .page-banner { font-size: var(--font-size-2xl); }
             .nav-links { display: none; }
             .portfolio-grid { grid-template-columns: 1fr; }
             align-items: center;
@@ -220,7 +174,7 @@
 <header>
 <div class="container">
 <nav data-menu-open="false">
-<div class="logo"><a href="../index.html" style="color: inherit; text-decoration: none;"><img src="../images/CG-logo-new.webp" alt="Caitlin Gardulescu" style="height: 48px; width: auto;"/></a></div>
+<div class="logo"><a href="../index.html" style="color: inherit; text-decoration: none;"><img src="../images/CG-logo-new.webp" alt="Caitlin Gardulescu" style="height: 40px; width: auto;"/></a></div>
 <div class="nav-header-cta">
 <a class="btn" href="https://calendly.com/caitlingardulescu/" target="_blank">Book a Call</a>
 </div>
@@ -243,7 +197,7 @@
     <main>
         <section class="section">
             <div class="container">
-                <h1 class="page-banner">Creative Work</h1>
+                <h1>Creative Work</h1>
                 <p>Beyond business strategy, I'm a creative writer and artist with an exceptional eye for color. My creative practice explores storytelling, visual expression, and the intersection of art and commerce.</p>
 
                 <div class="portfolio-grid">
