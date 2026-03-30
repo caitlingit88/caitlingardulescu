@@ -520,6 +520,33 @@
             grid-template-columns: 1fr 1fr;
             gap: var(--spacing-3xl);
             align-items: center;
+            position: relative;
+        }
+
+        .section-2col::before {
+            content: "";
+            position: absolute;
+            left: 50%;
+            top: 8px;
+            bottom: 8px;
+            width: 1px;
+            background: linear-gradient(
+                to bottom,
+                rgba(43, 43, 45, 0.05) 0%,
+                rgba(43, 43, 45, 0.16) 20%,
+                rgba(43, 43, 45, 0.16) 80%,
+                rgba(43, 43, 45, 0.05) 100%
+            );
+            transform: translateX(-0.5px);
+        }
+
+        .section-2col-title {
+            font-family: 'Playfair Display', serif;
+            font-size: var(--font-size-2xl);
+            font-weight: 600;
+            line-height: var(--line-height-tight);
+            margin-bottom: var(--spacing-xl);
+            color: var(--dark);
         }
 
         /* Footer */
@@ -863,6 +890,10 @@
                 grid-template-columns: 1fr;
             }
 
+            .section-2col::before {
+                display: none;
+            }
+
             .nav-links {
                 display: flex;
                 flex-direction: column;
@@ -1023,13 +1054,12 @@
 <div class="container">
 <div class="section-2col">
 <div>
-<h2>Strategic depth across categories</h2>
-<p>I work at the intersection of product strategy and execution, helping teams turn priorities into plans that can actually be delivered.</p>
-<p>My focus includes assortment architecture, vendor strategy, pricing structure, and cross-functional launch readiness across food, grocery, retail, and consumer categories.</p>
-<p style="margin-top: var(--spacing-2xl);"><strong>I partner with founder-led brands and established businesses</strong> to align teams, sharpen decision-making, and build practical systems that support consistent growth.</p>
+<h2 class="section-2col-title">Operational Strategy in Practice</h2>
+<p>I help teams streamline processes, strengthen vendor partnerships, and scale operations across physical product businesses.</p>
+<p style="margin-top: var(--spacing-2xl);">Grounded in how consumers interact with products in everyday life, my approach connects assortment, pricing, and execution to measurable performance outcomes.</p>
 </div>
 <div>
-<h3 style="margin-bottom: var(--spacing-xl);">Key Experience</h3>
+<h2 class="section-2col-title">Key Experience</h2>
 <ul style="list-style: none; line-height: var(--line-height-relaxed);">
 <li style="padding: var(--spacing-md) 0; border-bottom: 1px solid var(--border);"><strong>Amazon Fresh</strong> — Vendor strategy, seasonal growth, clearance optimization</li>
 <li style="padding: var(--spacing-md) 0; border-bottom: 1px solid var(--border);"><strong>Wakefern</strong> — Private label product development, 360+ store rollouts</li>
