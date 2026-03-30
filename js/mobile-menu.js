@@ -3,7 +3,6 @@ document.addEventListener('DOMContentLoaded', function() {
   const nav = document.querySelector('nav');
   const hamburger = document.querySelector('.hamburger');
   const navLinks = document.querySelectorAll('.nav-links a');
-  const closeButton = document.querySelector('.nav-close');
   const menuOverlay = document.querySelector('.menu-overlay');
 
   // Toggle menu open/close
@@ -23,13 +22,6 @@ document.addEventListener('DOMContentLoaded', function() {
       toggleMenu(true);
     });
 
-    // Close menu - button
-    if (closeButton) {
-      closeButton.addEventListener('click', function() {
-        toggleMenu(false);
-      });
-    }
-
     // Close menu - overlay click
     if (menuOverlay) {
       menuOverlay.addEventListener('click', function() {
@@ -40,14 +32,8 @@ document.addEventListener('DOMContentLoaded', function() {
     // Close menu - nav link click (but allow navigation to happen first)
     navLinks.forEach(link => {
       link.addEventListener('click', function(e) {
-        // Check if this is an external link or CTA
-        const isExternal = link.target === '_blank' || link.href.startsWith('http');
-        const isCTA = link.classList.contains('nav-cta');
-
         // Close menu after a brief delay to allow navigation
-        if (!link.classList.contains('nav-close')) {
-          setTimeout(() => toggleMenu(false), 100);
-        }
+        setTimeout(() => toggleMenu(false), 100);
       });
     });
   }
