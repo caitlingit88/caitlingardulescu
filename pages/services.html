@@ -197,6 +197,124 @@
             box-shadow: 0 4px 12px rgba(202, 156, 31, 0.3);
         }
 
+        .nav-header-cta {
+            display: none;
+        }
+
+        .nav-header-cta .btn {
+            padding: var(--spacing-sm) var(--spacing-lg);
+            font-size: var(--font-size-xs);
+        }
+
+        .hamburger {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            flex-direction: column;
+            gap: 6px;
+            padding: 8px;
+            z-index: 102;
+        }
+
+        .hamburger span {
+            width: 24px;
+            height: 2px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 2px;
+            transition: all 0.3s ease;
+        }
+
+        .menu-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 100;
+            pointer-events: none;
+        }
+
+        nav[data-menu-open="true"] .menu-overlay {
+            display: block;
+            pointer-events: auto;
+        }
+
+        .nav-close {
+            display: none;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-header-cta {
+                display: block;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .nav-links {
+                display: flex;
+                flex-direction: column;
+                position: fixed;
+                top: 0;
+                right: 0;
+                height: 100vh;
+                width: 100%;
+                background-color: #000000;
+                padding: var(--spacing-2xl) var(--spacing-lg);
+                gap: var(--spacing-lg);
+                z-index: 101;
+                transform: translateX(100%);
+                transition: transform 0.3s ease-out;
+                align-items: stretch;
+                justify-content: flex-start;
+            }
+
+            nav[data-menu-open="true"] .nav-links {
+                transform: translateX(0);
+            }
+
+            .nav-links li {
+                margin: 0;
+            }
+
+            .nav-links a {
+                display: block;
+                padding: var(--spacing-lg) 0;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+                cursor: pointer;
+                user-select: none;
+            }
+
+            .nav-links a.nav-cta {
+                padding: var(--spacing-md) var(--spacing-xl);
+                border: none;
+                margin-top: var(--spacing-lg);
+                margin-bottom: var(--spacing-lg);
+                display: inline-block;
+                width: 100%;
+                text-align: center;
+            }
+
+            .nav-close {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: none;
+                border: none;
+                color: rgba(255, 255, 255, 0.8);
+                font-size: 24px;
+                cursor: pointer;
+                padding: 8px 0;
+                margin-top: auto;
+                align-self: flex-end;
+            }
+        }
+
         /* Footer */
         footer {
             background-color: var(--dark);
@@ -478,15 +596,25 @@
 <!-- Header -->
 <header>
 <div class="container">
-<nav>
+<nav data-menu-open="false">
 <div class="logo"><a href="../index.html" style="color: inherit; text-decoration: none;"><img src="../images/caitlin gardulescu caitlingardulescu logo.webp" alt="Caitlin Gardulescu" style="height: 40px; width: auto;"/></a></div>
+<div class="nav-header-cta">
+<a class="btn" href="https://calendly.com/caitlingardulescu/" target="_blank">Book a Call</a>
+</div>
+<button class="hamburger" aria-label="Menu">
+  <span></span>
+  <span></span>
+  <span></span>
+</button>
 <ul class="nav-links">
 <li><a href="about.html">About</a></li>
 <li><a href="services.html">Services</a></li>
 <li><a href="../index.html#experience">Experience</a></li>
 <li><a href="cv.html">CV</a></li>
 <li><a class="nav-cta" href="https://calendly.com/caitlingardulescu/" target="_blank">Book a Call</a></li>
+<li><button class="nav-close" aria-label="Close menu">✕</button></li>
 </ul>
+<div class="menu-overlay" data-menu-overlay></div>
 </nav>
 </div>
 </header>
@@ -710,5 +838,8 @@
 </div>
 </div>
 </footer>
+
+<!-- Mobile Menu -->
+<script src="../js/mobile-menu.js" defer></script>
 </body>
 </html>
