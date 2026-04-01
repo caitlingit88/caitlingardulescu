@@ -442,7 +442,7 @@
         /* Service Cards */
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
+            grid-template-columns: repeat(3, 1fr);
             gap: var(--spacing-md);
             margin: var(--spacing-2xl) 0;
         }
@@ -462,10 +462,33 @@
 
         .service-card h3 {
             color: var(--dark);
-            font-size: var(--font-size-lg);
+            font-size: calc(var(--font-size-base) + 1px);
             font-weight: 700;
             margin-bottom: var(--spacing-lg);
             line-height: var(--line-height-tight);
+            white-space: nowrap;
+        }
+
+        .service-thumb {
+            width: 100%;
+            aspect-ratio: 16 / 7;
+            object-fit: cover;
+            border: 1px solid rgba(43, 43, 45, 0.12);
+            border-radius: 6px;
+            margin-bottom: var(--spacing-md);
+        }
+
+        .service-card p {
+            margin: 0;
+        }
+
+        .collab-title {
+            text-align: center;
+            font-family: 'Playfair Display', serif;
+            font-size: calc(var(--font-size-2xl) + 4px);
+            font-weight: 700;
+            letter-spacing: 0.01em;
+            margin-bottom: var(--spacing-2xl);
         }
 
         .service-card ul {
@@ -1127,45 +1150,22 @@
 <!-- Services Section -->
 <section class="section section--gradient-cream" id="services">
 <div class="container">
-<h2 style="text-align: center;">Consulting Services</h2>
-<p style="text-align: center; font-size: var(--font-size-lg); margin-bottom: var(--spacing-3xl);">Full-time roles and project-based engagements for teams ready to scale strategically.</p>
+<h2 class="collab-title">Ways to Collaborate</h2>
 <div class="services-grid">
 <div class="service-card">
-<h3>Brand, Category &amp; Product Strategy</h3>
-<ul>
-<li>Concept development</li>
-<li>Assortment planning</li>
-<li>Consumer insight integration</li>
-<li>Pricing and margin optimization</li>
-<li>Performance analysis</li>
-</ul>
+<img class="service-thumb" src="https://images.pexels.com/photos/264507/pexels-photo-264507.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1200" alt="Grocery store aisle"/>
+<h3>Product &amp; Category Strategy</h3>
+<p>Define, evaluate, and refine assortments to improve performance and unlock growth.</p>
 </div>
 <div class="service-card">
-<h3>GTM &amp; Launch Planning</h3>
-<ul>
-<li>Product positioning and market definition</li>
-<li>Cross-functional launch execution</li>
-<li>Promotional and channel strategy</li>
-<li>Read/react testing</li>
-</ul>
+<img class="service-thumb" src="https://images.pexels.com/photos/1884584/pexels-photo-1884584.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1200" alt="Retail clothing rack"/>
+<h3>Go-To-Market &amp; Commercial Execution</h3>
+<p>Align strategy and execution to ensure products launch and perform effectively.</p>
 </div>
 <div class="service-card">
-<h3>Sourcing &amp; Vendor Partnerships</h3>
-<ul>
-<li>Pricing strategy and cost negotiations</li>
-<li>Vendor onboarding and quality control</li>
-<li>End-to-end supply chain planning</li>
-<li>Long-term partnerships</li>
-</ul>
-</div>
-<div class="service-card">
-<h3>Process Optimization</h3>
-<ul>
-<li>Workflow and process design</li>
-<li>Operational scaling</li>
-<li>Cross-functional communication &amp; alignment</li>
-<li>Efficiency-focused process streamlining</li>
-</ul>
+<img class="service-thumb" src="https://images.pexels.com/photos/1181396/pexels-photo-1181396.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1200" alt="People in a conference room meeting"/>
+<h3>Vendor Strategy &amp; Operational Excellence</h3>
+<p>Strengthen vendor matrix and streamline operations to support scalable growth.</p>
 </div>
 </div>
 </div>
