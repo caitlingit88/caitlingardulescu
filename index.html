@@ -698,6 +698,32 @@
             font-weight: 700;
         }
 
+        .contact-live-time {
+            margin-top: var(--spacing-sm);
+            color: var(--text-secondary);
+            font-size: var(--font-size-sm);
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            justify-content: center;
+            white-space: nowrap;
+        }
+
+        .contact-live-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--gold);
+            box-shadow: 0 0 0 0 rgba(198, 159, 46, 0.45);
+            animation: livePulse 2.2s ease-out infinite;
+        }
+
+        @keyframes livePulse {
+            0% { box-shadow: 0 0 0 0 rgba(198, 159, 46, 0.45); }
+            70% { box-shadow: 0 0 0 8px rgba(198, 159, 46, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(198, 159, 46, 0); }
+        }
+
         /* Contact Experience */
         .contact-shell {
             max-width: 980px;
@@ -1199,8 +1225,9 @@
 <p><a href="tel:+17348461006">+1 734-846-1006</a></p>
 </div>
 <div class="contact-unified-item">
-<p class="contact-unified-label">Location</p>
-<p style="color: var(--text-secondary);">Barcelona, Spain (GMT+1)</p>
+<p class="contact-unified-label">Current Location</p>
+<p style="color: var(--text-secondary);">Da Nang, Vietnam (ICT, GMT+7)</p>
+<p aria-live="polite" class="contact-live-time"><span aria-hidden="true" class="contact-live-dot"></span>Local time: <span id="danang-local-time">--:--</span></p>
 </div>
 </div>
 </div>
@@ -1234,6 +1261,33 @@
 
 <!-- Mobile Menu -->
 <script src="js/mobile-menu.js" defer></script>
+
+<script>
+(() => {
+  const timeEl = document.getElementById('danang-local-time');
+  if (!timeEl) return;
+
+  const formatter = new Intl.DateTimeFormat('en-US', {
+    timeZone: 'Asia/Ho_Chi_Minh',
+    hour: 'numeric',
+    minute: '2-digit',
+    hour12: true
+  });
+
+  const updateTime = () => {
+    timeEl.textContent = formatter.format(new Date());
+  };
+
+  updateTime();
+
+  const now = new Date();
+  const delayToNextMinute = (60 - now.getSeconds()) * 1000 - now.getMilliseconds();
+  setTimeout(() => {
+    updateTime();
+    setInterval(updateTime, 60000);
+  }, Math.max(delayToNextMinute, 0));
+})();
+</script>
 
 <!-- Footer -->
 <footer>
