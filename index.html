@@ -455,6 +455,18 @@
             transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
 
+        .service-card-link {
+            display: block;
+            text-decoration: none;
+            color: inherit;
+            cursor: pointer;
+        }
+
+        .service-card-link:focus-visible {
+            outline: 3px solid var(--gold);
+            outline-offset: 3px;
+        }
+
         .service-card:hover {
             transform: translateY(-2px);
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
@@ -1188,21 +1200,21 @@
 <div class="container">
 <h2 class="collab-title">Ways to Collaborate</h2>
 <div class="services-grid">
-<div class="service-card">
+<a class="service-card service-card-link" href="pages/services.html#product-category-strategy">
 <img class="service-thumb" src="images/img-2183-2-square-produce.jpg" alt="Produce section"/>
 <h3>Product &amp; Category Strategy</h3>
 <p>Define, evaluate, and refine assortments to improve performance and unlock growth.</p>
-</div>
-<div class="service-card">
+</a>
+<a class="service-card service-card-link" href="pages/services.html#go-to-market-product-sourcing">
 <img class="service-thumb" src="images/img-1483-tees-on-table.jpg" alt="Retail merchandise table"/>
-<h3>Go-To-Market &amp; Commercial Execution</h3>
+<h3>Go-To-Market Planning &amp; Product Sourcing</h3>
 <p>Align strategy and execution to ensure products launch and perform effectively.</p>
-</div>
-<div class="service-card">
+</a>
+<a class="service-card service-card-link" href="pages/services.html#vendor-strategy-operational-excellence">
 <img class="service-thumb" src="images/img-1268-guat-factory-image-1.jpg" alt="Factory operations" style="object-position: center 62%;"/>
 <h3>Vendor Strategy &amp; Operational Excellence</h3>
 <p>Strengthen vendor matrix and streamline operations to support scalable growth.</p>
-</div>
+</a>
 </div>
 </div>
 </section>
