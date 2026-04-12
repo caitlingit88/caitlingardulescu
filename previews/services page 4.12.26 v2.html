@@ -400,6 +400,34 @@
             opacity: 0.9;
         }
 
+        .hero-proof-row {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 18px;
+        }
+
+        .hero-proof-pill {
+            display: inline-flex;
+            align-items: center;
+            padding: 8px 12px;
+            border-radius: 999px;
+            border: 1px solid rgba(202, 156, 31, 0.24);
+            background: rgba(202, 156, 31, 0.08);
+            color: var(--dark);
+            font-size: var(--font-size-sm);
+            line-height: 1.4;
+        }
+
+        .hero-actions {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: var(--spacing-md);
+            margin-top: var(--spacing-xl);
+        }
+
         /* Hero */
         .hero {
             text-align: center;
@@ -604,6 +632,34 @@
             color: var(--dark);
             font-size: calc(var(--font-size-base) + 3px);
             line-height: 1.6;
+        }
+
+        .trusted-metrics {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--spacing-lg);
+            margin-top: var(--spacing-xl);
+        }
+
+        .trusted-metric {
+            background: var(--bg-white);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 18px 16px;
+            text-align: center;
+        }
+
+        .trusted-metric strong {
+            display: block;
+            font-size: calc(var(--font-size-xl) + 2px);
+            color: var(--dark);
+            margin-bottom: 6px;
+        }
+
+        .trusted-metric span {
+            color: var(--text-secondary);
+            font-size: var(--font-size-sm);
+            line-height: 1.5;
         }
 
         .client-fit {
@@ -812,10 +868,58 @@
                 font-size: var(--font-size-2xl);
             }
 
+            .nav-header-cta {
+                display: block;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
             .nav-links {
-                display: none;
-            align-items: center;
-        }
+                display: flex;
+                flex-direction: column;
+                position: fixed;
+                top: 0;
+                right: 0;
+                height: 100vh;
+                width: 80%;
+                max-width: 400px;
+                background-color: #383838;
+                padding: var(--spacing-lg);
+                gap: var(--spacing-lg);
+                z-index: 101;
+                transform: translateX(100%);
+                transition: transform 0.3s ease-out;
+                align-items: stretch;
+                justify-content: flex-start;
+            }
+
+            nav[data-menu-open="true"] .nav-links {
+                transform: translateX(0);
+            }
+
+            .nav-links li {
+                margin: 0;
+            }
+
+            .nav-links a {
+                display: block;
+                padding: var(--spacing-lg) 0;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+                cursor: pointer;
+                user-select: none;
+            }
+
+            .nav-links a.nav-cta {
+                padding: var(--spacing-md) var(--spacing-xl);
+                border: none;
+                margin-top: var(--spacing-lg);
+                margin-bottom: var(--spacing-lg);
+                display: inline-block;
+                width: 100%;
+                text-align: center;
+            }
 
             .engagement-types {
                 grid-template-columns: 1fr;
@@ -834,6 +938,10 @@
             }
 
             .trusted-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .trusted-metrics {
                 grid-template-columns: 1fr;
             }
 
@@ -870,9 +978,9 @@
   <span></span>
 </button>
 <ul class="nav-links">
-<li><a href="services.html">Services</a></li>
-<li><a href="cv.html">Experience</a></li>
-<li><a href="about.html">About</a></li>
+<li><a href="../pages/services.html">Services</a></li>
+<li><a href="../pages/cv.html">Experience</a></li>
+<li><a href="../pages/about.html">About</a></li>
 <li><a class="nav-cta" href="https://calendly.com/caitlingardulescu/" target="_blank">Schedule a Call</a></li>
 </ul>
 <div class="menu-overlay" data-menu-overlay></div>
@@ -884,48 +992,58 @@
     <section class="section hero">
         <div class="container">
             <h1 class="page-banner">Services</h1>
-            <p class="hero-subtext">Improving physical product performance from strategy through execution.</p>
+            <p class="hero-subtext">Strategic support for product-driven businesses that need better decisions across assortment, sourcing, pricing, vendors, and execution.</p>
+            <div class="hero-proof-row">
+                <span class="hero-proof-pill">15+ years across product-driven businesses</span>
+                <span class="hero-proof-pill">$3M shrink risk reduced</span>
+                <span class="hero-proof-pill">50% margin improvement achieved</span>
+            </div>
+            <div class="hero-actions">
+                <a href="https://calendly.com/caitlingardulescu/" target="_blank" class="btn">Schedule a Call</a>
+                <a href="../pages/cv.html" class="btn" style="background: transparent; color: var(--dark); border: 1px solid var(--border);">View Experience</a>
+            </div>
         </div>
     </section>
 
     <!-- Core Services -->
     <section class="section core-services-section">
         <div class="container container--wide">
+            <p class="section-intro">These services are designed for companies that sell physical products and need sharper commercial thinking, stronger operating discipline, and more reliable execution.</p>
             <div class="core-services-grid">
                 <div class="service-deep-dive" id="product-category-strategy">
                     <h3>Product &amp; Category Strategy</h3>
-                    <p class="service-lead">Define, evaluate, and refine assortments to improve performance and drive growth.</p>
+                    <p class="service-lead">Clarify where your assortment should go next and how category choices can drive stronger commercial performance.</p>
                     <ul class="service-bullets">
                         <li>Assortment optimization and line planning</li>
                         <li>Category performance analysis and white space identification</li>
                         <li>Positioning, pricing, and margin strategy</li>
                         <li>Concept validation and category expansion planning</li>
                     </ul>
-                    <p class="service-context">I work across both new and established businesses to shape category strategies grounded in performance, positioning, and how products reach consumers.</p>
+                    <p class="service-context">Best for teams that need clearer category priorities, better portfolio decisions, or a more commercially grounded growth strategy.</p>
                 </div>
 
                 <div class="service-deep-dive" id="go-to-market-product-sourcing">
                     <h3>Go-To-Market Planning &amp; Product Sourcing</h3>
-                    <p class="service-lead">Align strategy, sourcing, and execution to ensure products launch successfully and perform in market.</p>
+                    <p class="service-lead">Turn product strategy into launch-ready plans with stronger sourcing, coordination, and in-market follow-through.</p>
                     <ul class="service-bullets">
                         <li>Go-to-market strategy and launch planning</li>
                         <li>Test and react planning to respond to customer demand</li>
                         <li>Cross-functional execution and team alignment</li>
                         <li>Post-launch performance tracking and iteration</li>
                     </ul>
-                    <p class="service-context">From new launches to optimizing existing portfolios, I help teams translate strategy into coordinated execution across channels.</p>
+                    <p class="service-context">Best for businesses launching new products, relaunching underperforming lines, or trying to reduce execution gaps across functions.</p>
                 </div>
 
                 <div class="service-deep-dive" id="vendor-strategy-operational-excellence">
                     <h3>Vendor Strategy &amp; Operational Excellence</h3>
-                    <p class="service-lead">Strengthen vendor matrix and operational systems to support scalable, efficient growth.</p>
+                    <p class="service-lead">Tighten vendor performance, reduce operational drag, and build systems that support healthier margins and scale.</p>
                     <ul class="service-bullets">
                         <li>Vendor matrix development and optimization</li>
                         <li>Supplier onboarding and quality control</li>
                         <li>Cost negotiations and margin improvement</li>
                         <li>Process and workflow streamlining across teams</li>
                     </ul>
-                    <p class="service-context">I help businesses build and optimize vendor partnerships, streamline workflows, and improve operational efficiency across the organization.</p>
+                    <p class="service-context">Best for teams dealing with vendor sprawl, inconsistent execution, supply chain friction, or margin pressure.</p>
                 </div>
             </div>
         </div>
@@ -942,29 +1060,43 @@
                     <img src="../images/img-2199-carrots-and-veg.jpg" alt="Fresh produce and vegetable assortment"/>
                 </div>
             </div>
+            <div class="trusted-metrics">
+                <div class="trusted-metric">
+                    <strong>360+ Stores</strong>
+                    <span>private label execution and category leadership across Wakefern banners</span>
+                </div>
+                <div class="trusted-metric">
+                    <strong>2,500+ SKUs</strong>
+                    <span>managed across complex apparel and accessories portfolios at Kohl's</span>
+                </div>
+                <div class="trusted-metric">
+                    <strong>40+ People</strong>
+                    <span>led cross-functionally to execute Amazon Fresh seasonal and clearance strategy</span>
+                </div>
+            </div>
         </div>
     </section>
 
     <section class="section section--light">
         <div class="container">
-            <h2 style="text-align: center; margin-bottom: var(--spacing-lg);">Partnership That Drives Results</h2>
+            <h2 style="text-align: center; margin-bottom: var(--spacing-lg);">The Problems Clients Usually Bring Me</h2>
             <div class="client-fit">
                 <div class="client-fit-card">
-                    <h3>Who I Partner With</h3>
+                    <h3>Common Client Situations</h3>
                     <ul>
-                        <li>Teams preparing to launch or relaunch physical products</li>
-                        <li>Businesses scaling assortment complexity without clear structure</li>
-                        <li>Organizations with vendor sprawl or inconsistent execution</li>
-                        <li>Leaders needing strategic clarity across functions</li>
+                        <li>Product lines are growing, but assortment decisions are not disciplined</li>
+                        <li>Launches feel reactive or misaligned across teams</li>
+                        <li>Vendor complexity is hurting speed, quality, or margin</li>
+                        <li>Leadership needs clearer priorities and more confidence in execution</li>
                     </ul>
                 </div>
                 <div class="client-fit-card">
-                    <h3>Typical Business Outcomes</h3>
+                    <h3>What Better Looks Like</h3>
                     <ul>
-                        <li>Clearer category priorities and faster decision-making</li>
-                        <li>Improved pricing logic and margin control</li>
-                        <li>More reliable launch execution across channels</li>
-                        <li>Stronger vendor performance and operational efficiency</li>
+                        <li>Clearer category priorities and faster commercial decisions</li>
+                        <li>Improved pricing logic, sourcing discipline, and margin control</li>
+                        <li>Stronger launches with better cross-functional follow-through</li>
+                        <li>Cleaner vendor structures and more reliable operating rhythms</li>
                     </ul>
                 </div>
             </div>
@@ -1004,7 +1136,7 @@
     <section class="section section--light">
         <div class="container">
             <h2 style="text-align: center; margin-bottom: var(--spacing-md);">How We Collaborate</h2>
-            <p class="section-intro">Engagement models are flexible and can be scoped around one initiative or a broader transformation roadmap.</p>
+            <p class="section-intro">Engagement models are flexible and can be scoped around one urgent initiative or a broader transformation roadmap.</p>
             <div class="engagement-types">
                 <div class="engagement-card">
                     <h3>Strategic Deep Dive</h3>
@@ -1029,8 +1161,8 @@
     <section class="section">
         <div class="container">
             <div class="cta-section">
-                <h2>Ready to improve your product performance and execution?</h2>
-                <p>Let’s discuss your priorities and where focused support can create the strongest impact.</p>
+                <h2>Ready to solve a product, category, or vendor challenge?</h2>
+                <p>Let’s discuss what is getting in the way of growth and where focused strategic support can create the strongest commercial impact.</p>
                 <a href="https://calendly.com/caitlingardulescu/" target="_blank" class="btn">Schedule a Call</a>
             </div>
         </div>

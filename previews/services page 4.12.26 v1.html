@@ -400,6 +400,26 @@
             opacity: 0.9;
         }
 
+        .hero-proof-row {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 18px;
+        }
+
+        .hero-proof-pill {
+            display: inline-flex;
+            align-items: center;
+            padding: 8px 12px;
+            border-radius: 999px;
+            border: 1px solid rgba(202, 156, 31, 0.24);
+            background: rgba(202, 156, 31, 0.08);
+            color: var(--dark);
+            font-size: var(--font-size-sm);
+            line-height: 1.4;
+        }
+
         /* Hero */
         .hero {
             text-align: center;
@@ -604,6 +624,34 @@
             color: var(--dark);
             font-size: calc(var(--font-size-base) + 3px);
             line-height: 1.6;
+        }
+
+        .trusted-metrics {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--spacing-lg);
+            margin-top: var(--spacing-xl);
+        }
+
+        .trusted-metric {
+            background: var(--bg-white);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 18px 16px;
+            text-align: center;
+        }
+
+        .trusted-metric strong {
+            display: block;
+            font-size: calc(var(--font-size-xl) + 2px);
+            color: var(--dark);
+            margin-bottom: 6px;
+        }
+
+        .trusted-metric span {
+            color: var(--text-secondary);
+            font-size: var(--font-size-sm);
+            line-height: 1.5;
         }
 
         .client-fit {
@@ -812,10 +860,58 @@
                 font-size: var(--font-size-2xl);
             }
 
+            .nav-header-cta {
+                display: block;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
             .nav-links {
-                display: none;
-            align-items: center;
-        }
+                display: flex;
+                flex-direction: column;
+                position: fixed;
+                top: 0;
+                right: 0;
+                height: 100vh;
+                width: 80%;
+                max-width: 400px;
+                background-color: #383838;
+                padding: var(--spacing-lg);
+                gap: var(--spacing-lg);
+                z-index: 101;
+                transform: translateX(100%);
+                transition: transform 0.3s ease-out;
+                align-items: stretch;
+                justify-content: flex-start;
+            }
+
+            nav[data-menu-open="true"] .nav-links {
+                transform: translateX(0);
+            }
+
+            .nav-links li {
+                margin: 0;
+            }
+
+            .nav-links a {
+                display: block;
+                padding: var(--spacing-lg) 0;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+                cursor: pointer;
+                user-select: none;
+            }
+
+            .nav-links a.nav-cta {
+                padding: var(--spacing-md) var(--spacing-xl);
+                border: none;
+                margin-top: var(--spacing-lg);
+                margin-bottom: var(--spacing-lg);
+                display: inline-block;
+                width: 100%;
+                text-align: center;
+            }
 
             .engagement-types {
                 grid-template-columns: 1fr;
@@ -834,6 +930,10 @@
             }
 
             .trusted-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .trusted-metrics {
                 grid-template-columns: 1fr;
             }
 
@@ -870,9 +970,9 @@
   <span></span>
 </button>
 <ul class="nav-links">
-<li><a href="services.html">Services</a></li>
-<li><a href="cv.html">Experience</a></li>
-<li><a href="about.html">About</a></li>
+<li><a href="../pages/services.html">Services</a></li>
+<li><a href="../pages/cv.html">Experience</a></li>
+<li><a href="../pages/about.html">About</a></li>
 <li><a class="nav-cta" href="https://calendly.com/caitlingardulescu/" target="_blank">Schedule a Call</a></li>
 </ul>
 <div class="menu-overlay" data-menu-overlay></div>
@@ -884,7 +984,12 @@
     <section class="section hero">
         <div class="container">
             <h1 class="page-banner">Services</h1>
-            <p class="hero-subtext">Improving physical product performance from strategy through execution.</p>
+            <p class="hero-subtext">Improving physical product performance from category strategy through launch, sourcing, and execution.</p>
+            <div class="hero-proof-row">
+                <span class="hero-proof-pill">15+ years across product-driven businesses</span>
+                <span class="hero-proof-pill">$3M shrink risk reduced</span>
+                <span class="hero-proof-pill">50% margin improvement achieved</span>
+            </div>
         </div>
     </section>
 
@@ -942,15 +1047,29 @@
                     <img src="../images/img-2199-carrots-and-veg.jpg" alt="Fresh produce and vegetable assortment"/>
                 </div>
             </div>
+            <div class="trusted-metrics">
+                <div class="trusted-metric">
+                    <strong>360+ Stores</strong>
+                    <span>private label execution and category leadership across Wakefern banners</span>
+                </div>
+                <div class="trusted-metric">
+                    <strong>2,500+ SKUs</strong>
+                    <span>managed across complex apparel and accessories portfolios at Kohl's</span>
+                </div>
+                <div class="trusted-metric">
+                    <strong>40+ People</strong>
+                    <span>led cross-functionally to execute Amazon Fresh seasonal and clearance strategy</span>
+                </div>
+            </div>
         </div>
     </section>
 
     <section class="section section--light">
         <div class="container">
-            <h2 style="text-align: center; margin-bottom: var(--spacing-lg);">Partnership That Drives Results</h2>
+            <h2 style="text-align: center; margin-bottom: var(--spacing-lg);">Where This Work Helps Most</h2>
             <div class="client-fit">
                 <div class="client-fit-card">
-                    <h3>Who I Partner With</h3>
+                    <h3>Who I Partner With Best</h3>
                     <ul>
                         <li>Teams preparing to launch or relaunch physical products</li>
                         <li>Businesses scaling assortment complexity without clear structure</li>
@@ -1004,7 +1123,7 @@
     <section class="section section--light">
         <div class="container">
             <h2 style="text-align: center; margin-bottom: var(--spacing-md);">How We Collaborate</h2>
-            <p class="section-intro">Engagement models are flexible and can be scoped around one initiative or a broader transformation roadmap.</p>
+            <p class="section-intro">Engagement models are flexible and can be scoped around one urgent initiative or a broader transformation roadmap.</p>
             <div class="engagement-types">
                 <div class="engagement-card">
                     <h3>Strategic Deep Dive</h3>
@@ -1029,8 +1148,8 @@
     <section class="section">
         <div class="container">
             <div class="cta-section">
-                <h2>Ready to improve your product performance and execution?</h2>
-                <p>Let’s discuss your priorities and where focused support can create the strongest impact.</p>
+                <h2>Ready to improve product performance, margins, and execution?</h2>
+                <p>Let’s discuss your priorities and where focused support can create the strongest commercial impact.</p>
                 <a href="https://calendly.com/caitlingardulescu/" target="_blank" class="btn">Schedule a Call</a>
             </div>
         </div>

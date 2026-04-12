@@ -4,7 +4,7 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Caitlin Gardulescu | Strategic Brand &amp; Product Consultant</title>
-<link rel="icon" href="images/CG-logo-new.webp" type="image/webp"/>
+<link rel="icon" href="../images/CG-logo-new.webp" type="image/webp"/>
 <meta content="Strategic brand, category, and product leader. 15+ years scaling consumer brands. Consulting for founders and teams." name="description"/>
 <meta content="Caitlin Gardulescu | Strategic Consultant" property="og:title"/>
 <meta content="15+ years of strategic experience scaling brands. Consulting for product strategy, go-to-market, and category expansion." property="og:description"/>
@@ -399,6 +399,42 @@
             border-color: var(--dark);
         }
 
+        .hero-actions {
+            display: flex;
+            justify-content: center;
+            gap: var(--spacing-md);
+            flex-wrap: wrap;
+            margin-top: 18px;
+        }
+
+        .proof-strip {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: var(--spacing-lg);
+            margin-top: var(--spacing-2xl);
+        }
+
+        .proof-stat {
+            padding: 14px 16px;
+            border: 1px solid rgba(202, 156, 31, 0.22);
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.72);
+            text-align: center;
+        }
+
+        .proof-stat strong {
+            display: block;
+            color: var(--dark);
+            font-size: calc(var(--font-size-xl) + 2px);
+            margin-bottom: 4px;
+        }
+
+        .proof-stat span {
+            color: var(--text-secondary);
+            font-size: var(--font-size-sm);
+            line-height: 1.5;
+        }
+
         /* Value Props */
         .value-props {
             display: grid;
@@ -561,9 +597,8 @@
         .section-2col {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            column-gap: 72px;
-            row-gap: var(--spacing-3xl);
-            align-items: start;
+            gap: var(--spacing-3xl);
+            align-items: center;
             position: relative;
         }
 
@@ -591,10 +626,6 @@
             line-height: var(--line-height-tight);
             margin-bottom: var(--spacing-xl);
             color: var(--dark);
-        }
-
-        .section-2col-panel {
-            padding: 0 18px;
         }
 
         /* Footer */
@@ -698,12 +729,9 @@
 
         .contact-unified-grid {
             display: grid;
-            max-width: 660px;
-            margin: 0 auto;
-            grid-template-columns: 280px 280px;
-            justify-content: center;
-            gap: 0 56px;
-            text-align: left;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: var(--spacing-xl) var(--spacing-2xl);
+            text-align: center;
             padding-top: var(--spacing-xl);
             border-top: 1px solid rgba(43, 43, 45, 0.12);
         }
@@ -712,44 +740,10 @@
             margin: 0;
         }
 
-        .contact-unified-item {
-            justify-self: stretch;
-        }
-
-        .contact-unified-item--left {
-            text-align: left;
-        }
-
-        .contact-unified-item--left .contact-live-time {
-            justify-content: flex-start;
-        }
-
-        .contact-location-lines {
-            display: grid;
-            gap: 16px;
-            font-size: calc(var(--font-size-base) + 1px);
-        }
-
-        .contact-stack {
-            display: grid;
-            gap: 0;
-        }
-
-        .contact-stack + .contact-stack {
-            margin-top: 10px;
-        }
-
         .contact-unified-label {
             margin: 0 0 var(--spacing-sm);
             color: var(--dark);
             font-weight: 700;
-            font-size: calc(var(--font-size-sm) + 1px);
-        }
-
-        .contact-unified-item a,
-        .contact-unified-item p:not(.contact-unified-label):not(.contact-live-time) {
-            font-size: calc(var(--font-size-base) + 1px);
-            line-height: 1.5;
         }
 
         .contact-live-time {
@@ -759,7 +753,7 @@
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            justify-content: flex-start;
+            justify-content: center;
             white-space: nowrap;
         }
 
@@ -1037,8 +1031,16 @@
                 grid-template-columns: repeat(2, 1fr);
             }
 
+            .proof-strip {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
             @media (max-width: 480px) {
                 .services-grid {
+                    grid-template-columns: 1fr;
+                }
+
+                .proof-strip {
                     grid-template-columns: 1fr;
                 }
             }
@@ -1115,8 +1117,7 @@
 
             .contact-unified-grid {
                 grid-template-columns: 1fr;
-                gap: var(--spacing-xl);
-                max-width: none;
+                gap: var(--spacing-lg);
             }
         }
 
@@ -1127,13 +1128,13 @@
             }
         }
     </style>
-<meta content="website" property="og:type"/><meta content="https://www.caitlingardulescu.com/" property="og:url"/><meta content="summary_large_image" name="twitter:card"/><meta content="Caitlin Gardulescu | Strategic Brand &amp; Product Consultant" name="twitter:title"/><meta content="Strategic brand, category, and product leader. 15+ years scaling consumer brands. Consulting for founders and teams." name="twitter:description"/><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Cormorant+Garamond:wght@600;700&display=swap" rel="stylesheet"/><link href="css/animations.css" rel="stylesheet"/></head>
+<meta content="website" property="og:type"/><meta content="https://www.caitlingardulescu.com/" property="og:url"/><meta content="summary_large_image" name="twitter:card"/><meta content="Caitlin Gardulescu | Strategic Brand &amp; Product Consultant" name="twitter:title"/><meta content="Strategic brand, category, and product leader. 15+ years scaling consumer brands. Consulting for founders and teams." name="twitter:description"/><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Cormorant+Garamond:wght@600;700&display=swap" rel="stylesheet"/><link href="../css/animations.css" rel="stylesheet"/></head>
 <body>
 <!-- Header -->
 <header>
 <div class="container">
 <nav data-menu-open="false">
-<div class="logo"><a href="index.html" style="color: inherit; text-decoration: none;"><img src="images/CG-logo-new.webp" alt="Caitlin Gardulescu" style="height: 48px; width: auto;"/></a></div>
+<div class="logo"><a href="../index.html" style="color: inherit; text-decoration: none;"><img src="../images/CG-logo-new.webp" alt="Caitlin Gardulescu" style="height: 48px; width: auto;"/></a></div>
 <div class="nav-header-cta">
 <a class="btn" href="https://calendly.com/caitlingardulescu/" target="_blank">Schedule a Call</a>
 </div>
@@ -1143,9 +1144,9 @@
   <span></span>
 </button>
 <ul class="nav-links">
-<li><a href="pages/services.html">Services</a></li>
-<li><a href="pages/cv.html">Experience</a></li>
-<li><a href="pages/about.html">About</a></li>
+<li><a href="../pages/services.html">Services</a></li>
+<li><a href="../pages/cv.html">Experience</a></li>
+<li><a href="../pages/about.html">About</a></li>
 <li><a class="nav-cta" href="https://calendly.com/caitlingardulescu/" target="_blank">Schedule a Call</a></li>
 </ul>
 <div class="menu-overlay" data-menu-overlay></div>
@@ -1155,22 +1156,41 @@
 <!-- Hero Section -->
 <section class="section hero-section-preview-tight">
 <div class="container">
-<div class="banner">Building consumer brands that resonate, perform and scale.</div>
+<div class="banner">Building consumer brands that resonate, perform, and scale.</div>
 <div class="hero">
 <div class="hero-content">
 <p class="hero-subtext" style="font-size: calc(var(--font-size-lg) + 2px); line-height: 1.76; margin-bottom: 24px;">With <strong>15+ years of experience</strong>, I help food, grocery, retail, and consumer product teams improve <strong>assortment performance</strong>, strengthen <strong>vendor strategy</strong>, and execute go-to-market plans that <strong>drive measurable growth</strong>.</p>
-<p class="hero-subtext" style="font-size: calc(var(--font-size-lg) + 2px); line-height: 1.76; margin-bottom: 24px;">From founder-led brands to established organizations, I translate strategy into practical decisions across <strong>category</strong>, <strong>pricing</strong>, <strong>sourcing</strong>, and <strong>execution</strong>.</p>
-<p class="hero-subtext" style="font-size: calc(var(--font-size-lg) + 2px); line-height: 1.76; margin-bottom: 24px;">Based in Barcelona and working globally, I partner through <strong>project-based</strong>, <strong>advisory</strong>, and <strong>fractional engagements</strong>.</p>
-<div style="text-align: center; margin-top: 16px;">
+<p class="hero-subtext" style="font-size: calc(var(--font-size-lg) + 2px); line-height: 1.76; margin-bottom: 24px;">From founder-led brands to established organizations, I translate strategy into practical decisions across <strong>category</strong>, <strong>pricing</strong>, <strong>sourcing</strong>, and <strong>execution</strong>, with a focus on what will actually move the business.</p>
+<p class="hero-subtext" style="font-size: calc(var(--font-size-lg) + 2px); line-height: 1.76; margin-bottom: 20px;">Based in Barcelona and working globally, I partner through <strong>project-based</strong>, <strong>advisory</strong>, and <strong>fractional engagements</strong>.</p>
+<div class="hero-actions">
 <a class="btn" href="https://calendly.com/caitlingardulescu/" target="_blank">Schedule a Call</a>
+<a class="btn btn-secondary" href="../pages/cv.html">View Experience</a>
 </div>
 </div>
 <div class="hero-image">
-<img alt="Caitlin Gardulescu, strategic brand and product consultant" src="images/hero-pic-1.jpg"/>
+<img alt="Caitlin Gardulescu, strategic brand and product consultant" src="../images/hero-pic-1.jpg"/>
 <div class="hero-image-overlay">
 <div class="hero-image-overlay-name">Caitlin Gardulescu</div>
 <div class="hero-image-overlay-title">Strategic Brand &amp; Product Consultant</div>
 </div>
+</div>
+</div>
+<div class="proof-strip">
+<div class="proof-stat">
+<strong>15+ Years</strong>
+<span>leading across grocery, retail, consumer goods, and product development</span>
+</div>
+<div class="proof-stat">
+<strong>$3M</strong>
+<span>shrink risk reduced through Amazon Fresh clearance strategy</span>
+</div>
+<div class="proof-stat">
+<strong>50%</strong>
+<span>gross margin improvement through sourcing and cost negotiation</span>
+</div>
+<div class="proof-stat">
+<strong>360+ Stores</strong>
+<span>private label rollout and category execution at Wakefern</span>
 </div>
 </div>
 </div>
@@ -1179,7 +1199,7 @@
 <!-- Logo Banner Section -->
 <section class="section" style="background: var(--bg-white); padding: 0; margin-top: -16px;">
 <div class="container">
-<img class="logo-banner-image" alt="Caitlin Gardulescu consulting logo and branding" src="images/caitlin-gardulescu-logo-banner.webp"/>
+<img class="logo-banner-image" alt="Caitlin Gardulescu consulting logo and branding" src="../images/caitlin-gardulescu-logo-banner.webp"/>
 </div>
 </section>
 
@@ -1194,7 +1214,7 @@
 </svg>
 </div>
 <h3>Strategic Clarity</h3>
-<p>Cut through complexity. Clarify your product vision, go-to-market strategy, and competitive positioning.</p>
+<p>Cut through complexity. Get clear on your product vision, go-to-market strategy, and competitive positioning.</p>
 </div>
 <div class="value-prop">
 <div class="value-prop-icon">
@@ -1203,7 +1223,7 @@
 </svg>
 </div>
 <h3>Launch Execution</h3>
-<p>Support from concept planning to market launch. Build the operational foundations and cross-functional alignment for successful launches.</p>
+<p>Move from planning to market. Build the operational foundations and cross-functional alignment for successful launches.</p>
 </div>
 <div class="value-prop">
 <div class="value-prop-icon">
@@ -1221,24 +1241,18 @@
 <section class="section section--cream" id="about">
 <div class="container">
 <div class="section-2col">
-<div class="section-2col-panel">
-<h2 class="section-2col-title">Problems I've Helped Clients Solve</h2>
-<ul style="padding-left: 22px; line-height: 1.75; color: var(--text-secondary); font-size: 18px;">
-<li style="padding: 0 0 16px 0;">Store sales are soft while e-commerce remains strong</li>
-<li style="padding: 0 0 16px 0;">Production timelines are too long and prevent chase/react</li>
-<li style="padding: 0 0 16px 0;">Customer complaints point to quality or delivery issues</li>
-<li style="padding: 0 0 16px 0;">Vendor strategy and sourcing decisions are limiting growth</li>
-<li style="padding: 0;">Launches and rebrands need strategic assortment planning</li>
-</ul>
+<div>
+<h2 class="section-2col-title">Operational Strategy That Holds Up in Practice</h2>
+<p>I help teams streamline processes, strengthen vendor partnerships, and scale operations across physical product businesses.</p>
+<p style="margin-top: var(--spacing-2xl);">Grounded in how consumers interact with products in everyday life, my approach connects assortment, pricing, and execution to measurable performance outcomes.</p>
 </div>
-<div class="section-2col-panel">
-<h2 class="section-2col-title">Measured Business Impact</h2>
-<ul style="padding-left: 22px; line-height: 1.75; color: var(--text-secondary); font-size: 18px;">
-<li style="padding: 0 0 16px 0;"><strong>$3M</strong> shrink reduction from a new clearance strategy</li>
-<li style="padding: 0 0 16px 0;"><strong>50%</strong> gross-margin improvement through negotiations</li>
-<li style="padding: 0 0 16px 0;"><strong>33%</strong> shorter product lead time to floor</li>
-<li style="padding: 0 0 16px 0;">Up to <strong>$300M</strong> in volume and <strong>2,500+ SKUs</strong></li>
-<li style="padding: 0;"><strong>1,100+ retail</strong> and <strong>360+ grocery</strong> stores managed</li>
+<div>
+<h2 class="section-2col-title">Selected Experience</h2>
+<ul style="list-style: none; line-height: var(--line-height-relaxed);">
+<li style="padding: var(--spacing-md) 0; border-bottom: 1px solid var(--border);"><strong>Amazon Fresh</strong> — Vendor strategy, seasonal growth, clearance optimization</li>
+<li style="padding: var(--spacing-md) 0; border-bottom: 1px solid var(--border);"><strong>Wakefern</strong> — Private label product development, 360+ store rollouts</li>
+<li style="padding: var(--spacing-md) 0; border-bottom: 1px solid var(--border);"><strong>Kohl's</strong> — 9+ years spanning product development to brand management</li>
+<li style="padding: var(--spacing-md) 0;"><strong>DTC Startups</strong> — Product operations, profitability optimization</li>
 </ul>
 </div>
 </div>
@@ -1247,20 +1261,20 @@
 <!-- Services Section -->
 <section class="section section--gradient-cream" id="services">
 <div class="container">
-<h2 class="collab-title">How I Can Help</h2>
+<h2 class="collab-title">Ways to Collaborate</h2>
 <div class="services-grid">
-<a class="service-card service-card-link" href="pages/services.html#product-category-strategy">
-<img class="service-thumb" src="images/img-2183-2-square-produce.jpg" alt="Produce section"/>
+<a class="service-card service-card-link" href="../pages/services.html#product-category-strategy">
+<img class="service-thumb" src="../images/img-2183-2-square-produce.jpg" alt="Produce section"/>
 <h3>Product &amp; Category Strategy</h3>
 <p>Define, evaluate, and refine assortments to improve performance and unlock growth.</p>
 </a>
-<a class="service-card service-card-link" href="pages/services.html#go-to-market-product-sourcing">
-<img class="service-thumb" src="images/img-1483-tees-on-table.jpg" alt="Retail merchandise table"/>
+<a class="service-card service-card-link" href="../pages/services.html#go-to-market-product-sourcing">
+<img class="service-thumb" src="../images/img-1483-tees-on-table.jpg" alt="Retail merchandise table"/>
 <h3>Go-To-Market Planning &amp; Product Sourcing</h3>
 <p>Align strategy and execution to ensure products launch and perform effectively.</p>
 </a>
-<a class="service-card service-card-link" href="pages/services.html#vendor-strategy-operational-excellence">
-<img class="service-thumb" src="images/img-1268-guat-factory-image-1.jpg" alt="Factory operations" style="object-position: center 62%;"/>
+<a class="service-card service-card-link" href="../pages/services.html#vendor-strategy-operational-excellence">
+<img class="service-thumb" src="../images/img-1268-guat-factory-image-1.jpg" alt="Factory operations" style="object-position: center 62%;"/>
 <h3>Vendor Strategy &amp; Operational Excellence</h3>
 <p>Strengthen vendor matrix and streamline operations to support scalable growth.</p>
 </a>
@@ -1272,28 +1286,23 @@
 <div class="container">
 <div class="contact-unified">
 <div class="contact-unified-header">
-<h2>Ready to solve a product, category, or vendor challenge?</h2>
-<p>Book a 30-minute consultation to discuss your challenges and explore how I can help.</p>
+<h2>Ready to improve product performance and execution?</h2>
+<p>Book a 30-minute consultation to discuss your priorities and where focused strategic support can create the strongest impact.</p>
 <a class="btn" href="https://calendly.com/caitlingardulescu/" target="_blank">Schedule a Call</a>
 </div>
 <div class="contact-unified-grid">
-<div class="contact-unified-item contact-unified-item--left">
-<div class="contact-stack">
+<div class="contact-unified-item">
 <p class="contact-unified-label">Email</p>
 <p><a href="mailto:caitlin@caitlingardulescu.com">caitlin@caitlingardulescu.com</a></p>
 </div>
-<div class="contact-stack">
+<div class="contact-unified-item">
 <p class="contact-unified-label">Phone</p>
 <p><a href="tel:+17348461006">+1 734-846-1006</a></p>
 </div>
-</div>
 <div class="contact-unified-item">
-<p class="contact-unified-label">Location</p>
-<div class="contact-location-lines">
-<p style="color: var(--text-secondary);">Based in Barcelona, España</p>
-<p style="color: var(--text-secondary);">Currently in <a href="https://maps.google.com/?q=Da+Nang,+Vietnam" target="_blank" rel="noreferrer">Da Nang, Vietnam</a></p>
-</div>
-<p aria-live="polite" class="contact-live-time"><span aria-hidden="true" class="contact-live-dot"></span>Local time: <span id="danang-local-time">--:--</span></p>
+<p class="contact-unified-label">Current Location</p>
+<p style="color: var(--text-secondary);">Barcelona, open to remote or relocation</p>
+<p aria-live="polite" class="contact-live-time"><span aria-hidden="true" class="contact-live-dot"></span>Local time: <span id="barcelona-local-time">--:--</span></p>
 </div>
 </div>
 </div>
@@ -1319,22 +1328,22 @@
 </script>
 
 <!-- Scroll Animations -->
-<script src="js/scroll-animations-no-parallax.js" defer></script>
+<script src="../js/scroll-animations-no-parallax.js" defer></script>
 
 <!-- Chaty Widget -->
-<script src="js/chaty-config.js" defer></script>
-<script src="js/chaty-widget.js" defer></script>
+<script src="../js/chaty-config.js" defer></script>
+<script src="../js/chaty-widget.js" defer></script>
 
 <!-- Mobile Menu -->
-<script src="js/mobile-menu.js" defer></script>
+<script src="../js/mobile-menu.js" defer></script>
 
 <script>
 (() => {
-  const timeEl = document.getElementById('danang-local-time');
+  const timeEl = document.getElementById('barcelona-local-time');
   if (!timeEl) return;
 
   const formatter = new Intl.DateTimeFormat('en-US', {
-    timeZone: 'Asia/Ho_Chi_Minh',
+    timeZone: 'Europe/Madrid',
     hour: 'numeric',
     minute: '2-digit',
     hour12: true

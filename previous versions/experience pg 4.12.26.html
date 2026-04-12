@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV | Caitlin Gardulescu</title>
+    <meta name="description" content="Professional CV and career history of Caitlin Gardulescu. Strategic consultant with 15+ years in brand management, product strategy, and go-to-market planning.">
+    <meta property="og:title" content="CV | Caitlin Gardulescu">
+    <meta property="og:description" content="Professional CV and career history of Caitlin Gardulescu. Strategic consultant with 15+ years in brand management, product strategy, and go-to-market planning.">
+    <meta property="og:type" content="profile">
+    <meta property="og:url" content="https://www.caitlingardulescu.com/pages/cv.html">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="CV | Caitlin Gardulescu">
+    <meta name="twitter:description" content="Professional CV and career history of Caitlin Gardulescu. Strategic consultant with 15+ years in brand management, product strategy, and go-to-market planning.">
+    <link rel="canonical" href="https://www.caitlingardulescu.com/pages/cv.html">
+    <style>
+        /* Local Fonts */
+        @font-face {
+            font-family: 'Playfair Display';
+            font-style: normal;
+            font-weight: 600;
+            font-display: swap;
+            src: url('../fonts/playfair-display-600.woff2') format('woff2');
+        }
+        @font-face {
+            font-family: 'Playfair Display';
+            font-style: normal;
+            font-weight: 700;
+            font-display: swap;
+            src: url('../fonts/playfair-display-700.woff2') format('woff2');
+        }
+        :root {
+            --gold: #CA9C1F;
+            --light-gold: #f5ead3;
+            --cream: #faf6f1;
+            --dark: #383838;
+            --text-secondary: #666666;
+            --bg-white: #ffffff;
+            --border: #e0e0e0;
+
+            --spacing-xs: 2px;
+            --spacing-sm: 4px;
+            --spacing-md: 8px;
+            --spacing-lg: 12px;
+            --spacing-xl: 16px;
+            --spacing-2xl: 24px;
+            --spacing-3xl: 32px;
+
+            --font-system: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            --font-heading: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            --font-size-sm: 14px;
+            --font-size-base: 16px;
+            --font-size-lg: 18px;
+            --font-size-xl: 20px;
+            --font-size-2xl: 28px;
+            --font-size-3xl: 36px;
+
+            --line-height-tight: 1.3;
+            --line-height-normal: 1.6;
+            --line-height-relaxed: 1.8;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        html {
+            scroll-behavior: smooth;
+            scrollbar-gutter: stable;
+        }
+
+        body {
+            font-family: var(--font-system);
+            font-size: var(--font-size-base);
+            line-height: var(--line-height-normal);
+            color: var(--dark);
+            background: var(--bg-white);
+        }
+
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 var(--spacing-lg); }
+
+        h1 { font-family: var(--font-heading); font-size: var(--font-size-3xl); font-weight: 600; margin-bottom: var(--spacing-xl); }
+        h2 { font-family: var(--font-heading); font-size: var(--font-size-2xl); font-weight: 600; margin-bottom: var(--spacing-lg); color: var(--dark); border-bottom: 2px solid var(--gold); padding-bottom: var(--spacing-md); }
+        h3 { font-family: var(--font-heading); font-size: var(--font-size-lg); font-weight: 600; margin-bottom: var(--spacing-md); color: var(--dark); }
+        h4 { font-family: var(--font-heading); font-size: var(--font-size-base); font-weight: 600; color: var(--dark); }
+
+        p { margin-bottom: var(--spacing-md); color: var(--text-secondary); line-height: var(--line-height-relaxed); }
+
+        a { color: var(--gold); text-decoration: none; }
+        a:hover { opacity: 0.8; }
+
+        /* Header */
+        header {
+            position: sticky;
+            top: 0;
+            background-color: #383838;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            z-index: 100;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: var(--spacing-lg) 0;
+        }
+
+        .logo a {
+            font-size: var(--font-size-xl);
+            font-weight: 600;
+            color: var(--bg-white);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: var(--spacing-2xl);
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: var(--font-size-sm);
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .nav-links a:hover {
+            color: var(--gold);
+        }
+
+        .header-content {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: var(--spacing-2xl);
+            align-items: start;
+        }
+
+        .page-banner {
+            text-align: center;
+            font-family: 'Playfair Display', serif;
+            font-size: calc(var(--font-size-2xl) + 10px);
+            font-weight: 700;
+            letter-spacing: 0.01em;
+            color: var(--dark);
+            margin-bottom: 18px;
+            padding-bottom: 18px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .page-banner::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(
+                90deg,
+                rgba(202, 156, 31, 0.15) 0%,
+                rgba(202, 156, 31, 0.95) 45%,
+                rgba(255, 238, 194, 0.95) 55%,
+                rgba(202, 156, 31, 0.95) 65%,
+                rgba(202, 156, 31, 0.15) 100%
+            );
+            background-size: 220% 100%;
+            transform-origin: left center;
+            transform: scaleX(0);
+            animation:
+                pageBannerSatinReveal 1.2s ease-out 0.08s forwards,
+                pageBannerSatinShine 2.2s linear 0.5s forwards;
+        }
+
+        @keyframes pageBannerSatinReveal {
+            from { transform: scaleX(0); }
+            to { transform: scaleX(1); }
+        }
+
+        @keyframes pageBannerSatinShine {
+            from { background-position: 0% 0; }
+            to { background-position: 100% 0; }
+        }
+
+        .nav-cta {
+            background-color: var(--gold);
+            color: var(--bg-white);
+            padding: var(--spacing-md) var(--spacing-xl);
+            border-radius: 4px;
+            font-weight: 600;
+            font-size: var(--font-size-sm);
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            transition: all 0.2s ease;
+        }
+
+        .nav-links .nav-cta:hover {
+            opacity: 0.9;
+            color: var(--bg-white) !important;
+            box-shadow: 0 4px 12px rgba(202, 156, 31, 0.3);
+        }
+
+        .nav-header-cta {
+            display: none;
+        }
+
+        .nav-header-cta .btn {
+            padding: var(--spacing-sm) var(--spacing-lg);
+            font-size: var(--font-size-xs);
+        }
+
+        .hamburger {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            flex-direction: column;
+            gap: 6px;
+            padding: 8px;
+            z-index: 102;
+        }
+
+        .hamburger span {
+            width: 24px;
+            height: 2px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 2px;
+            transition: all 0.3s ease;
+        }
+
+        .menu-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 100;
+            pointer-events: none;
+        }
+
+        nav[data-menu-open="true"] .menu-overlay {
+            display: block;
+            pointer-events: auto;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-header-cta {
+                display: block;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .nav-links {
+                display: flex;
+                flex-direction: column;
+                position: fixed;
+                top: 0;
+                right: 0;
+                height: 100vh;
+                width: 80%;
+                max-width: 400px;
+                background-color: #2b2b2d;
+                padding: var(--spacing-lg);
+                gap: var(--spacing-lg);
+                z-index: 101;
+                transform: translateX(100%);
+                transition: transform 0.3s ease-out;
+                align-items: stretch;
+                justify-content: flex-start;
+            }
+
+            nav[data-menu-open="true"] .nav-links {
+                transform: translateX(0);
+            }
+
+            .nav-links li {
+                margin: 0;
+            }
+
+            .nav-links a {
+                display: block;
+                padding: var(--spacing-lg) 0;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+                cursor: pointer;
+                user-select: none;
+            }
+
+            .nav-links a.nav-cta {
+                padding: var(--spacing-md) var(--spacing-xl);
+                border: none;
+                margin-top: var(--spacing-lg);
+                margin-bottom: var(--spacing-lg);
+                display: inline-block;
+                width: 100%;
+                text-align: center;
+            }
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: var(--bg-white);
+            padding: var(--spacing-3xl) 0;
+        }
+
+        footer p {
+            color: rgba(255, 255, 255, 0.7);
+            margin: 0;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--spacing-2xl);
+            margin-bottom: var(--spacing-2xl);
+        }
+
+        .footer-section {
+            text-align: center;
+        }
+
+        .footer-section h4 {
+            color: var(--bg-white);
+            margin-bottom: var(--spacing-md);
+            font-size: calc(var(--font-size-base) + 4px);
+            font-weight: 600;
+        }
+
+        .footer-section ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: var(--spacing-sm);
+        }
+
+        .footer-section a {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .footer-section a:hover {
+            color: var(--gold);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: var(--spacing-2xl);
+            text-align: center;
+            font-size: var(--font-size-sm);
+        }
+
+        .header-image {
+            width: 340px;
+            aspect-ratio: 1/1;
+            background: var(--bg-white);
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid var(--border);
+        }
+
+        .header-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .header-info h1 {
+            font-family: 'Playfair Display', serif;
+            margin-bottom: var(--spacing-md);
+        }
+
+        .header-title {
+            font-size: var(--font-size-xl);
+            font-weight: 600;
+            color: var(--gold);
+            margin-bottom: var(--spacing-md);
+        }
+
+        .header-contact {
+            display: flex;
+            flex-direction: column;
+            gap: var(--spacing-sm);
+            font-size: calc(var(--font-size-sm) + 4px);
+            margin-top: var(--spacing-lg);
+        }
+
+        .header-contact p { margin: 0; }
+
+        /* Main Content */
+        main {
+            padding: var(--spacing-3xl) 0;
+        }
+
+        section {
+            margin-bottom: var(--spacing-3xl);
+        }
+
+        /* Experience Entry */
+        .experience-entry {
+            margin-bottom: var(--spacing-2xl);
+            padding-bottom: var(--spacing-2xl);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .experience-entry:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .job-header {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: var(--spacing-lg);
+            margin-bottom: var(--spacing-md);
+            align-items: baseline;
+        }
+
+        .job-title {
+            display: flex;
+            flex-direction: column;
+            gap: var(--spacing-sm);
+        }
+
+        .job-title h3 { margin: 0; }
+        .job-company { font-weight: 600; color: var(--dark); }
+        .job-dates { font-size: var(--font-size-sm); color: var(--text-secondary); font-style: italic; }
+
+        .job-description {
+            display: flex;
+            flex-direction: column;
+            gap: var(--spacing-md);
+        }
+
+        .job-description ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .job-description li {
+            padding-left: var(--spacing-xl);
+            position: relative;
+            color: var(--text-secondary);
+            line-height: var(--line-height-relaxed);
+        }
+
+        .job-description li:before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: var(--gold);
+            font-weight: 600;
+        }
+
+        /* Two Column Layout */
+        .cv-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--spacing-2xl);
+        }
+
+        .cv-column h2 {
+            margin-top: 0;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: var(--bg-white);
+            padding: var(--spacing-3xl) 0;
+        }
+
+        footer p {
+            color: rgba(255, 255, 255, 0.7);
+            margin: 0;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--spacing-2xl);
+            margin-bottom: var(--spacing-2xl);
+        }
+
+        .footer-section {
+            text-align: center;
+        }
+
+        .footer-section h4 {
+            color: var(--bg-white);
+            margin-bottom: var(--spacing-md);
+            font-size: calc(var(--font-size-base) + 4px);
+            font-weight: 600;
+        }
+
+        .footer-section ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            padding: 0;
+            gap: var(--spacing-sm);
+        }
+
+        .footer-section a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+        }
+
+        .footer-section a:hover {
+            color: var(--gold);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: var(--spacing-2xl);
+            text-align: center;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .page-banner {
+                font-size: var(--font-size-2xl);
+            }
+
+            .header-content {
+                grid-template-columns: 1fr;
+            }
+
+            .job-header {
+                grid-template-columns: 1fr;
+            }
+
+            .cv-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+<header>
+<div class="container">
+<nav data-menu-open="false">
+<div class="logo"><a href="../index.html" style="color: inherit; text-decoration: none;"><img src="../images/CG-logo-new.webp" alt="Caitlin Gardulescu" style="height: 48px; width: auto;"/></a></div>
+<div class="nav-header-cta">
+<a class="btn" href="https://calendly.com/caitlingardulescu/" target="_blank">Schedule a Call</a>
+</div>
+<button class="hamburger" aria-label="Menu">
+  <span></span>
+  <span></span>
+  <span></span>
+</button>
+<ul class="nav-links">
+<li><a href="services.html">Services</a></li>
+<li><a href="cv.html">Experience</a></li>
+<li><a href="about.html">About</a></li>
+<li><a class="nav-cta" href="https://calendly.com/caitlingardulescu/" target="_blank">Schedule a Call</a></li>
+</ul>
+<div class="menu-overlay" data-menu-overlay></div>
+</nav>
+</div>
+</header>
+
+    <section style="padding: var(--spacing-3xl) 0;">
+        <div class="container">
+            <div class="page-banner">Experience</div>
+            <div class="header-content">
+                <div class="header-image">
+                    <img alt="Caitlin Gardulescu, strategic consultant" src="../images/caitlin-consulting-hero.webp"/>
+                </div>
+                <div class="header-info">
+                    <h1>Caitlin Gardulescu</h1>
+                    <p class="header-title">Strategic Brand & Product Consultant</p>
+                    <p style="font-size: calc(var(--font-size-base) + 4px); color: var(--text-secondary); line-height: var(--line-height-relaxed);">15+ years driving growth across retail, grocery, CPG, and tech. Expertise in product strategy, go-to-market planning, category management, and operational excellence.</p>
+                    <div class="header-contact">
+                        <p><strong>📍 Barcelona, Spain</strong> (working globally)</p>
+                        <p><strong>📧</strong> <a href="mailto:caitlin@caitlingardulescu.com">caitlin@caitlingardulescu.com</a></p>
+                        <p><strong>📞</strong> <a href="tel:+17348461006">+1 734-846-1006</a></p>
+                        <p><strong>🔗</strong> <a href="https://linkedin.com/in/caitlin-gardulescu" target="_blank">linkedin.com/in/caitlin-gardulescu</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main>
+        <div class="container">
+            <!-- Professional Summary -->
+            <section>
+                <h2>Professional Summary</h2>
+                <p>Strategic and creative leader with proven ability to propel brand and category growth in the consumer goods space. Data-driven, entrepreneurial, and passionate about transforming industries through innovative solutions. Expertise spans product strategy, go-to-market execution, operational efficiency, and cross-functional leadership.</p>
+            </section>
+
+            <!-- Experience -->
+            <section>
+                <h2>Professional Experience</h2>
+
+                <div class="experience-entry">
+                    <div class="job-header">
+                        <div class="job-title">
+                            <h3>Senior Strategic Consultant</h3>
+                            <span class="job-company">Caitlin Gardulescu Consulting</span>
+                        </div>
+                        <div class="job-dates">2023 – Present</div>
+                    </div>
+                    <div class="job-description">
+                        <ul>
+                            <li>Provide strategic consulting to diverse global organizations in grocery, retail, and tech sectors</li>
+                            <li>Drive incremental growth through expert guidance on category strategy and market expansion</li>
+                            <li>Partner with founder-led brands and fast-growing teams on product vision and operational optimization</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="experience-entry">
+                    <div class="job-header">
+                        <div class="job-title">
+                            <h3>Director of Vendor Operations</h3>
+                            <span class="job-company">Bitewell</span>
+                        </div>
+                        <div class="job-dates">March 2024 – July 2024</div>
+                    </div>
+                    <div class="job-description">
+                        <ul>
+                            <li>Led vendor strategy reevaluation and expansion of product offerings across food & beverage</li>
+                            <li><strong>Increased profit margins by up to 50%</strong> through strategic vendor pricing negotiations</li>
+                            <li>Developed and analysed P&L statements for all retail operations, delivering executive insights</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="experience-entry">
+                    <div class="job-header">
+                        <div class="job-title">
+                            <h3>Senior Vendor Manager (L6)</h3>
+                            <span class="job-company">Amazon Fresh</span>
+                        </div>
+                        <div class="job-dates">March 2022 – November 2022</div>
+                    </div>
+                    <div class="job-description">
+                        <ul>
+                            <li><strong>Reduced organisational shrink risk by $3M</strong> through comprehensive Clearance programme</li>
+                            <li>Drove <strong>+22% YoY seasonal growth</strong> through captivating in-store and online experiences</li>
+                            <li>Led 40+ person cross-functional team spanning eCommerce and brick-and-mortar operations</li>
+                            <li>Identified and integrated new seasonal vendors to enhance customer experience</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="experience-entry">
+                    <div class="job-header">
+                        <div class="job-title">
+                            <h3>Category/Brand Manager</h3>
+                            <span class="job-company">Wakefern Food Corporation</span>
+                        </div>
+                        <div class="job-dates">September 2020 – February 2022</div>
+                    </div>
+                    <div class="job-description">
+                        <ul>
+                            <li>Managed end-to-end CPG private label production for 360+ grocery stores across Fairway, ShopRite, and Price Rite</li>
+                            <li>Spearheaded brand development and supply chain logistics for Fresh Produce, Deli, and Appetiser categories</li>
+                            <li><strong>Optimised operational efficiency, achieving 33% reduction in lead time</strong></li>
+                            <li>Strategic lead for comprehensive Fairway private label category reevaluation</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="experience-entry">
+                    <div class="job-header">
+                        <div class="job-title">
+                            <h3>Product Development Manager</h3>
+                            <span class="job-company">Kohl's Corporation</span>
+                        </div>
+                        <div class="job-dates">October 2017 – February 2020</div>
+                    </div>
+                    <div class="job-description">
+                        <ul>
+                            <li>Headed 15-person cross-functional team driving strategy for private and exclusive brands (2,500+ SKUs)</li>
+                            <li><strong>Generated $5M increase in sales volume</strong> through test-and-react planning</li>
+                            <li>Led product development across apparel, accessories, and lifestyle categories</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="experience-entry">
+                    <div class="job-header">
+                        <div class="job-title">
+                            <h3>Associate Product Development Manager</h3>
+                            <span class="job-company">Kohl's Corporation</span>
+                        </div>
+                        <div class="job-dates">January 2016 – October 2017</div>
+                    </div>
+                    <div class="job-description">
+                        <ul>
+                            <li>Supported brand development and product strategy across key retail categories</li>
+                            <li>Collaborated with cross-functional teams on assortment planning and vendor management</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Skills & Expertise -->
+            <section class="cv-grid">
+                <div class="cv-column">
+                    <h2>Core Expertise</h2>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="padding: var(--spacing-md) 0; color: var(--text-secondary);"><strong>Strategy & Leadership:</strong> Product strategy, category management, go-to-market planning, business development</li>
+                        <li style="padding: var(--spacing-md) 0; color: var(--text-secondary);"><strong>Operations:</strong> Vendor management, supply chain optimization, P&L analysis, cost negotiation</li>
+                        <li style="padding: var(--spacing-md) 0; color: var(--text-secondary);"><strong>Execution:</strong> Cross-functional leadership, launch planning, process optimization, performance analytics</li>
+                        <li style="padding: var(--spacing-md) 0; color: var(--text-secondary);"><strong>Industries:</strong> Retail, Grocery, CPG, Tech, Food & Beverage, DTC</li>
+                    </ul>
+                </div>
+
+                <div class="cv-column">
+                    <h2>Key Achievements</h2>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="padding: var(--spacing-md) 0; color: var(--text-secondary);"><strong>$3M</strong> shrink reduction</li>
+                        <li style="padding: var(--spacing-md) 0; color: var(--text-secondary);"><strong>+22%</strong> YoY growth delivery</li>
+                        <li style="padding: var(--spacing-md) 0; color: var(--text-secondary);"><strong>50%</strong> margin improvement</li>
+                        <li style="padding: var(--spacing-md) 0; color: var(--text-secondary);"><strong>33%</strong> lead time reduction</li>
+                        <li style="padding: var(--spacing-md) 0; color: var(--text-secondary;"><strong>360+ store</strong> rollout leadership</li>
+                        <li style="padding: var(--spacing-md) 0; color: var(--text-secondary);"><strong>2,500+ SKU</strong> portfolio management</li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Chaty Widget -->
+    <script src="../js/chaty-config.js" defer></script>
+    <script src="../js/chaty-widget.js" defer></script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.caitlingardulescu.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "CV",
+      "item": "https://www.caitlingardulescu.com/pages/cv.html"
+    }
+  ]
+}
+</script>
+
+<footer>
+<div class="container">
+<div class="footer-bottom">
+<p>© 2026 Caitlin Gardulescu. All rights reserved.</p>
+</div>
+</div>
+</footer>
+
+<!-- Mobile Menu -->
+<script src="../js/mobile-menu.js" defer></script>
+</body>
+</html>

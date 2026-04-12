@@ -698,12 +698,9 @@
 
         .contact-unified-grid {
             display: grid;
-            max-width: 660px;
-            margin: 0 auto;
-            grid-template-columns: 280px 280px;
-            justify-content: center;
-            gap: 0 56px;
-            text-align: left;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: var(--spacing-xl) var(--spacing-2xl);
+            text-align: center;
             padding-top: var(--spacing-xl);
             border-top: 1px solid rgba(43, 43, 45, 0.12);
         }
@@ -712,44 +709,10 @@
             margin: 0;
         }
 
-        .contact-unified-item {
-            justify-self: stretch;
-        }
-
-        .contact-unified-item--left {
-            text-align: left;
-        }
-
-        .contact-unified-item--left .contact-live-time {
-            justify-content: flex-start;
-        }
-
-        .contact-location-lines {
-            display: grid;
-            gap: 16px;
-            font-size: calc(var(--font-size-base) + 1px);
-        }
-
-        .contact-stack {
-            display: grid;
-            gap: 0;
-        }
-
-        .contact-stack + .contact-stack {
-            margin-top: 10px;
-        }
-
         .contact-unified-label {
             margin: 0 0 var(--spacing-sm);
             color: var(--dark);
             font-weight: 700;
-            font-size: calc(var(--font-size-sm) + 1px);
-        }
-
-        .contact-unified-item a,
-        .contact-unified-item p:not(.contact-unified-label):not(.contact-live-time) {
-            font-size: calc(var(--font-size-base) + 1px);
-            line-height: 1.5;
         }
 
         .contact-live-time {
@@ -759,7 +722,7 @@
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            justify-content: flex-start;
+            justify-content: center;
             white-space: nowrap;
         }
 
@@ -1115,8 +1078,7 @@
 
             .contact-unified-grid {
                 grid-template-columns: 1fr;
-                gap: var(--spacing-xl);
-                max-width: none;
+                gap: var(--spacing-lg);
             }
         }
 
@@ -1226,9 +1188,9 @@
 <ul style="padding-left: 22px; line-height: 1.75; color: var(--text-secondary); font-size: 18px;">
 <li style="padding: 0 0 16px 0;">Store sales are soft while e-commerce remains strong</li>
 <li style="padding: 0 0 16px 0;">Production timelines are too long and prevent chase/react</li>
+<li style="padding: 0 0 16px 0;">Unclear processes are causing duplicative work and spin</li>
 <li style="padding: 0 0 16px 0;">Customer complaints point to quality or delivery issues</li>
-<li style="padding: 0 0 16px 0;">Vendor strategy and sourcing decisions are limiting growth</li>
-<li style="padding: 0;">Launches and rebrands need strategic assortment planning</li>
+<li style="padding: 0;">Vendor strategy is fragmented and limiting growth</li>
 </ul>
 </div>
 <div class="section-2col-panel">
@@ -1277,22 +1239,17 @@
 <a class="btn" href="https://calendly.com/caitlingardulescu/" target="_blank">Schedule a Call</a>
 </div>
 <div class="contact-unified-grid">
-<div class="contact-unified-item contact-unified-item--left">
-<div class="contact-stack">
+<div class="contact-unified-item">
 <p class="contact-unified-label">Email</p>
 <p><a href="mailto:caitlin@caitlingardulescu.com">caitlin@caitlingardulescu.com</a></p>
 </div>
-<div class="contact-stack">
+<div class="contact-unified-item">
 <p class="contact-unified-label">Phone</p>
 <p><a href="tel:+17348461006">+1 734-846-1006</a></p>
 </div>
-</div>
 <div class="contact-unified-item">
-<p class="contact-unified-label">Location</p>
-<div class="contact-location-lines">
-<p style="color: var(--text-secondary);">Based in Barcelona, España</p>
-<p style="color: var(--text-secondary);">Currently in <a href="https://maps.google.com/?q=Da+Nang,+Vietnam" target="_blank" rel="noreferrer">Da Nang, Vietnam</a></p>
-</div>
+<p class="contact-unified-label">Current Location</p>
+<p style="color: var(--text-secondary);">Da Nang, Vietnam (ICT, GMT+7)</p>
 <p aria-live="polite" class="contact-live-time"><span aria-hidden="true" class="contact-live-dot"></span>Local time: <span id="danang-local-time">--:--</span></p>
 </div>
 </div>
