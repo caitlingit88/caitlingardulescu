@@ -3,16 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV | Caitlin Gardulescu</title>
-    <meta name="description" content="Professional CV and career history of Caitlin Gardulescu. Strategic consultant with 15+ years in brand management, product strategy, category growth, and operational execution.">
-    <meta property="og:title" content="CV | Caitlin Gardulescu">
-    <meta property="og:description" content="Professional CV and career history of Caitlin Gardulescu. Strategic consultant with 15+ years in brand management, product strategy, category growth, and operational execution.">
-    <meta property="og:type" content="profile">
-    <meta property="og:url" content="https://www.caitlingardulescu.com/pages/cv.html">
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="CV | Caitlin Gardulescu">
-    <meta name="twitter:description" content="Professional CV and career history of Caitlin Gardulescu. Strategic consultant with 15+ years in brand management, product strategy, category growth, and operational execution.">
-    <link rel="canonical" href="https://www.caitlingardulescu.com/pages/cv.html">
+    <title>Experience Preview V6 | Caitlin Gardulescu</title>
+    <meta name="description" content="Preview of a modernized experience page for Caitlin Gardulescu.">
     <style>
         @font-face {
             font-family: 'Playfair Display';
@@ -429,6 +421,11 @@
             border-bottom: 1px solid rgba(56, 56, 56, 0.08);
         }
 
+        .fact-row--location {
+            grid-template-columns: 1fr;
+            gap: 10px;
+        }
+
         .fact-row:last-child {
             border-bottom: none;
             padding-bottom: 0;
@@ -457,6 +454,13 @@
             line-height: 1.6;
         }
 
+        .location-current {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px 12px;
+            align-items: center;
+        }
+
         .location-line a {
             color: var(--dark);
             text-decoration: underline;
@@ -473,24 +477,9 @@
             align-items: center;
             gap: 8px;
             justify-content: flex-start;
+            white-space: nowrap;
             font-size: var(--font-size-sm);
             color: var(--dark);
-        }
-
-        .time-stack {
-            display: grid;
-            gap: 2px;
-        }
-
-        .time-label {
-            color: var(--text-secondary);
-            font-size: var(--font-size-sm);
-        }
-
-        .time-value {
-            color: var(--dark);
-            font-size: var(--font-size-base);
-            font-weight: 600;
         }
 
         .contact-live-dot {
@@ -861,9 +850,9 @@
                 <span></span>
             </button>
             <ul class="nav-links">
-                <li><a href="services.html">Services</a></li>
-                <li><a href="cv.html">Experience</a></li>
-                <li><a href="about.html">About</a></li>
+                <li><a href="../pages/services.html">Services</a></li>
+                <li><a href="../pages/cv.html">Experience</a></li>
+                <li><a href="../pages/about.html">About</a></li>
                 <li><a class="nav-cta" href="https://calendly.com/caitlingardulescu/" target="_blank">Schedule a Call</a></li>
             </ul>
             <div class="menu-overlay" data-menu-overlay></div>
@@ -878,13 +867,13 @@
             <div class="hero-copy reveal">
                 <div class="hero-top">
                     <h1 class="hero-name">Caitlin Gardulescu</h1>
-                    <p class="hero-summary">Strategic and creative leader with <strong>15+ years</strong> driving <strong>brand, product, category, and operational growth</strong> across food, grocery, retail, and consumer goods. Experience spans <strong>consulting, founder-led brands, large-scale retail, and private label</strong>, with a focus on the decisions that improve margin, sharpen assortment, strengthen vendor strategy, and support growth.</p>
+                    <p class="hero-summary">Strategic and creative leader with 15+ years driving brand, product, category, and operational growth across food, grocery, retail, and consumer goods. Experience spans consulting, founder-led businesses, large-scale retail, and private label, with a focus on the decisions that improve margin, sharpen assortment, strengthen vendor strategy, and support growth.</p>
                 </div>
                 <div class="hero-bottom">
                     <a class="download-link" href="../attachments/Caitlin%20Gardulescu%20Resume.pdf" download>Download CV</a>
                     <ul class="hero-contact-list">
-                        <li><a href="tel:+17348461006">+1 734-846-1006</a></li>
                         <li><a href="mailto:caitlin@caitlingardulescu.com">caitlin@caitlingardulescu.com</a></li>
+                        <li><a href="tel:+17348461006">+1 734-846-1006</a></li>
                         <li><a href="https://linkedin.com/in/caitlin-gardulescu" target="_blank" rel="noopener noreferrer">linkedin.com/in/caitlin-gardulescu</a></li>
                     </ul>
                 </div>
@@ -892,20 +881,19 @@
             <aside class="hero-facts reveal" style="--reveal-delay: 80ms;">
                 <div class="fact-row">
                     <div class="fact-label">Specialties</div>
-                    <div class="fact-value">Product strategy, category growth, sourcing, vendor negotiations, launch planning, and execution</div>
+                    <div class="fact-value">Product strategy, category growth, sourcing, vendor negotiations, launch planning, and operational execution</div>
                 </div>
                 <div class="fact-row">
                     <div class="fact-label">Sectors</div>
-                    <div class="fact-value">Food, grocery, retail, consumer goods, DTC, and lifestyle</div>
+                    <div class="fact-value">Food, grocery, retail, consumer goods, DTC, and lifestyle brands</div>
                 </div>
-                <div class="fact-row">
+                <div class="fact-row fact-row--location">
                     <div class="fact-label">Location</div>
                     <div class="location-stack">
                         <div class="location-line">Based in Barcelona, España</div>
-                        <div class="location-line">Currently in <a href="https://maps.google.com/?q=Da+Nang,+Vietnam" target="_blank" rel="noopener noreferrer">Da Nang, Vietnam</a></div>
-                        <div class="time-stack">
-                            <div class="time-label">Local time:</div>
-                            <div aria-live="polite" class="contact-live time-value"><span class="contact-live-dot"></span><span id="danang-local-time">--:--</span></div>
+                        <div class="location-current">
+                            <div class="location-line">Currently in <a href="https://maps.google.com/?q=Da+Nang,+Vietnam" target="_blank" rel="noopener noreferrer">Da Nang, Vietnam</a></div>
+                            <span aria-live="polite" class="contact-live"><span class="contact-live-dot"></span>Local time: <span id="danang-local-time">--:--</span></span>
                         </div>
                         <div class="location-line">Open to remote and relocation</div>
                     </div>
@@ -924,19 +912,19 @@
         <div class="impact-grid">
             <article class="impact-card reveal" style="--reveal-delay: 40ms;">
                 <span class="impact-number">$3M</span>
-                <p class="impact-copy">$3M shrink reduction through a new clearance strategy at Amazon Fresh</p>
+                <p class="impact-copy">Reduction in shrink risk through a newly created clearance strategy at Amazon Fresh</p>
             </article>
             <article class="impact-card reveal" style="--reveal-delay: 90ms;">
                 <span class="impact-number">50%</span>
-                <p class="impact-copy">Gross-margin improvement through vendor negotiations and sourcing at Bitewell</p>
+                <p class="impact-copy">Gross-margin improvement through vendor pricing negotiations and sourcing decisions at Bitewell</p>
             </article>
             <article class="impact-card reveal" style="--reveal-delay: 140ms;">
                 <span class="impact-number">33%</span>
-                <p class="impact-copy">Reduction in lead time to floor through operational improvements at Wakefern</p>
+                <p class="impact-copy">Reduction in product lead time to floor through operational improvements at Wakefern</p>
             </article>
             <article class="impact-card reveal" style="--reveal-delay: 190ms;">
                 <span class="impact-number">$300M</span>
-                <p class="impact-copy">Businesses of up to 2,500+ SKUs supported across major retail organizations</p>
+                <p class="impact-copy">Businesses supported at scale, with portfolios of up to 2,500+ SKUs across major retail organizations</p>
             </article>
         </div>
     </div>
@@ -976,7 +964,7 @@
                     <p class="job-note">Position ended due to company-wide restructuring</p>
                     <ul class="experience-bullets">
                         <li>Drove operations for DTC food products across cost negotiations, sourcing, supply planning, and SKU lifecycle management</li>
-                        <li>Improved gross margins by up to 50% through purchasing optimization and negotiations</li>
+                        <li>Increased gross margins by up to 50% through optimized purchasing and vendor negotiations</li>
                         <li>Built supplier relationships across food and beverage categories while onboarding new partners for growth</li>
                         <li>Developed and analyzed P&amp;L statements for retail operations, sharing insights in regular CEO and COO reviews</li>
                     </ul>
@@ -1039,7 +1027,7 @@
                     </div>
                     <ul class="experience-bullets">
                         <li>Oversaw multi-category product development portfolios of up to $300M and 2,500 SKUs annually</li>
-                        <li>Partnered daily with suppliers globally across the US, SE Asia and South America</li>
+                        <li>Partnered daily with suppliers across China, Vietnam, and India on cost, quality, and lead times</li>
                         <li>Worked cross-functionally with buying, design, QA, tech, marketing, and merchandising teams to support sales growth</li>
                     </ul>
                 </article>
@@ -1049,11 +1037,11 @@
                 <section class="side-card reveal" style="--reveal-delay: 80ms;">
                     <h3>Core Competencies</h3>
                     <ul class="pill-list">
-                        <li>Team leadership, coaching, and team alignment</li>
+                        <li>Team leadership, coaching, and cross-functional collaboration</li>
                         <li>Strategic pricing, planning, and execution</li>
                         <li>Vendor partnerships, sourcing, and negotiation</li>
                         <li>P&amp;L management and performance analysis</li>
-                        <li>SQL, IRI, and Nielsen-informed analysis</li>
+                        <li>SQL, IRI, and Nielsen-informed decision-making</li>
                         <li>Process streamlining and operational improvement</li>
                     </ul>
                 </section>
@@ -1070,8 +1058,8 @@
                     <h3>Areas of Strength</h3>
                     <ul class="detail-list">
                         <li><strong>Brand and assortment strategy</strong><br>Shaping product direction with commercial discipline and customer relevance</li>
-                        <li><strong>Operational execution</strong><br>Connecting strategy to sourcing, planning, and delivery</li>
-                        <li><strong>Category growth</strong><br>Balancing margin, assortment, timing, and vendor strategy</li>
+                        <li><strong>Operational execution</strong><br>Connecting strategy to sourcing, planning, and delivery across physical product businesses</li>
+                        <li><strong>Category growth</strong><br>Balancing margin, assortment, timing, and vendor strategy to support scale</li>
                     </ul>
                 </section>
             </aside>

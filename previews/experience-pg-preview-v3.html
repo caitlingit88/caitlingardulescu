@@ -3,16 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV | Caitlin Gardulescu</title>
-    <meta name="description" content="Professional CV and career history of Caitlin Gardulescu. Strategic consultant with 15+ years in brand management, product strategy, category growth, and operational execution.">
-    <meta property="og:title" content="CV | Caitlin Gardulescu">
-    <meta property="og:description" content="Professional CV and career history of Caitlin Gardulescu. Strategic consultant with 15+ years in brand management, product strategy, category growth, and operational execution.">
-    <meta property="og:type" content="profile">
-    <meta property="og:url" content="https://www.caitlingardulescu.com/pages/cv.html">
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="CV | Caitlin Gardulescu">
-    <meta name="twitter:description" content="Professional CV and career history of Caitlin Gardulescu. Strategic consultant with 15+ years in brand management, product strategy, category growth, and operational execution.">
-    <link rel="canonical" href="https://www.caitlingardulescu.com/pages/cv.html">
+    <title>Experience Preview V3 | Caitlin Gardulescu</title>
+    <meta name="description" content="Preview of a modernized experience page for Caitlin Gardulescu.">
     <style>
         @font-face {
             font-family: 'Playfair Display';
@@ -331,60 +323,8 @@
         .hero-copy {
             display: flex;
             flex-direction: column;
-            gap: 22px;
-            align-self: stretch;
-            padding-top: 6px;
-        }
-
-        .hero-top {
-            display: grid;
-            gap: 14px;
-        }
-
-        .hero-bottom {
-            display: grid;
-            gap: 16px;
-            align-items: start;
-            justify-items: start;
-        }
-
-        .download-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding-bottom: 4px;
-            border-bottom: 1px solid rgba(202, 156, 31, 0.42);
-            color: var(--dark);
-            font-size: 15px;
-            font-weight: 600;
-            letter-spacing: 0.02em;
-            transition: color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
-        }
-
-        .download-link:hover {
-            opacity: 1;
-            color: var(--gold);
-            border-color: rgba(202, 156, 31, 0.8);
-            transform: translateY(-1px);
-        }
-
-        .hero-contact-list {
-            list-style: none;
-            display: grid;
-            gap: 10px;
-            margin: 0;
-            padding: 0;
-        }
-
-        .hero-contact-list li,
-        .hero-contact-list a {
-            color: var(--dark);
-            font-size: 15px;
-            line-height: 1.7;
-        }
-
-        .hero-contact-list a:hover {
-            color: var(--gold);
+            justify-content: space-between;
+            min-height: 100%;
         }
 
         .eyebrow {
@@ -401,12 +341,6 @@
             font-size: 19px;
             max-width: 720px;
             color: var(--text-secondary);
-            margin-bottom: 0;
-        }
-
-        .hero-name {
-            color: var(--gold);
-            text-shadow: 0 10px 28px rgba(202, 156, 31, 0.18);
             margin-bottom: 0;
         }
 
@@ -447,67 +381,6 @@
             line-height: 1.7;
         }
 
-        .location-stack {
-            display: grid;
-            gap: 8px;
-        }
-
-        .location-line {
-            color: var(--dark);
-            line-height: 1.6;
-        }
-
-        .location-line a {
-            color: var(--dark);
-            text-decoration: underline;
-            text-underline-offset: 3px;
-            text-decoration-color: rgba(202, 156, 31, 0.55);
-        }
-
-        .location-line a:hover {
-            color: var(--gold);
-        }
-
-        .contact-live {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            justify-content: flex-start;
-            font-size: var(--font-size-sm);
-            color: var(--dark);
-        }
-
-        .time-stack {
-            display: grid;
-            gap: 2px;
-        }
-
-        .time-label {
-            color: var(--text-secondary);
-            font-size: var(--font-size-sm);
-        }
-
-        .time-value {
-            color: var(--dark);
-            font-size: var(--font-size-base);
-            font-weight: 600;
-        }
-
-        .contact-live-dot {
-            width: 8px;
-            height: 8px;
-            border-radius: 50%;
-            background: var(--gold);
-            box-shadow: 0 0 0 0 rgba(198, 159, 46, 0.45);
-            animation: livePulse 2.2s ease-out infinite;
-        }
-
-        @keyframes livePulse {
-            0% { box-shadow: 0 0 0 0 rgba(198, 159, 46, 0.45); }
-            70% { box-shadow: 0 0 0 8px rgba(198, 159, 46, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(198, 159, 46, 0); }
-        }
-
         .impact-grid {
             display: grid;
             grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -520,13 +393,6 @@
             background: var(--bg-white);
             border: 1px solid rgba(202, 156, 31, 0.16);
             box-shadow: var(--shadow-soft);
-            transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
-        }
-
-        .impact-card:hover {
-            border-color: rgba(202, 156, 31, 0.3);
-            box-shadow: 0 4px 12px rgba(202, 156, 31, 0.1);
-            transform: translateY(-1px);
         }
 
         .impact-number {
@@ -574,11 +440,11 @@
         .experience-card::before {
             content: '';
             position: absolute;
-            top: 6px;
-            bottom: 6px;
+            top: 0;
             left: 0;
             width: 3px;
-            border-radius: 12px 0 0 12px;
+            height: 100%;
+            border-radius: 18px 0 0 18px;
             background: linear-gradient(180deg, rgba(202, 156, 31, 0.95) 0%, rgba(202, 156, 31, 0.3) 100%);
         }
 
@@ -656,16 +522,9 @@
         .side-card {
             padding: 26px 24px;
             border-radius: 14px;
-            background: linear-gradient(180deg, rgba(245, 234, 211, 0.82) 0%, rgba(255, 255, 255, 0.98) 100%);
-            border: 1px solid rgba(202, 156, 31, 0.18);
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.98) 0%, rgba(250, 246, 241, 0.9) 100%);
+            border: 1px solid rgba(56, 56, 56, 0.08);
             box-shadow: var(--shadow-soft);
-            transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
-        }
-
-        .side-card:hover {
-            border-color: rgba(202, 156, 31, 0.34);
-            box-shadow: 0 4px 12px rgba(202, 156, 31, 0.1);
-            transform: translateY(-1px);
         }
 
         .side-card h3 {
@@ -684,8 +543,8 @@
             padding: 0 0 10px;
             border-radius: 0;
             background: transparent;
-            border-bottom: 1px solid rgba(202, 156, 31, 0.18);
-            color: var(--dark);
+            border-bottom: 1px solid rgba(56, 56, 56, 0.08);
+            color: var(--text-secondary);
             font-size: 15px;
             line-height: 1.7;
         }
@@ -696,7 +555,7 @@
         }
 
         .detail-list li {
-            color: var(--dark);
+            color: var(--text-secondary);
             line-height: 1.8;
         }
 
@@ -861,9 +720,9 @@
                 <span></span>
             </button>
             <ul class="nav-links">
-                <li><a href="services.html">Services</a></li>
-                <li><a href="cv.html">Experience</a></li>
-                <li><a href="about.html">About</a></li>
+                <li><a href="../pages/services.html">Services</a></li>
+                <li><a href="../pages/cv.html">Experience</a></li>
+                <li><a href="../pages/about.html">About</a></li>
                 <li><a class="nav-cta" href="https://calendly.com/caitlingardulescu/" target="_blank">Schedule a Call</a></li>
             </ul>
             <div class="menu-overlay" data-menu-overlay></div>
@@ -876,39 +735,26 @@
         <div class="page-banner">Experience</div>
         <div class="experience-hero">
             <div class="hero-copy reveal">
-                <div class="hero-top">
-                    <h1 class="hero-name">Caitlin Gardulescu</h1>
-                    <p class="hero-summary">Strategic and creative leader with <strong>15+ years</strong> driving <strong>brand, product, category, and operational growth</strong> across food, grocery, retail, and consumer goods. Experience spans <strong>consulting, founder-led brands, large-scale retail, and private label</strong>, with a focus on the decisions that improve margin, sharpen assortment, strengthen vendor strategy, and support growth.</p>
-                </div>
-                <div class="hero-bottom">
-                    <a class="download-link" href="../attachments/Caitlin%20Gardulescu%20Resume.pdf" download>Download CV</a>
-                    <ul class="hero-contact-list">
-                        <li><a href="tel:+17348461006">+1 734-846-1006</a></li>
-                        <li><a href="mailto:caitlin@caitlingardulescu.com">caitlin@caitlingardulescu.com</a></li>
-                        <li><a href="https://linkedin.com/in/caitlin-gardulescu" target="_blank" rel="noopener noreferrer">linkedin.com/in/caitlin-gardulescu</a></li>
-                    </ul>
-                </div>
+                <span class="eyebrow">Career Snapshot</span>
+                <h1>Caitlin Gardulescu</h1>
+                <p class="hero-summary">Strategic and creative leader with 15+ years driving brand, product, category, and operational growth across food, grocery, retail, and consumer goods. Experience spans consulting, founder-led businesses, large-scale retail, and private label, with a focus on the decisions that improve margin, sharpen assortment, strengthen vendor strategy, and support growth.</p>
             </div>
             <aside class="hero-facts reveal" style="--reveal-delay: 80ms;">
                 <div class="fact-row">
-                    <div class="fact-label">Specialties</div>
-                    <div class="fact-value">Product strategy, category growth, sourcing, vendor negotiations, launch planning, and execution</div>
+                    <div class="fact-label">Focus</div>
+                    <div class="fact-value">Product strategy, category growth, sourcing, vendor negotiations, launch planning, and operational execution</div>
                 </div>
                 <div class="fact-row">
                     <div class="fact-label">Sectors</div>
-                    <div class="fact-value">Food, grocery, retail, consumer goods, DTC, and lifestyle</div>
+                    <div class="fact-value">Food, grocery, retail, consumer goods, DTC, and lifestyle brands</div>
                 </div>
                 <div class="fact-row">
-                    <div class="fact-label">Location</div>
-                    <div class="location-stack">
-                        <div class="location-line">Based in Barcelona, España</div>
-                        <div class="location-line">Currently in <a href="https://maps.google.com/?q=Da+Nang,+Vietnam" target="_blank" rel="noopener noreferrer">Da Nang, Vietnam</a></div>
-                        <div class="time-stack">
-                            <div class="time-label">Local time:</div>
-                            <div aria-live="polite" class="contact-live time-value"><span class="contact-live-dot"></span><span id="danang-local-time">--:--</span></div>
-                        </div>
-                        <div class="location-line">Open to remote and relocation</div>
-                    </div>
+                    <div class="fact-label">Based</div>
+                    <div class="fact-value">Barcelona, open to remote and relocation</div>
+                </div>
+                <div class="fact-row">
+                    <div class="fact-label">Contact</div>
+                    <div class="fact-value"><a href="mailto:gardulescu@gmail.com">gardulescu@gmail.com</a><br><a href="tel:+17348461006">+1 734-846-1006</a><br><a href="https://linkedin.com/in/caitlin-gardulescu" target="_blank">linkedin.com/in/caitlin-gardulescu</a></div>
                 </div>
             </aside>
         </div>
@@ -924,19 +770,19 @@
         <div class="impact-grid">
             <article class="impact-card reveal" style="--reveal-delay: 40ms;">
                 <span class="impact-number">$3M</span>
-                <p class="impact-copy">$3M shrink reduction through a new clearance strategy at Amazon Fresh</p>
+                <p class="impact-copy">Reduction in shrink risk through a newly created clearance strategy at Amazon Fresh</p>
             </article>
             <article class="impact-card reveal" style="--reveal-delay: 90ms;">
                 <span class="impact-number">50%</span>
-                <p class="impact-copy">Gross-margin improvement through vendor negotiations and sourcing at Bitewell</p>
+                <p class="impact-copy">Gross-margin improvement through vendor pricing negotiations and sourcing decisions at Bitewell</p>
             </article>
             <article class="impact-card reveal" style="--reveal-delay: 140ms;">
                 <span class="impact-number">33%</span>
-                <p class="impact-copy">Reduction in lead time to floor through operational improvements at Wakefern</p>
+                <p class="impact-copy">Reduction in product lead time to floor through operational improvements at Wakefern</p>
             </article>
             <article class="impact-card reveal" style="--reveal-delay: 190ms;">
                 <span class="impact-number">$300M</span>
-                <p class="impact-copy">Businesses of up to 2,500+ SKUs supported across major retail organizations</p>
+                <p class="impact-copy">Businesses supported at scale, with portfolios of up to 2,500+ SKUs across major retail organizations</p>
             </article>
         </div>
     </div>
@@ -976,7 +822,7 @@
                     <p class="job-note">Position ended due to company-wide restructuring</p>
                     <ul class="experience-bullets">
                         <li>Drove operations for DTC food products across cost negotiations, sourcing, supply planning, and SKU lifecycle management</li>
-                        <li>Improved gross margins by up to 50% through purchasing optimization and negotiations</li>
+                        <li>Increased gross margins by up to 50% through optimized purchasing and vendor negotiations</li>
                         <li>Built supplier relationships across food and beverage categories while onboarding new partners for growth</li>
                         <li>Developed and analyzed P&amp;L statements for retail operations, sharing insights in regular CEO and COO reviews</li>
                     </ul>
@@ -1039,7 +885,7 @@
                     </div>
                     <ul class="experience-bullets">
                         <li>Oversaw multi-category product development portfolios of up to $300M and 2,500 SKUs annually</li>
-                        <li>Partnered daily with suppliers globally across the US, SE Asia and South America</li>
+                        <li>Partnered daily with suppliers across China, Vietnam, and India on cost, quality, and lead times</li>
                         <li>Worked cross-functionally with buying, design, QA, tech, marketing, and merchandising teams to support sales growth</li>
                     </ul>
                 </article>
@@ -1049,11 +895,11 @@
                 <section class="side-card reveal" style="--reveal-delay: 80ms;">
                     <h3>Core Competencies</h3>
                     <ul class="pill-list">
-                        <li>Team leadership, coaching, and team alignment</li>
+                        <li>Team leadership, coaching, and cross-functional collaboration</li>
                         <li>Strategic pricing, planning, and execution</li>
                         <li>Vendor partnerships, sourcing, and negotiation</li>
                         <li>P&amp;L management and performance analysis</li>
-                        <li>SQL, IRI, and Nielsen-informed analysis</li>
+                        <li>SQL, IRI, and Nielsen-informed decision-making</li>
                         <li>Process streamlining and operational improvement</li>
                     </ul>
                 </section>
@@ -1070,8 +916,8 @@
                     <h3>Areas of Strength</h3>
                     <ul class="detail-list">
                         <li><strong>Brand and assortment strategy</strong><br>Shaping product direction with commercial discipline and customer relevance</li>
-                        <li><strong>Operational execution</strong><br>Connecting strategy to sourcing, planning, and delivery</li>
-                        <li><strong>Category growth</strong><br>Balancing margin, assortment, timing, and vendor strategy</li>
+                        <li><strong>Operational execution</strong><br>Connecting strategy to sourcing, planning, and delivery across physical product businesses</li>
+                        <li><strong>Category growth</strong><br>Balancing margin, assortment, timing, and vendor strategy to support scale</li>
                     </ul>
                 </section>
             </aside>
@@ -1082,7 +928,7 @@
 <section class="section section--light">
     <div class="container">
         <div class="cta-panel reveal">
-            <h2>Need support across product, category, or vendor strategy?</h2>
+            <h2>Need senior support across product, category, or vendor strategy?</h2>
             <p>I partner with founders and teams on assortment planning, sourcing, vendor strategy, go-to-market execution, and the operating decisions that shape commercial performance.</p>
             <a class="btn" href="https://calendly.com/caitlingardulescu/" target="_blank">Schedule a Call</a>
         </div>
@@ -1097,29 +943,10 @@
     </div>
 </footer>
 
-<script src="../js/chaty-config.js" defer></script>
-<script src="../js/chaty-widget.js" defer></script>
 <script src="../js/mobile-menu.js" defer></script>
 <script>
     document.addEventListener('DOMContentLoaded', function () {
-        const timeTarget = document.getElementById('danang-local-time');
         const revealItems = document.querySelectorAll('.reveal');
-
-        if (timeTarget) {
-            const updateDaNangTime = () => {
-                const formatter = new Intl.DateTimeFormat('en-US', {
-                    hour: 'numeric',
-                    minute: '2-digit',
-                    hour12: true,
-                    timeZone: 'Asia/Ho_Chi_Minh'
-                });
-
-                timeTarget.textContent = formatter.format(new Date());
-            };
-
-            updateDaNangTime();
-            setInterval(updateDaNangTime, 60000);
-        }
 
         if (!('IntersectionObserver' in window)) {
             revealItems.forEach((item) => item.classList.add('is-visible'));
