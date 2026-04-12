@@ -4,7 +4,7 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Caitlin Gardulescu | Strategic Brand &amp; Product Consultant</title>
-<link rel="icon" href="images/CG-logo-new.webp" type="image/webp"/>
+<link rel="icon" href="../images/CG-logo-new.webp" type="image/webp"/>
 <meta content="Strategic brand, category, and product leader. 15+ years scaling consumer brands. Consulting for founders and teams." name="description"/>
 <meta content="Caitlin Gardulescu | Strategic Consultant" property="og:title"/>
 <meta content="15+ years of strategic experience scaling brands. Consulting for product strategy, go-to-market, and category expansion." property="og:description"/>
@@ -1152,8 +1152,8 @@
             opacity: 0;
             transform: translateY(14px) scale(0.982);
             transition:
-                opacity 760ms var(--motion-ease-premium),
-                transform 760ms var(--motion-ease-premium),
+                opacity 640ms var(--motion-ease-premium),
+                transform 640ms var(--motion-ease-premium),
                 box-shadow 220ms ease,
                 border-color 220ms ease;
             transform-origin: center bottom;
@@ -1245,7 +1245,7 @@
 <header>
 <div class="container">
 <nav data-menu-open="false">
-<div class="logo"><a href="index.html" style="color: inherit; text-decoration: none;"><img src="images/CG-logo-new.webp" alt="Caitlin Gardulescu" style="height: 48px; width: auto;"/></a></div>
+<div class="logo"><a href="../index.html" style="color: inherit; text-decoration: none;"><img src="../images/CG-logo-new.webp" alt="Caitlin Gardulescu" style="height: 48px; width: auto;"/></a></div>
 <div class="nav-header-cta">
 <a class="btn" href="https://calendly.com/caitlingardulescu/" target="_blank">Schedule a Call</a>
 </div>
@@ -1255,9 +1255,9 @@
   <span></span>
 </button>
 <ul class="nav-links">
-<li><a href="pages/services.html">Services</a></li>
-<li><a href="pages/cv.html">Experience</a></li>
-<li><a href="pages/about.html">About</a></li>
+<li><a href="../pages/services.html">Services</a></li>
+<li><a href="../pages/cv.html">Experience</a></li>
+<li><a href="../pages/about.html">About</a></li>
 <li><a class="nav-cta" href="https://calendly.com/caitlingardulescu/" target="_blank">Schedule a Call</a></li>
 </ul>
 <div class="menu-overlay" data-menu-overlay></div>
@@ -1278,7 +1278,7 @@
 </div>
 </div>
 <div class="hero-image">
-<img alt="Caitlin Gardulescu, strategic brand and product consultant" src="images/hero-pic-1.jpg"/>
+<img alt="Caitlin Gardulescu, strategic brand and product consultant" src="../images/hero-pic-1.jpg"/>
 <div class="hero-image-overlay">
 <div class="hero-image-overlay-name">Caitlin Gardulescu</div>
 <div class="hero-image-overlay-title">Strategic Brand &amp; Product Consultant</div>
@@ -1291,7 +1291,7 @@
 <!-- Logo Banner Section -->
 <section class="section" style="background: var(--bg-white); padding: 0; margin-top: -16px;">
 <div class="container">
-<img class="logo-banner-image" alt="Caitlin Gardulescu consulting logo and branding" src="images/caitlin-gardulescu-logo-banner.webp"/>
+<img class="logo-banner-image" alt="Caitlin Gardulescu consulting logo and branding" src="../images/caitlin-gardulescu-logo-banner.webp"/>
 </div>
 </section>
 
@@ -1360,19 +1360,19 @@
 <section class="section section--gradient-cream" id="services">
 <div class="container">
 <h2 class="collab-title">How I Can Help</h2>
-<div class="services-grid" data-services-reveal>
-<a class="service-card service-card-link" href="pages/services.html#product-category-strategy">
-<img class="service-thumb" src="images/img-2183-2-square-produce.jpg" alt="Produce section"/>
+<div class="services-grid">
+<a class="service-card service-card-link" href="../pages/services.html#product-category-strategy">
+<img class="service-thumb" src="../images/img-2183-2-square-produce.jpg" alt="Produce section"/>
 <h3>Product &amp; Category Strategy</h3>
 <p>Define, evaluate, and refine assortments to improve performance and unlock growth.</p>
 </a>
-<a class="service-card service-card-link" href="pages/services.html#go-to-market-product-sourcing">
-<img class="service-thumb" src="images/img-1483-tees-on-table.jpg" alt="Retail merchandise table"/>
+<a class="service-card service-card-link" href="../pages/services.html#go-to-market-product-sourcing">
+<img class="service-thumb" src="../images/img-1483-tees-on-table.jpg" alt="Retail merchandise table"/>
 <h3>Go-To-Market Planning &amp; Product Sourcing</h3>
 <p>Align strategy and execution to ensure products launch and perform effectively.</p>
 </a>
-<a class="service-card service-card-link" href="pages/services.html#vendor-strategy-operational-excellence">
-<img class="service-thumb" src="images/img-1268-guat-factory-image-1.jpg" alt="Factory operations" style="object-position: center 62%;"/>
+<a class="service-card service-card-link" href="../pages/services.html#vendor-strategy-operational-excellence">
+<img class="service-thumb" src="../images/img-1268-guat-factory-image-1.jpg" alt="Factory operations" style="object-position: center 62%;"/>
 <h3>Vendor Strategy &amp; Operational Excellence</h3>
 <p>Strengthen vendor matrix and streamline operations to support scalable growth.</p>
 </a>
@@ -1434,11 +1434,10 @@
 <script>
 (() => {
   const heroTargets = document.querySelectorAll('.hero-content, .hero-image');
-  const servicesGrid = document.querySelector('[data-services-reveal]');
-  const serviceCards = servicesGrid ? Array.from(servicesGrid.querySelectorAll('.service-card-link')) : [];
   const revealGroups = [
     '.value-props > .value-prop',
     '.section-2col > .section-2col-panel',
+    '.services-grid > .service-card-link',
     '.contact-unified-header',
     '.contact-unified-grid > .contact-unified-item'
   ];
@@ -1448,13 +1447,10 @@
   revealGroups.forEach((selector) => {
     document.querySelectorAll(selector).forEach((el, index) => {
       el.classList.add('reveal-item');
-      el.style.setProperty('--reveal-delay', `${index * 35}ms`);
+      const isServiceCard = el.matches('.service-card-link');
+      el.style.setProperty('--reveal-delay', isServiceCard ? `${index * 140}ms` : `${index * 35}ms`);
       allRevealItems.push(el);
     });
-  });
-
-  serviceCards.forEach((el) => {
-    el.classList.add('reveal-item');
   });
 
   requestAnimationFrame(() => {
@@ -1466,7 +1462,6 @@
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
     heroTargets.forEach((el) => el.classList.add('is-visible'));
     allRevealItems.forEach((el) => el.classList.add('is-visible'));
-    serviceCards.forEach((el) => el.classList.add('is-visible'));
     return;
   }
 
@@ -1483,33 +1478,15 @@
   });
 
   allRevealItems.forEach((el) => observer.observe(el));
-
-  if (servicesGrid) {
-    const servicesObserver = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          serviceCards.forEach((card, index) => {
-            setTimeout(() => card.classList.add('is-visible'), index * 220);
-          });
-          servicesObserver.unobserve(entry.target);
-        }
-      });
-    }, {
-      threshold: 0.14,
-      rootMargin: '0px 0px -4% 0px'
-    });
-
-    servicesObserver.observe(servicesGrid);
-  }
 })();
 </script>
 
 <!-- Chaty Widget -->
-<script src="js/chaty-config.js" defer></script>
-<script src="js/chaty-widget.js" defer></script>
+<script src="../js/chaty-config.js" defer></script>
+<script src="../js/chaty-widget.js" defer></script>
 
 <!-- Mobile Menu -->
-<script src="js/mobile-menu.js" defer></script>
+<script src="../js/mobile-menu.js" defer></script>
 
 <script>
 (() => {
