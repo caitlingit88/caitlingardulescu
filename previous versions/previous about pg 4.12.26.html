@@ -3,15 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Caitlin | Personal Background & Interests</title>
-    <meta name="description" content="Get to know Caitlin beyond work: Ann Arbor roots, years in Wisconsin and New York City, a love of food and travel, and a deeply creative eye.">
-    <meta property="og:title" content="About Caitlin | Personal Background & Interests">
-    <meta property="og:description" content="Get to know Caitlin beyond work: Ann Arbor roots, years in Wisconsin and New York City, a love of food and travel, and a deeply creative eye.">
+    <title>About Caitlin | Strategic Leader & Consultant</title>
+    <meta name="description" content="15+ years scaling consumer brands. Strategic leadership in product, category management, and go-to-market.">
+    <meta property="og:title" content="About Caitlin | Strategic Leader & Consultant">
+    <meta property="og:description" content="15+ years scaling consumer brands. Strategic leadership in product, category management, and go-to-market.">
     <meta property="og:type" content="profile">
     <meta property="og:url" content="https://www.caitlingardulescu.com/pages/about.html">
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="About Caitlin | Personal Background & Interests">
-    <meta name="twitter:description" content="Get to know Caitlin beyond work: Ann Arbor roots, years in Wisconsin and New York City, a love of food and travel, and a deeply creative eye.">
+    <meta name="twitter:title" content="About Caitlin | Strategic Leader & Consultant">
+    <meta name="twitter:description" content="15+ years scaling consumer brands. Strategic leadership in product, category management, and go-to-market.">
+    <link rel="canonical" href="https://www.caitlingardulescu.com/pages/about.html">
     <style>
         /* Local Fonts */
         @font-face {
@@ -358,6 +359,52 @@
             padding-top: 18px;
         }
 
+        .page-banner {
+            text-align: center;
+            font-family: 'Playfair Display', serif;
+            font-size: calc(var(--font-size-2xl) + 10px);
+            font-weight: 700;
+            letter-spacing: 0.01em;
+            color: var(--dark);
+            margin-bottom: 18px;
+            padding-bottom: 18px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .page-banner::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(
+                90deg,
+                rgba(202, 156, 31, 0.15) 0%,
+                rgba(202, 156, 31, 0.95) 45%,
+                rgba(255, 238, 194, 0.95) 55%,
+                rgba(202, 156, 31, 0.95) 65%,
+                rgba(202, 156, 31, 0.15) 100%
+            );
+            background-size: 220% 100%;
+            transform-origin: left center;
+            transform: scaleX(0);
+            animation:
+                pageBannerSatinReveal 1.2s ease-out 0.08s forwards,
+                pageBannerSatinShine 2.2s linear 0.5s forwards;
+        }
+
+        @keyframes pageBannerSatinReveal {
+            from { transform: scaleX(0); }
+            to { transform: scaleX(1); }
+        }
+
+        @keyframes pageBannerSatinShine {
+            from { background-position: 0% 0; }
+            to { background-position: 100% 0; }
+        }
+
         .hero-image {
             width: 100%;
             aspect-ratio: 3/4;
@@ -380,230 +427,6 @@
             font-size: var(--font-size-lg);
             color: var(--text-secondary);
             margin-bottom: var(--spacing-2xl);
-        }
-
-        .hero-intro {
-            background: linear-gradient(180deg, #ffffff 0%, #fbf7ef 100%);
-        }
-
-        .hero-layout-v3 {
-            display: grid;
-            grid-template-columns: minmax(280px, 0.72fr) minmax(0, 1.28fr);
-            gap: 52px;
-            align-items: stretch;
-            padding: 18px 0 8px;
-        }
-
-        .hero-copy-card {
-            padding: 18px 0 0;
-        }
-
-        .hero-copy-card h1 {
-            max-width: none;
-            white-space: nowrap;
-            margin-bottom: 20px;
-            font-family: var(--font-heading);
-        }
-
-        .hero-copy-card p {
-            max-width: 700px;
-            font-size: calc(var(--font-size-base) + 1px);
-        }
-
-        .hero-photo-card {
-            position: relative;
-            border-radius: 10px;
-            overflow: hidden;
-            min-height: 500px;
-            background: #eee5d5;
-            box-shadow: 0 22px 44px rgba(56, 56, 56, 0.12);
-        }
-
-        .hero-photo-card img {
-            position: absolute;
-            inset: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .hero-photo-caption {
-            position: absolute;
-            left: 18px;
-            right: 18px;
-            bottom: 18px;
-            padding: 16px 18px;
-            background: linear-gradient(180deg, rgba(255, 252, 246, 0.9) 0%, rgba(255, 248, 236, 0.96) 100%);
-            border: 1px solid rgba(202, 156, 31, 0.24);
-            border-radius: 8px;
-            backdrop-filter: blur(10px);
-        }
-
-        .hero-photo-caption strong {
-            display: block;
-            margin-bottom: 8px;
-            color: var(--dark);
-            font-weight: 600;
-            font-size: var(--font-size-sm);
-            letter-spacing: 0.08em;
-            text-transform: uppercase;
-        }
-
-        .hero-photo-caption p {
-            margin: 0;
-            font-size: var(--font-size-sm);
-            line-height: 1.7;
-        }
-
-        .band {
-            padding: 22px 0;
-            background: var(--dark);
-            color: var(--bg-white);
-        }
-
-        .band p {
-            margin: 0;
-            color: rgba(255, 255, 255, 0.88);
-            font-size: var(--font-size-lg);
-            line-height: 1.8;
-            text-align: center;
-        }
-
-        .story-grid {
-            display: grid;
-            grid-template-columns: minmax(0, 1.05fr) minmax(320px, 0.95fr);
-            gap: 32px;
-            align-items: start;
-        }
-
-        .story-lead h2,
-        .chapter-header h2,
-        .closing-panel h2 {
-            font-family: var(--font-heading);
-            margin-bottom: 18px;
-        }
-
-        .story-lead p {
-            font-size: calc(var(--font-size-base) + 1px);
-            max-width: 700px;
-        }
-
-        .glance-panel {
-            background: linear-gradient(180deg, #ffffff 0%, #fbf7ef 100%);
-            border: 1px solid var(--border);
-            border-radius: 10px;
-            padding: 28px;
-        }
-
-        .glance-panel h3 {
-            font-size: var(--font-size-xl);
-            margin-bottom: 14px;
-        }
-
-        .glance-list {
-            list-style: none;
-        }
-
-        .glance-list li {
-            padding: 14px 0;
-            border-top: 1px solid rgba(56, 56, 56, 0.08);
-            color: var(--text-secondary);
-        }
-
-        .glance-list li:first-child {
-            border-top: none;
-            padding-top: 0;
-        }
-
-        .glance-list strong {
-            display: block;
-            margin-bottom: 4px;
-            color: var(--dark);
-            font-weight: 600;
-        }
-
-        .chapter-stack {
-            display: grid;
-            gap: 24px;
-        }
-
-        .chapter-card {
-            display: grid;
-            grid-template-columns: 140px 1fr;
-            gap: 24px;
-            padding: 28px;
-            border: 1px solid var(--border);
-            border-radius: 10px;
-            background: var(--bg-white);
-        }
-
-        .chapter-label {
-            color: var(--gold);
-            font-size: var(--font-size-xs);
-            font-weight: 600;
-            letter-spacing: 0.08em;
-            text-transform: uppercase;
-        }
-
-        .chapter-card h3 {
-            font-size: var(--font-size-xl);
-            margin-bottom: 10px;
-        }
-
-        .chapter-card p:last-child {
-            margin-bottom: 0;
-        }
-
-        .chapter-card p {
-            max-width: 720px;
-        }
-
-        .split-feature {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 26px;
-        }
-
-        .feature-card {
-            padding: 30px;
-            border-radius: 10px;
-            border: 1px solid var(--border);
-            background: linear-gradient(180deg, #ffffff 0%, #fbf8f2 100%);
-        }
-
-        .feature-card h3 {
-            font-size: 24px;
-            margin-bottom: 16px;
-        }
-
-        .feature-card p:last-child {
-            margin-bottom: 0;
-        }
-
-        .quote-panel {
-            padding: 34px;
-            border-radius: 10px;
-            background: #f7f1e6;
-            border: 1px solid rgba(202, 156, 31, 0.2);
-        }
-
-        .quote-panel p {
-            margin: 0;
-            color: var(--dark);
-            font-size: 22px;
-            line-height: 1.6;
-            font-family: var(--font-heading);
-            font-weight: 600;
-        }
-
-        .closing-panel {
-            max-width: 860px;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        .closing-panel p {
-            font-size: var(--font-size-lg);
         }
 
         /* Timeline */
@@ -687,75 +510,6 @@
             border-radius: 4px;
             font-size: var(--font-size-sm);
             color: var(--dark);
-        }
-
-        .section-intro {
-            max-width: 760px;
-            margin-bottom: var(--spacing-2xl);
-            font-size: var(--font-size-lg);
-        }
-
-        .snapshot-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: var(--spacing-xl);
-            margin-top: var(--spacing-2xl);
-        }
-
-        .snapshot-card {
-            background-color: var(--bg-white);
-            border: 1px solid var(--border);
-            border-radius: 8px;
-            padding: var(--spacing-2xl);
-        }
-
-        .snapshot-label {
-            color: var(--gold);
-            font-size: var(--font-size-xs);
-            font-weight: 600;
-            letter-spacing: 0.08em;
-            text-transform: uppercase;
-            margin-bottom: var(--spacing-sm);
-        }
-
-        .snapshot-card h3 {
-            font-size: var(--font-size-xl);
-            margin-bottom: var(--spacing-sm);
-        }
-
-        .essay-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: var(--spacing-2xl);
-            margin-top: var(--spacing-2xl);
-        }
-
-        .essay-card {
-            background: linear-gradient(180deg, #ffffff 0%, #fbf8f2 100%);
-            border: 1px solid var(--border);
-            border-radius: 8px;
-            padding: var(--spacing-3xl);
-        }
-
-        .essay-card h3 {
-            margin-bottom: var(--spacing-lg);
-        }
-
-        .values-list {
-            list-style: none;
-            margin-top: var(--spacing-lg);
-        }
-
-        .values-list li {
-            padding: var(--spacing-sm) 0;
-            color: var(--text-secondary);
-        }
-
-        .values-list li::before {
-            content: "→ ";
-            color: var(--gold);
-            font-weight: 600;
-            margin-right: var(--spacing-sm);
         }
 
         /* Button */
@@ -858,6 +612,10 @@
 
         /* Responsive */
         @media (max-width: 768px) {
+            .page-banner {
+                font-size: var(--font-size-2xl);
+            }
+
             h1 {
                 font-size: var(--font-size-2xl);
             }
@@ -867,26 +625,20 @@
             align-items: center;
         }
 
-            .hero,
-            .hero-layout-v3,
-            .story-grid,
-            .split-feature,
-            .essay-grid,
-            .snapshot-grid {
+            .hero {
                 grid-template-columns: 1fr;
             }
 
-            .hero-photo-card {
-                min-height: 420px;
+            .hero-image {
+                order: -1;
             }
 
-            .chapter-card {
+            .timeline-item {
                 grid-template-columns: 1fr;
-                gap: 14px;
             }
 
-            .quote-panel p {
-                font-size: 20px;
+            .skills {
+                grid-template-columns: 1fr;
             }
 
             .footer-content {
@@ -910,8 +662,8 @@
   <span></span>
 </button>
 <ul class="nav-links">
-<li><a href="../pages/services.html">Services</a></li>
-<li><a href="../pages/cv.html">Experience</a></li>
+<li><a href="services.html">Services</a></li>
+<li><a href="cv.html">Experience</a></li>
 <li><a href="about.html">About</a></li>
 <li><a class="nav-cta" href="https://calendly.com/caitlingardulescu/" target="_blank">Schedule a Call</a></li>
 </ul>
@@ -920,141 +672,222 @@
 </div>
 </header>
 
-    <section class="section hero-intro page-intro-section">
+    <!-- Hero -->
+    <section class="section page-intro-section">
         <div class="container">
-            <div class="hero-layout-v3" id="about">
-                <div class="hero-photo-card">
+            <div class="page-banner">About</div>
+            <div class="hero" id="about">
+                <div class="hero-image">
                     <img src="../images/caitlin-consulting-hero.png" alt="Caitlin Gardulescu">
-                    <div class="hero-photo-caption">
-                        <strong>A Personal Snapshot</strong>
-                        <p>The places that shaped me, the things I love, and the sensibility I bring into every part of life.</p>
-                    </div>
                 </div>
-                <div class="hero-copy-card">
-                    <h1>About Me</h1>
-                    <p class="hero-subtext">I’m deeply drawn to people, beauty, travel, creativity, and great food.</p>
-                    <p>I'm from Ann Arbor, Michigan, and the places I’ve lived have shaped me in lasting ways. I spent 10 years in Wisconsin and 9 years in New York City, and those chapters broadened the way I think about culture, connection, pace, and everyday life.</p>
-                    <p>Food is one of the great loves of my life, and travel feels most meaningful to me when it offers a real sense of place. I’m drawn to atmosphere, conversation, meals that carry memory, and the details that make somewhere feel distinct rather than interchangeable.</p>
-                    <p>I also love meeting new people, reading, writing, and making art. I have a deeply visual mind and a strong instinct for color, tone, and mood, which shapes the way I experience everything from design to travel to daily life.</p>
-                    <a href="../index.html#contact" class="btn" style="margin-top: var(--spacing-lg);">Get in Touch</a>
+                <div class="hero-content">
+                    <h1>Caitlin Gardulescu</h1>
+                    <p class="hero-subtext">Strategic brand, category, and product leader with 15+ years of experience launching and scaling consumer brands across food, grocery, retail, and DTC.</p>
+                    <p>I love understanding what people buy, why they buy it, and how businesses can meet them with products that feel meaningful, useful, and exciting.</p>
+                    <p style="margin-top: var(--spacing-lg);">My broad product background allows me to understand the consumer as a whole person, not just a single-category shopper. This comprehensive perspective helps me build launch strategies that connect with a customer's identity, preferences, and lifestyle across all aspects of their life.</p>
+                    <p style="margin-top: var(--spacing-lg);">Today, I run a global consulting practice supporting founders and teams with product strategy and operational execution.</p>
+                    <a href="index.html#contact" class="btn" style="margin-top: var(--spacing-lg);">Get in Touch</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="band">
-        <div class="container">
-            <p>What matters most to me is connection: to people, to place, to beauty, to culture, and to the details that make life feel textured and alive.</p>
-        </div>
-    </section>
-
-    <section class="section">
-        <div class="container">
-            <div class="story-grid">
-                <div class="story-lead">
-                    <h2>A Life Shaped by Curiosity</h2>
-                    <p>I’m someone who pays close attention. I love the feeling of understanding a place through its food, understanding a person through conversation, or being fully absorbed by a book, a piece of writing, or a visual world that feels complete.</p>
-                    <p>That curiosity runs through everything for me. It shapes the way I travel, the way I connect, and the way I notice atmosphere, nuance, and the details that give something real character.</p>
-                </div>
-                <aside class="glance-panel">
-                    <h3>At a Glance</h3>
-                    <ul class="glance-list">
-                        <li>
-                            <strong>Roots</strong>
-                            Ann Arbor, Michigan
-                        </li>
-                        <li>
-                            <strong>Life Chapters</strong>
-                            10 years in Wisconsin, 9 years in New York City
-                        </li>
-                        <li>
-                            <strong>Great Joys</strong>
-                            Food, travel, reading, writing, art, and conversation
-                        </li>
-                        <li>
-                            <strong>Creative Lens</strong>
-                            Strong visual instinct and an exceptional eye for color
-                        </li>
-                    </ul>
-                </aside>
-            </div>
-        </div>
-    </section>
-
+    <!-- Core Competencies -->
     <section class="section section--light">
         <div class="container">
-            <div class="split-feature">
-                <div class="feature-card">
-                    <h3>Food, Travel, and Discovery</h3>
-                    <p>I love food more than anything in the world. It is one of the deepest sources of joy in my life, and one of the ways I feel most connected to culture, memory, and other people.</p>
-                    <p>Travel becomes meaningful to me through the foods I discover along the way. I’m drawn to the market stall someone remembers forever, the local restaurant people return to with loyalty, the bakery that gives a neighborhood its rhythm, and the meal that quietly tells you something true about where you are.</p>
+            <h2>Core Competencies</h2>
+            <div class="skills">
+                <div class="skill-group">
+                    <h4>Strategy & Planning</h4>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Go-to-Market Strategy</span>
+                        <span class="skill-tag">Product Development</span>
+                        <span class="skill-tag">Category Expansion</span>
+                        <span class="skill-tag">Strategic Planning</span>
+                        <span class="skill-tag">Competitive Analysis</span>
+                    </div>
                 </div>
-                <div class="feature-card">
-                    <h3>Reading, Writing, Art, and Color</h3>
-                    <p>I’m an avid reader and writer, and both are central to how I process the world. I love language, observation, and the feeling that a well-made sentence can make something feel clearer, sharper, or more alive.</p>
-                    <p>I’m also a creative artist with a deeply visual mind. Color, tone, and mood register immediately for me, and I notice the subtleties that shape how something feels. That sensitivity informs the way I experience design, beauty, and everyday life.</p>
+
+                <div class="skill-group">
+                    <h4>Operations & Partnerships</h4>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Vendor Partnerships</span>
+                        <span class="skill-tag">Strategic Negotiations</span>
+                        <span class="skill-tag">Supply Chain Management</span>
+                        <span class="skill-tag">Cost Optimization</span>
+                        <span class="skill-tag">Process Improvement</span>
+                    </div>
+                </div>
+
+                <div class="skill-group">
+                    <h4>Leadership & Execution</h4>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Cross-Functional Leadership</span>
+                        <span class="skill-tag">Team Development</span>
+                        <span class="skill-tag">Project Management</span>
+                        <span class="skill-tag">Launch Execution</span>
+                        <span class="skill-tag">Change Management</span>
+                    </div>
+                </div>
+
+                <div class="skill-group">
+                    <h4>Category Management</h4>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Category Analysis</span>
+                        <span class="skill-tag">Merchandising Strategy</span>
+                        <span class="skill-tag">Pricing Strategy</span>
+                        <span class="skill-tag">Trend Forecasting</span>
+                        <span class="skill-tag">Sales Analytics</span>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="section">
+    <!-- Experience -->
+    <section class="section" id="experience">
         <div class="container">
-            <div class="chapter-header">
-                <h2>Places That Shaped Me</h2>
-                <p class="section-intro">The cities and seasons of life I’ve moved through say more about me personally than a conventional biography ever could.</p>
-            </div>
-            <div class="chapter-stack">
-                <div class="chapter-card">
-                    <div class="chapter-label">The Beginning</div>
+            <h2>Professional Background</h2>
+
+            <div class="timeline">
+                <div class="timeline-item">
                     <div>
-                        <h3>Ann Arbor, Michigan</h3>
-                        <p>Ann Arbor is where my story starts. It gave me a strong sense of identity and an early appreciation for ideas, culture, and community. That Midwestern grounding still feels like an essential part of who I am.</p>
+                        <div class="timeline-date">2023 – Present<br>3 years</div>
+                    </div>
+                    <div>
+                        <h4>Owner, Caitlin Gardulescu Consulting</h4>
+                        <div class="timeline-role">Global / Remote</div>
+                        <p>Strategy, product, and go-to-market guidance for consumer brands across food, retail, DTC, and lifestyle categories. I help teams strengthen their product vision, build strategic launch plans, and create the operational systems needed for sustainable growth.</p>
+                        <ul class="timeline-bullets">
+                            <li>Product strategy, concept development, and assortment planning</li>
+                            <li>Category expansion and trend-informed product roadmapping</li>
+                            <li>GTM planning, positioning, and cross-functional launch support</li>
+                            <li>Vendor sourcing, cost negotiations, and supply chain management</li>
+                            <li>Process optimization across supply chain, merchandising, and product operations</li>
+                            <li>Based in Barcelona and working globally with founder-led brands and fast-growing teams</li>
+                        </ul>
                     </div>
                 </div>
-                <div class="chapter-card">
-                    <div class="chapter-label">A Full Decade</div>
+
+                <div class="timeline-item">
                     <div>
-                        <h3>Wisconsin</h3>
-                        <p>I spent 10 years in Wisconsin, and it shaped a great deal of my adult life. It was a chapter of independence, personal growth, and long-form friendship, and it still carries a great deal of meaning for me.</p>
+                        <div class="timeline-date">2024<br>5 months</div>
+                    </div>
+                    <div>
+                        <h4>Director of Vendor Operations, bitewell</h4>
+                        <div class="timeline-role">New York, New York (Hybrid)</div>
+                        <p>Cross-functional leader of vendor strategy and product expansion.</p>
+                        <ul class="timeline-bullets">
+                            <li>Vendor strategy reevaluation and expansion planning</li>
+                            <li>Position ended due to company-wide restructuring</li>
+                        </ul>
                     </div>
                 </div>
-                <div class="chapter-card">
-                    <div class="chapter-label">Nine Years</div>
+
+                <div class="timeline-item">
                     <div>
-                        <h3>New York City</h3>
-                        <p>I lived in New York City for 9 years, and that chapter expanded me in every direction. It sharpened my perspective, deepened my love of meeting people from all walks of life, and gave me constant access to art, ideas, movement, and some of the best food in the world.</p>
+                        <div class="timeline-date">2022<br>9 months</div>
+                    </div>
+                    <div>
+                        <h4>Senior Vendor Manager (L6), Amazon Fresh</h4>
+                        <div class="timeline-role">New York, New York</div>
+                        <p>Led comprehensive clearance and seasonal strategies for all Amazon Fresh locations.</p>
+                        <ul class="timeline-bullets">
+                            <li>Championed creation and implementation of clearance program reducing shrink risk in 2022</li>
+                            <li>Crafted business cases driving strategic growth across categories for seasonal events</li>
+                            <li>Streamlined processes for clearance and seasonal, reducing product lead times</li>
+                            <li>Led 40+ person cross-functional team for store and online clearance and seasonal operations</li>
+                            <li>Identified and integrated new seasonal vendors for innovative product offerings</li>
+                        </ul>
                     </div>
                 </div>
-                <div class="chapter-card">
-                    <div class="chapter-label">Now</div>
+
+                <div class="timeline-item">
                     <div>
-                        <h3>Travel, New Chapters, and Staying Curious</h3>
-                        <p>These days, travel continues to shape how I experience the world. I feel most alive when I’m discovering a new place, connecting with new people, and finding the meal I’ll remember long after I leave.</p>
+                        <div class="timeline-date">2020 – 2022<br>1 year 6 months</div>
+                    </div>
+                    <div>
+                        <h4>Category Manager, Wakefern Food Corp</h4>
+                        <div class="timeline-role">New York, New York</div>
+                        <p>Directed private label production and brand development across 360+ stores.</p>
+                        <ul class="timeline-bullets">
+                            <li>Directed end-to-end CPG private label production for fresh produce, deli, and appetizers</li>
+                            <li>Spearheaded brand development of all private label conventional and organic products</li>
+                            <li>Strategic lead for total Fairway private label transition into Own Brands</li>
+                            <li>Optimized operational efficiency, resulting in 33% reduction in lead time to floor</li>
+                            <li>Introduced novel product categories driven by internal sales and external industry trends</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div>
+                        <div class="timeline-date">2014 – 2020<br>9 years 2 months</div>
+                    </div>
+                    <div>
+                        <h4>Product Management, Kohl's</h4>
+                        <div class="timeline-role">New York / Milwaukee</div>
+                        <p>Progressed through multiple product management roles, managing $100M+ brands and leading cross-functional teams.</p>
+                        <ul class="timeline-bullets">
+                            <li><strong>Product Management – Jewelry Accessories (2019-2020):</strong> Drove strategy for key brands, created test-and-react plan generating $5M sales increase</li>
+                            <li><strong>Product Management – Dana Buchman Women's Apparel (2017-2019):</strong> Led 15-person cross-functional team, updated testing strategy for informed business decisions</li>
+                            <li><strong>Associate Product Manager – Legwear Accessories (2016-2017):</strong> Executed strategic decisions resulting in 20% comp sales increase, led eCommerce growth across all categories</li>
+                            <li><strong>Brand Developer – Men's/Boy's Active Apparel (2014-2016):</strong> Spearheaded launch of stand-alone FILA outlet stores, propelled $300M annual sales growth</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div>
+                        <div class="timeline-date">2011 – 2014<br>3 years 7 months</div>
+                    </div>
+                    <div>
+                        <h4>Product Development Coordinator, Kohl's</h4>
+                        <div class="timeline-role">Milwaukee, Wisconsin</div>
+                        <p>Coordinated planning, design, and production of children's products.</p>
+                        <ul class="timeline-bullets">
+                            <li>Coordinated planning, conceptualization, design, and placement of children's products</li>
+                            <li>Created comprehensive Kid's Swim business plan with 5-year $3M growth strategy</li>
+                            <li>Developed Boy's and Girl's products across multiple brands</li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Education -->
     <section class="section section--light">
         <div class="container">
-            <div class="quote-panel">
-                <p>At the center of it all, I care about a life that feels thoughtful, curious, creative, and deeply connected to other people.</p>
+            <h2>Education & Certifications</h2>
+
+            <div style="display: grid; gap: var(--spacing-2xl);">
+                <div style="padding: var(--spacing-2xl); background-color: var(--bg-white); border: 1px solid var(--border); border-radius: 8px;">
+                    <h4 style="margin-bottom: var(--spacing-sm);">Bachelor of Science in Consumer Science; Retail</h4>
+                    <p style="color: var(--text-secondary); margin-bottom: var(--spacing-sm);">University of Wisconsin-Madison (2006 – 2010)</p>
+                    <p style="color: var(--text-secondary); font-size: var(--font-size-sm);">Activities: Retail Club Board Member, FBLA-PBL</p>
+                </div>
+
+                <div style="padding: var(--spacing-2xl); background-color: var(--bg-white); border: 1px solid var(--border); border-radius: 8px;">
+                    <h4 style="margin-bottom: var(--spacing-sm);">Successful Negotiation: Essential Strategies and Skills</h4>
+                    <p style="color: var(--text-secondary); margin-bottom: var(--spacing-sm);">University of Michigan (Issued June 2020)</p>
+                </div>
+
+                <div style="padding: var(--spacing-2xl); background-color: var(--bg-white); border: 1px solid var(--border); border-radius: 8px;">
+                    <h4 style="margin-bottom: var(--spacing-sm);">Volunteer Work</h4>
+                    <p style="color: var(--text-secondary);">Lead instructor for New York Cares after-school art program for elementary students (2019 – Present)</p>
+                </div>
             </div>
         </div>
     </section>
 
+    <!-- CTA -->
     <section class="section">
         <div class="container">
-            <div class="closing-panel">
-                <h2>What Matters Most to Me</h2>
-                <p>I care about a life that feels thoughtful, warm, curious, and fully awake. I’m drawn to people with depth, to beauty that feels lived-in rather than performative, and to experiences that leave a lasting impression because they were real, generous, and alive.</p>
-            </div>
             <div class="cta-section">
-                <h2>Want to connect?</h2>
-                <p>I always enjoy meeting thoughtful, interesting people from different places and backgrounds.</p>
-                <a href="../index.html#contact" class="btn">Get in Touch</a>
+                <h2>Interested in working together?</h2>
+                <p>Let's discuss your strategic challenges and opportunities.</p>
+                <a href="index.html#contact" class="btn">Schedule a Consultation</a>
             </div>
         </div>
     </section>

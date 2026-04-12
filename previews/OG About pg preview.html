@@ -3,15 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Caitlin | Personal Background & Interests</title>
-    <meta name="description" content="Get to know Caitlin beyond work: Ann Arbor roots, years in Wisconsin and New York City, a love of food and travel, and a deeply creative eye.">
-    <meta property="og:title" content="About Caitlin | Personal Background & Interests">
-    <meta property="og:description" content="Get to know Caitlin beyond work: Ann Arbor roots, years in Wisconsin and New York City, a love of food and travel, and a deeply creative eye.">
+    <title>About Caitlin Preview V1 | Personal Story Direction</title>
+    <meta name="description" content="Preview concept for a more personal About page: rooted in place, food, travel, creativity, and connection.">
+    <meta property="og:title" content="About Caitlin Preview V1 | Personal Story Direction">
+    <meta property="og:description" content="Preview concept for a more personal About page: rooted in place, food, travel, creativity, and connection.">
     <meta property="og:type" content="profile">
     <meta property="og:url" content="https://www.caitlingardulescu.com/pages/about.html">
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="About Caitlin | Personal Background & Interests">
-    <meta name="twitter:description" content="Get to know Caitlin beyond work: Ann Arbor roots, years in Wisconsin and New York City, a love of food and travel, and a deeply creative eye.">
+    <meta name="twitter:title" content="About Caitlin Preview V1 | Personal Story Direction">
+    <meta name="twitter:description" content="Preview concept for a more personal About page: rooted in place, food, travel, creativity, and connection.">
+    <meta name="robots" content="noindex, nofollow">
     <style>
         /* Local Fonts */
         @font-face {
@@ -358,6 +359,52 @@
             padding-top: 18px;
         }
 
+        .page-banner {
+            text-align: center;
+            font-family: 'Playfair Display', serif;
+            font-size: calc(var(--font-size-2xl) + 10px);
+            font-weight: 700;
+            letter-spacing: 0.01em;
+            color: var(--dark);
+            margin-bottom: 18px;
+            padding-bottom: 18px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .page-banner::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(
+                90deg,
+                rgba(202, 156, 31, 0.15) 0%,
+                rgba(202, 156, 31, 0.95) 45%,
+                rgba(255, 238, 194, 0.95) 55%,
+                rgba(202, 156, 31, 0.95) 65%,
+                rgba(202, 156, 31, 0.15) 100%
+            );
+            background-size: 220% 100%;
+            transform-origin: left center;
+            transform: scaleX(0);
+            animation:
+                pageBannerSatinReveal 1.2s ease-out 0.08s forwards,
+                pageBannerSatinShine 2.2s linear 0.5s forwards;
+        }
+
+        @keyframes pageBannerSatinReveal {
+            from { transform: scaleX(0); }
+            to { transform: scaleX(1); }
+        }
+
+        @keyframes pageBannerSatinShine {
+            from { background-position: 0% 0; }
+            to { background-position: 100% 0; }
+        }
+
         .hero-image {
             width: 100%;
             aspect-ratio: 3/4;
@@ -380,230 +427,6 @@
             font-size: var(--font-size-lg);
             color: var(--text-secondary);
             margin-bottom: var(--spacing-2xl);
-        }
-
-        .hero-intro {
-            background: linear-gradient(180deg, #ffffff 0%, #fbf7ef 100%);
-        }
-
-        .hero-layout-v3 {
-            display: grid;
-            grid-template-columns: minmax(280px, 0.72fr) minmax(0, 1.28fr);
-            gap: 52px;
-            align-items: stretch;
-            padding: 18px 0 8px;
-        }
-
-        .hero-copy-card {
-            padding: 18px 0 0;
-        }
-
-        .hero-copy-card h1 {
-            max-width: none;
-            white-space: nowrap;
-            margin-bottom: 20px;
-            font-family: var(--font-heading);
-        }
-
-        .hero-copy-card p {
-            max-width: 700px;
-            font-size: calc(var(--font-size-base) + 1px);
-        }
-
-        .hero-photo-card {
-            position: relative;
-            border-radius: 10px;
-            overflow: hidden;
-            min-height: 500px;
-            background: #eee5d5;
-            box-shadow: 0 22px 44px rgba(56, 56, 56, 0.12);
-        }
-
-        .hero-photo-card img {
-            position: absolute;
-            inset: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .hero-photo-caption {
-            position: absolute;
-            left: 18px;
-            right: 18px;
-            bottom: 18px;
-            padding: 16px 18px;
-            background: linear-gradient(180deg, rgba(255, 252, 246, 0.9) 0%, rgba(255, 248, 236, 0.96) 100%);
-            border: 1px solid rgba(202, 156, 31, 0.24);
-            border-radius: 8px;
-            backdrop-filter: blur(10px);
-        }
-
-        .hero-photo-caption strong {
-            display: block;
-            margin-bottom: 8px;
-            color: var(--dark);
-            font-weight: 600;
-            font-size: var(--font-size-sm);
-            letter-spacing: 0.08em;
-            text-transform: uppercase;
-        }
-
-        .hero-photo-caption p {
-            margin: 0;
-            font-size: var(--font-size-sm);
-            line-height: 1.7;
-        }
-
-        .band {
-            padding: 22px 0;
-            background: var(--dark);
-            color: var(--bg-white);
-        }
-
-        .band p {
-            margin: 0;
-            color: rgba(255, 255, 255, 0.88);
-            font-size: var(--font-size-lg);
-            line-height: 1.8;
-            text-align: center;
-        }
-
-        .story-grid {
-            display: grid;
-            grid-template-columns: minmax(0, 1.05fr) minmax(320px, 0.95fr);
-            gap: 32px;
-            align-items: start;
-        }
-
-        .story-lead h2,
-        .chapter-header h2,
-        .closing-panel h2 {
-            font-family: var(--font-heading);
-            margin-bottom: 18px;
-        }
-
-        .story-lead p {
-            font-size: calc(var(--font-size-base) + 1px);
-            max-width: 700px;
-        }
-
-        .glance-panel {
-            background: linear-gradient(180deg, #ffffff 0%, #fbf7ef 100%);
-            border: 1px solid var(--border);
-            border-radius: 10px;
-            padding: 28px;
-        }
-
-        .glance-panel h3 {
-            font-size: var(--font-size-xl);
-            margin-bottom: 14px;
-        }
-
-        .glance-list {
-            list-style: none;
-        }
-
-        .glance-list li {
-            padding: 14px 0;
-            border-top: 1px solid rgba(56, 56, 56, 0.08);
-            color: var(--text-secondary);
-        }
-
-        .glance-list li:first-child {
-            border-top: none;
-            padding-top: 0;
-        }
-
-        .glance-list strong {
-            display: block;
-            margin-bottom: 4px;
-            color: var(--dark);
-            font-weight: 600;
-        }
-
-        .chapter-stack {
-            display: grid;
-            gap: 24px;
-        }
-
-        .chapter-card {
-            display: grid;
-            grid-template-columns: 140px 1fr;
-            gap: 24px;
-            padding: 28px;
-            border: 1px solid var(--border);
-            border-radius: 10px;
-            background: var(--bg-white);
-        }
-
-        .chapter-label {
-            color: var(--gold);
-            font-size: var(--font-size-xs);
-            font-weight: 600;
-            letter-spacing: 0.08em;
-            text-transform: uppercase;
-        }
-
-        .chapter-card h3 {
-            font-size: var(--font-size-xl);
-            margin-bottom: 10px;
-        }
-
-        .chapter-card p:last-child {
-            margin-bottom: 0;
-        }
-
-        .chapter-card p {
-            max-width: 720px;
-        }
-
-        .split-feature {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 26px;
-        }
-
-        .feature-card {
-            padding: 30px;
-            border-radius: 10px;
-            border: 1px solid var(--border);
-            background: linear-gradient(180deg, #ffffff 0%, #fbf8f2 100%);
-        }
-
-        .feature-card h3 {
-            font-size: 24px;
-            margin-bottom: 16px;
-        }
-
-        .feature-card p:last-child {
-            margin-bottom: 0;
-        }
-
-        .quote-panel {
-            padding: 34px;
-            border-radius: 10px;
-            background: #f7f1e6;
-            border: 1px solid rgba(202, 156, 31, 0.2);
-        }
-
-        .quote-panel p {
-            margin: 0;
-            color: var(--dark);
-            font-size: 22px;
-            line-height: 1.6;
-            font-family: var(--font-heading);
-            font-weight: 600;
-        }
-
-        .closing-panel {
-            max-width: 860px;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        .closing-panel p {
-            font-size: var(--font-size-lg);
         }
 
         /* Timeline */
@@ -687,6 +510,16 @@
             border-radius: 4px;
             font-size: var(--font-size-sm);
             color: var(--dark);
+        }
+
+        .pull-quote {
+            border-left: 3px solid var(--gold);
+            padding-left: var(--spacing-xl);
+            margin-top: var(--spacing-xl);
+            color: var(--dark);
+            font-size: var(--font-size-lg);
+            line-height: var(--line-height-relaxed);
+            max-width: 720px;
         }
 
         .section-intro {
@@ -858,6 +691,10 @@
 
         /* Responsive */
         @media (max-width: 768px) {
+            .page-banner {
+                font-size: var(--font-size-2xl);
+            }
+
             h1 {
                 font-size: var(--font-size-2xl);
             }
@@ -867,26 +704,25 @@
             align-items: center;
         }
 
-            .hero,
-            .hero-layout-v3,
-            .story-grid,
-            .split-feature,
-            .essay-grid,
-            .snapshot-grid {
+            .hero {
                 grid-template-columns: 1fr;
             }
 
-            .hero-photo-card {
-                min-height: 420px;
+            .hero-image {
+                order: -1;
             }
 
-            .chapter-card {
+            .timeline-item {
                 grid-template-columns: 1fr;
-                gap: 14px;
             }
 
-            .quote-panel p {
-                font-size: 20px;
+            .skills {
+                grid-template-columns: 1fr;
+            }
+
+            .snapshot-grid,
+            .essay-grid {
+                grid-template-columns: 1fr;
             }
 
             .footer-content {
@@ -912,7 +748,7 @@
 <ul class="nav-links">
 <li><a href="../pages/services.html">Services</a></li>
 <li><a href="../pages/cv.html">Experience</a></li>
-<li><a href="about.html">About</a></li>
+<li><a href="about-page-v1-preview.html">About</a></li>
 <li><a class="nav-cta" href="https://calendly.com/caitlingardulescu/" target="_blank">Schedule a Call</a></li>
 </ul>
 <div class="menu-overlay" data-menu-overlay></div>
@@ -920,140 +756,192 @@
 </div>
 </header>
 
-    <section class="section hero-intro page-intro-section">
+    <!-- Hero -->
+    <section class="section page-intro-section">
         <div class="container">
-            <div class="hero-layout-v3" id="about">
-                <div class="hero-photo-card">
+            <div class="page-banner">About</div>
+            <div class="hero" id="about">
+                <div class="hero-image">
                     <img src="../images/caitlin-consulting-hero.png" alt="Caitlin Gardulescu">
-                    <div class="hero-photo-caption">
-                        <strong>A Personal Snapshot</strong>
-                        <p>The places that shaped me, the things I love, and the sensibility I bring into every part of life.</p>
-                    </div>
                 </div>
-                <div class="hero-copy-card">
-                    <h1>About Me</h1>
-                    <p class="hero-subtext">I’m deeply drawn to people, beauty, travel, creativity, and great food.</p>
-                    <p>I'm from Ann Arbor, Michigan, and the places I’ve lived have shaped me in lasting ways. I spent 10 years in Wisconsin and 9 years in New York City, and those chapters broadened the way I think about culture, connection, pace, and everyday life.</p>
-                    <p>Food is one of the great loves of my life, and travel feels most meaningful to me when it offers a real sense of place. I’m drawn to atmosphere, conversation, meals that carry memory, and the details that make somewhere feel distinct rather than interchangeable.</p>
-                    <p>I also love meeting new people, reading, writing, and making art. I have a deeply visual mind and a strong instinct for color, tone, and mood, which shapes the way I experience everything from design to travel to daily life.</p>
+                <div class="hero-content">
+                    <h1>Caitlin Gardulescu</h1>
+                    <p class="hero-subtext">The personal side of me is rooted in curiosity, connection, creativity, and a very real belief that great food can change a day, a memory, or even a place.</p>
+                    <p>I'm from Ann Arbor, Michigan, spent 10 years in Wisconsin, and lived in New York City for 9. Each place shaped me differently, and together they gave me a blend of warmth, range, and perspective that people tend to feel quickly when they meet me.</p>
+                    <p style="margin-top: var(--spacing-lg);">I love food more than anything in the world. Travel is especially meaningful to me because it gives me the chance to discover new flavors, neighborhoods, rituals, and stories. I also love meeting new people, reading, writing, making art, and noticing color with the kind of intensity that makes me think I could technically have been a colorist.</p>
+                    <p class="pull-quote">If this page did one job well, it would make a future client think: she seems thoughtful, alive, observant, warm, and genuinely interesting to spend time with.</p>
                     <a href="../index.html#contact" class="btn" style="margin-top: var(--spacing-lg);">Get in Touch</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="band">
+    <!-- Personal Snapshot -->
+    <section class="section section--light">
         <div class="container">
-            <p>What matters most to me is connection: to people, to place, to beauty, to culture, and to the details that make life feel textured and alive.</p>
+            <h2>At a Glance</h2>
+            <p class="section-intro">This version is designed to feel more editorial and personal than a standard bio page, while still staying aligned with the tone and visual calm of the rest of the site.</p>
+            <div class="snapshot-grid">
+                <div class="snapshot-card">
+                    <div class="snapshot-label">Roots</div>
+                    <h3>Ann Arbor</h3>
+                    <p>Midwestern at heart, with an early love of ideas, people, and creative expression.</p>
+                </div>
+                <div class="snapshot-card">
+                    <div class="snapshot-label">Life Chapters</div>
+                    <h3>Wisconsin + NYC</h3>
+                    <p>10 years in Wisconsin and 9 in New York City shaped both my pace and my perspective.</p>
+                </div>
+                <div class="snapshot-card">
+                    <div class="snapshot-label">Great Joy</div>
+                    <h3>Food + Travel</h3>
+                    <p>I often experience a place through what people cook, gather around, and remember.</p>
+                </div>
+                <div class="snapshot-card">
+                    <div class="snapshot-label">Creative Lens</div>
+                    <h3>Words, Art, Color</h3>
+                    <p>Reading, writing, art, and color are not side interests for me. They are how I naturally see.</p>
+                </div>
+            </div>
         </div>
     </section>
 
+    <!-- Essay Panels -->
     <section class="section">
         <div class="container">
-            <div class="story-grid">
-                <div class="story-lead">
-                    <h2>A Life Shaped by Curiosity</h2>
-                    <p>I’m someone who pays close attention. I love the feeling of understanding a place through its food, understanding a person through conversation, or being fully absorbed by a book, a piece of writing, or a visual world that feels complete.</p>
-                    <p>That curiosity runs through everything for me. It shapes the way I travel, the way I connect, and the way I notice atmosphere, nuance, and the details that give something real character.</p>
-                </div>
-                <aside class="glance-panel">
-                    <h3>At a Glance</h3>
-                    <ul class="glance-list">
-                        <li>
-                            <strong>Roots</strong>
-                            Ann Arbor, Michigan
-                        </li>
-                        <li>
-                            <strong>Life Chapters</strong>
-                            10 years in Wisconsin, 9 years in New York City
-                        </li>
-                        <li>
-                            <strong>Great Joys</strong>
-                            Food, travel, reading, writing, art, and conversation
-                        </li>
-                        <li>
-                            <strong>Creative Lens</strong>
-                            Strong visual instinct and an exceptional eye for color
-                        </li>
+            <h2>What Shapes Me</h2>
+            <div class="essay-grid">
+                <div class="essay-card">
+                    <h3>Food, Travel, and Curiosity</h3>
+                    <p>Food is one of the deepest pleasures in my life. I love the beauty of it, the cultural meaning of it, and the way it creates instant connection between people who may not share anything else yet.</p>
+                    <p>When I travel, I want to understand a place from the inside out. I want the small restaurant someone swears by, the market stall with the perfect fruit, the neighborhood bakery, the dish that tells you something real about where you are.</p>
+                    <ul class="values-list">
+                        <li>New places feel most alive to me through taste and atmosphere</li>
+                        <li>I value discovery over checklist travel</li>
+                        <li>The best experiences are usually the most human ones</li>
                     </ul>
-                </aside>
-            </div>
-        </div>
-    </section>
-
-    <section class="section section--light">
-        <div class="container">
-            <div class="split-feature">
-                <div class="feature-card">
-                    <h3>Food, Travel, and Discovery</h3>
-                    <p>I love food more than anything in the world. It is one of the deepest sources of joy in my life, and one of the ways I feel most connected to culture, memory, and other people.</p>
-                    <p>Travel becomes meaningful to me through the foods I discover along the way. I’m drawn to the market stall someone remembers forever, the local restaurant people return to with loyalty, the bakery that gives a neighborhood its rhythm, and the meal that quietly tells you something true about where you are.</p>
                 </div>
-                <div class="feature-card">
+                <div class="essay-card">
                     <h3>Reading, Writing, Art, and Color</h3>
-                    <p>I’m an avid reader and writer, and both are central to how I process the world. I love language, observation, and the feeling that a well-made sentence can make something feel clearer, sharper, or more alive.</p>
-                    <p>I’m also a creative artist with a deeply visual mind. Color, tone, and mood register immediately for me, and I notice the subtleties that shape how something feels. That sensitivity informs the way I experience design, beauty, and everyday life.</p>
+                    <p>I am an avid reader and writer, and I have always been drawn to people who pay attention. Books, essays, art, and strong visual worlds all sharpen the way I think and the way I move through life.</p>
+                    <p>I also have a very visual brain. Color registers immediately for me, and I notice tone, contrast, and mood instinctively. It is part of why I love design, aesthetics, and the subtle details that make something feel truly considered.</p>
+                    <ul class="values-list">
+                        <li>I care deeply about texture, tone, and emotional resonance</li>
+                        <li>I notice details that shape how something feels</li>
+                        <li>Creativity is part of my everyday orientation, not a separate lane</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Places -->
+    <section class="section section--light" id="experience">
+        <div class="container">
+            <h2>Places That Shaped Me</h2>
+            <p class="section-intro">Rather than a professional timeline, this version uses place as the organizing principle. It gives the page more soul and makes the story easier to feel.</p>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div>
+                        <div class="timeline-date">The Beginning</div>
+                    </div>
+                    <div>
+                        <h4>Ann Arbor, Michigan</h4>
+                        <div class="timeline-role">My hometown</div>
+                        <p>Ann Arbor is where my story starts. It gave me a strong sense of identity, curiosity, and appreciation for culture, ideas, and community.</p>
+                        <ul class="timeline-bullets">
+                            <li>Midwestern roots</li>
+                            <li>Early love of creativity, expression, and people</li>
+                            <li>A foundation that still feels like home</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div>
+                        <div class="timeline-date">10 Years</div>
+                    </div>
+                    <div>
+                        <h4>Wisconsin</h4>
+                        <div class="timeline-role">A full decade of life and growth</div>
+                        <p>I lived in Wisconsin for 10 years, a chapter that shaped a great deal of my adult life. It was a meaningful stretch of personal growth, long-form friendship, and building independence.</p>
+                        <ul class="timeline-bullets">
+                            <li>Ten years of memories, routines, and relationships</li>
+                            <li>A formative chapter in who I became</li>
+                            <li>A place that still holds a lot of meaning for me</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div>
+                        <div class="timeline-date">9 Years</div>
+                    </div>
+                    <div>
+                        <h4>New York City</h4>
+                        <div class="timeline-role">Energy, pace, and endless inspiration</div>
+                        <p>I spent 9 years in NYC, and that chapter expanded me in every direction. It sharpened my perspective, deepened my love of meeting people from all walks of life, and gave me constant access to art, ideas, and some of the best food in the world.</p>
+                        <ul class="timeline-bullets">
+                            <li>Nine years of personal and creative evolution</li>
+                            <li>A city that fed my love of people, culture, and movement</li>
+                            <li>Countless memorable meals and conversations</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div>
+                        <div class="timeline-date">Today</div>
+                    </div>
+                    <div>
+                        <h4>Travel, Discovery, and New Chapters</h4>
+                        <div class="timeline-role">Living globally and staying curious</div>
+                        <p>These days, travel plays a meaningful role in how I experience the world. I feel most alive when I am discovering a new place, connecting with new people, and finding the meal I will remember long after I leave.</p>
+                        <ul class="timeline-bullets">
+                            <li>Food as one of my deepest joys</li>
+                            <li>Travel as a path to discovery and connection</li>
+                            <li>A life shaped by curiosity, beauty, and experience</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Client Impression -->
     <section class="section">
         <div class="container">
-            <div class="chapter-header">
-                <h2>Places That Shaped Me</h2>
-                <p class="section-intro">The cities and seasons of life I’ve moved through say more about me personally than a conventional biography ever could.</p>
-            </div>
-            <div class="chapter-stack">
-                <div class="chapter-card">
-                    <div class="chapter-label">The Beginning</div>
-                    <div>
-                        <h3>Ann Arbor, Michigan</h3>
-                        <p>Ann Arbor is where my story starts. It gave me a strong sense of identity and an early appreciation for ideas, culture, and community. That Midwestern grounding still feels like an essential part of who I am.</p>
-                    </div>
+            <h2>The Feeling This Page Should Leave</h2>
+            <div class="essay-grid">
+                <div class="essay-card">
+                    <h3>Personal, Not Overexposed</h3>
+                    <p>The goal is not to tell everything. It is to reveal enough that a client understands your sensibility, your warmth, and the kind of person they would be working with.</p>
+                    <ul class="values-list">
+                        <li>Worldly without sounding generic</li>
+                        <li>Creative without becoming vague</li>
+                        <li>Personal without becoming diaristic</li>
+                    </ul>
                 </div>
-                <div class="chapter-card">
-                    <div class="chapter-label">A Full Decade</div>
-                    <div>
-                        <h3>Wisconsin</h3>
-                        <p>I spent 10 years in Wisconsin, and it shaped a great deal of my adult life. It was a chapter of independence, personal growth, and long-form friendship, and it still carries a great deal of meaning for me.</p>
-                    </div>
-                </div>
-                <div class="chapter-card">
-                    <div class="chapter-label">Nine Years</div>
-                    <div>
-                        <h3>New York City</h3>
-                        <p>I lived in New York City for 9 years, and that chapter expanded me in every direction. It sharpened my perspective, deepened my love of meeting people from all walks of life, and gave me constant access to art, ideas, movement, and some of the best food in the world.</p>
-                    </div>
-                </div>
-                <div class="chapter-card">
-                    <div class="chapter-label">Now</div>
-                    <div>
-                        <h3>Travel, New Chapters, and Staying Curious</h3>
-                        <p>These days, travel continues to shape how I experience the world. I feel most alive when I’m discovering a new place, connecting with new people, and finding the meal I’ll remember long after I leave.</p>
-                    </div>
+                <div class="essay-card">
+                    <h3>Why It Matters</h3>
+                    <p>For a service-based site like this one, clients are not only hiring expertise. They are also choosing energy, judgment, taste, and trust. A strong About page should quietly reinforce all four.</p>
+                    <ul class="values-list">
+                        <li>Shows range and depth beyond credentials</li>
+                        <li>Makes the site feel memorable</li>
+                        <li>Creates a more human reason to reach out</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="section section--light">
-        <div class="container">
-            <div class="quote-panel">
-                <p>At the center of it all, I care about a life that feels thoughtful, curious, creative, and deeply connected to other people.</p>
-            </div>
-        </div>
-    </section>
-
+    <!-- CTA -->
     <section class="section">
         <div class="container">
-            <div class="closing-panel">
-                <h2>What Matters Most to Me</h2>
-                <p>I care about a life that feels thoughtful, warm, curious, and fully awake. I’m drawn to people with depth, to beauty that feels lived-in rather than performative, and to experiences that leave a lasting impression because they were real, generous, and alive.</p>
-            </div>
             <div class="cta-section">
-                <h2>Want to connect?</h2>
-                <p>I always enjoy meeting thoughtful, interesting people from different places and backgrounds.</p>
+                <h2>Want the site to feel more like you?</h2>
+                <p>This direction keeps the existing site aesthetic, but gives the About page more personality, texture, and emotional pull.</p>
                 <a href="../index.html#contact" class="btn">Get in Touch</a>
             </div>
         </div>

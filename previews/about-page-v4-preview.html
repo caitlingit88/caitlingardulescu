@@ -3,15 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Caitlin | Personal Background & Interests</title>
-    <meta name="description" content="Get to know Caitlin beyond work: Ann Arbor roots, years in Wisconsin and New York City, a love of food and travel, and a deeply creative eye.">
-    <meta property="og:title" content="About Caitlin | Personal Background & Interests">
-    <meta property="og:description" content="Get to know Caitlin beyond work: Ann Arbor roots, years in Wisconsin and New York City, a love of food and travel, and a deeply creative eye.">
+    <title>About Caitlin Preview V4 | Refined Personal Layout</title>
+    <meta name="description" content="A refined personal About page direction for Caitlin Gardulescu: elegant, story-led, and shaped around place, food, travel, creativity, and connection.">
+    <meta property="og:title" content="About Caitlin Preview V4 | Refined Personal Layout">
+    <meta property="og:description" content="A refined personal About page direction for Caitlin Gardulescu: elegant, story-led, and shaped around place, food, travel, creativity, and connection.">
     <meta property="og:type" content="profile">
     <meta property="og:url" content="https://www.caitlingardulescu.com/pages/about.html">
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="About Caitlin | Personal Background & Interests">
-    <meta name="twitter:description" content="Get to know Caitlin beyond work: Ann Arbor roots, years in Wisconsin and New York City, a love of food and travel, and a deeply creative eye.">
+    <meta name="twitter:title" content="About Caitlin Preview V4 | Refined Personal Layout">
+    <meta name="twitter:description" content="A refined personal About page direction for Caitlin Gardulescu: elegant, story-led, and shaped around place, food, travel, creativity, and connection.">
+    <meta name="robots" content="noindex, nofollow">
     <style>
         /* Local Fonts */
         @font-face {
@@ -358,6 +359,52 @@
             padding-top: 18px;
         }
 
+        .page-banner {
+            text-align: center;
+            font-family: 'Playfair Display', serif;
+            font-size: calc(var(--font-size-2xl) + 10px);
+            font-weight: 700;
+            letter-spacing: 0.01em;
+            color: var(--dark);
+            margin-bottom: 18px;
+            padding-bottom: 18px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .page-banner::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(
+                90deg,
+                rgba(202, 156, 31, 0.15) 0%,
+                rgba(202, 156, 31, 0.95) 45%,
+                rgba(255, 238, 194, 0.95) 55%,
+                rgba(202, 156, 31, 0.95) 65%,
+                rgba(202, 156, 31, 0.15) 100%
+            );
+            background-size: 220% 100%;
+            transform-origin: left center;
+            transform: scaleX(0);
+            animation:
+                pageBannerSatinReveal 1.2s ease-out 0.08s forwards,
+                pageBannerSatinShine 2.2s linear 0.5s forwards;
+        }
+
+        @keyframes pageBannerSatinReveal {
+            from { transform: scaleX(0); }
+            to { transform: scaleX(1); }
+        }
+
+        @keyframes pageBannerSatinShine {
+            from { background-position: 0% 0; }
+            to { background-position: 100% 0; }
+        }
+
         .hero-image {
             width: 100%;
             aspect-ratio: 3/4;
@@ -382,13 +429,27 @@
             margin-bottom: var(--spacing-2xl);
         }
 
+        .hero-kicker {
+            display: inline-block;
+            margin-bottom: var(--spacing-lg);
+            padding: 6px 12px;
+            border: 1px solid rgba(202, 156, 31, 0.28);
+            border-radius: 999px;
+            color: var(--gold);
+            font-size: var(--font-size-xs);
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            background: linear-gradient(180deg, rgba(202, 156, 31, 0.08) 0%, rgba(202, 156, 31, 0.02) 100%);
+        }
+
         .hero-intro {
             background: linear-gradient(180deg, #ffffff 0%, #fbf7ef 100%);
         }
 
         .hero-layout-v3 {
             display: grid;
-            grid-template-columns: minmax(280px, 0.72fr) minmax(0, 1.28fr);
+            grid-template-columns: minmax(0, 1.28fr) minmax(280px, 0.72fr);
             gap: 52px;
             align-items: stretch;
             padding: 18px 0 8px;
@@ -399,10 +460,9 @@
         }
 
         .hero-copy-card h1 {
-            max-width: none;
-            white-space: nowrap;
-            margin-bottom: 20px;
-            font-family: var(--font-heading);
+            max-width: 10ch;
+            margin-bottom: 18px;
+            font-family: 'Playfair Display', serif;
         }
 
         .hero-copy-card p {
@@ -479,7 +539,7 @@
         .story-lead h2,
         .chapter-header h2,
         .closing-panel h2 {
-            font-family: var(--font-heading);
+            font-family: 'Playfair Display', serif;
             margin-bottom: 18px;
         }
 
@@ -590,10 +650,9 @@
         .quote-panel p {
             margin: 0;
             color: var(--dark);
-            font-size: 22px;
+            font-size: 24px;
             line-height: 1.6;
-            font-family: var(--font-heading);
-            font-weight: 600;
+            font-family: 'Playfair Display', serif;
         }
 
         .closing-panel {
@@ -858,6 +917,10 @@
 
         /* Responsive */
         @media (max-width: 768px) {
+            .page-banner {
+                font-size: var(--font-size-2xl);
+            }
+
             h1 {
                 font-size: var(--font-size-2xl);
             }
@@ -912,7 +975,7 @@
 <ul class="nav-links">
 <li><a href="../pages/services.html">Services</a></li>
 <li><a href="../pages/cv.html">Experience</a></li>
-<li><a href="about.html">About</a></li>
+<li><a href="about-page-v4-preview.html">About</a></li>
 <li><a class="nav-cta" href="https://calendly.com/caitlingardulescu/" target="_blank">Schedule a Call</a></li>
 </ul>
 <div class="menu-overlay" data-menu-overlay></div>
@@ -922,21 +985,23 @@
 
     <section class="section hero-intro page-intro-section">
         <div class="container">
+            <div class="page-banner">About</div>
             <div class="hero-layout-v3" id="about">
+                <div class="hero-copy-card">
+                    <span class="hero-kicker">About</span>
+                    <h1>Caitlin Gardulescu</h1>
+                    <p class="hero-subtext">I’m deeply drawn to people, beauty, travel, creativity, and great food.</p>
+                    <p>I'm from Ann Arbor, Michigan, and the places I’ve lived have shaped me in lasting ways. I spent 10 years in Wisconsin and 9 years in New York City, and those chapters broadened the way I think about culture, connection, pace, and everyday life.</p>
+                    <p>Food is one of the great loves of my life, and travel feels most meaningful to me when it offers a real sense of place. I’m drawn to atmosphere, to conversation, to meals that carry memory, and to the details that make somewhere feel distinct rather than interchangeable.</p>
+                    <p>I also love meeting new people, reading, writing, and making art. I have a deeply visual mind and a strong instinct for color, tone, and mood, which shapes the way I experience everything from design to travel to daily life.</p>
+                    <a href="../index.html#contact" class="btn" style="margin-top: var(--spacing-lg);">Get in Touch</a>
+                </div>
                 <div class="hero-photo-card">
                     <img src="../images/caitlin-consulting-hero.png" alt="Caitlin Gardulescu">
                     <div class="hero-photo-caption">
                         <strong>A Personal Snapshot</strong>
                         <p>The places that shaped me, the things I love, and the sensibility I bring into every part of life.</p>
                     </div>
-                </div>
-                <div class="hero-copy-card">
-                    <h1>About Me</h1>
-                    <p class="hero-subtext">I’m deeply drawn to people, beauty, travel, creativity, and great food.</p>
-                    <p>I'm from Ann Arbor, Michigan, and the places I’ve lived have shaped me in lasting ways. I spent 10 years in Wisconsin and 9 years in New York City, and those chapters broadened the way I think about culture, connection, pace, and everyday life.</p>
-                    <p>Food is one of the great loves of my life, and travel feels most meaningful to me when it offers a real sense of place. I’m drawn to atmosphere, conversation, meals that carry memory, and the details that make somewhere feel distinct rather than interchangeable.</p>
-                    <p>I also love meeting new people, reading, writing, and making art. I have a deeply visual mind and a strong instinct for color, tone, and mood, which shapes the way I experience everything from design to travel to daily life.</p>
-                    <a href="../index.html#contact" class="btn" style="margin-top: var(--spacing-lg);">Get in Touch</a>
                 </div>
             </div>
         </div>
@@ -953,7 +1018,7 @@
             <div class="story-grid">
                 <div class="story-lead">
                     <h2>A Life Shaped by Curiosity</h2>
-                    <p>I’m someone who pays close attention. I love the feeling of understanding a place through its food, understanding a person through conversation, or being fully absorbed by a book, a piece of writing, or a visual world that feels complete.</p>
+                    <p>I’m someone who pays close attention. I love the feeling of understanding a place through its food, understanding a person through conversation, or being completely absorbed by a book, a piece of writing, or a visual world that feels fully realized.</p>
                     <p>That curiosity runs through everything for me. It shapes the way I travel, the way I connect, and the way I notice atmosphere, nuance, and the details that give something real character.</p>
                 </div>
                 <aside class="glance-panel">
@@ -992,7 +1057,7 @@
                 <div class="feature-card">
                     <h3>Reading, Writing, Art, and Color</h3>
                     <p>I’m an avid reader and writer, and both are central to how I process the world. I love language, observation, and the feeling that a well-made sentence can make something feel clearer, sharper, or more alive.</p>
-                    <p>I’m also a creative artist with a deeply visual mind. Color, tone, and mood register immediately for me, and I notice the subtleties that shape how something feels. That sensitivity informs the way I experience design, beauty, and everyday life.</p>
+                    <p>I’m also a creative artist with a deeply visual mind. Color, tone, and mood register immediately for me, and I notice the subtleties that shape how something feels. That sensitivity is part of how I experience design, beauty, and everyday life.</p>
                 </div>
             </div>
         </div>
@@ -1049,7 +1114,7 @@
         <div class="container">
             <div class="closing-panel">
                 <h2>What Matters Most to Me</h2>
-                <p>I care about a life that feels thoughtful, warm, curious, and fully awake. I’m drawn to people with depth, to beauty that feels lived-in rather than performative, and to experiences that leave a lasting impression because they were real, generous, and alive.</p>
+                <p>I care about a life that feels thoughtful, warm, curious, and fully awake. I’m drawn to people with depth, to beauty that feels lived-in rather than polished for show, and to experiences that leave a lasting impression because they were real, generous, and alive.</p>
             </div>
             <div class="cta-section">
                 <h2>Want to connect?</h2>
