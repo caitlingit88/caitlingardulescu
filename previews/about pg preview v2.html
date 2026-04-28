@@ -355,17 +355,17 @@
         }
 
         .page-intro-section {
-            padding-top: 22px;
+            padding-top: 18px;
         }
 
         .page-banner {
-            text-align: center;
+            text-align: left;
             font-family: 'Playfair Display', serif;
             font-size: calc(var(--font-size-2xl) + 10px);
             font-weight: 700;
             letter-spacing: 0.01em;
             color: var(--dark);
-            margin-bottom: 36px;
+            margin-bottom: 18px;
             padding-bottom: 18px;
             position: relative;
             overflow: hidden;
@@ -374,11 +374,10 @@
         .page-banner::after {
             content: '';
             position: absolute;
-            left: 50%;
+            left: 0;
             bottom: 0;
-            width: min(100%, 980px);
+            width: 100%;
             height: 2px;
-            transform: translateX(-50%) scaleX(0);
             background: linear-gradient(
                 90deg,
                 rgba(202, 156, 31, 0.15) 0%,
@@ -388,7 +387,8 @@
                 rgba(202, 156, 31, 0.15) 100%
             );
             background-size: 220% 100%;
-            transform-origin: center center;
+            transform-origin: left center;
+            transform: scaleX(0);
             animation:
                 pageBannerSatinReveal 1.2s ease-out 0.08s forwards,
                 pageBannerSatinShine 2.2s linear 0.5s forwards;
@@ -430,42 +430,27 @@
 
         .about-intro {
             display: grid;
-            grid-template-columns: minmax(210px, 0.44fr) minmax(0, 1.4fr);
-            gap: 42px;
+            grid-template-columns: minmax(0, 1.32fr) minmax(240px, 0.55fr);
+            gap: 40px;
             align-items: center;
-            padding: 6px 0 8px;
+            padding: 18px 0 10px;
         }
 
         .about-copy h1 {
-            margin-bottom: var(--spacing-xl);
+            margin-bottom: var(--spacing-lg);
         }
 
         .about-copy p {
-            max-width: 650px;
+            max-width: 680px;
             font-size: calc(var(--font-size-base) + 1px);
         }
 
-        .about-copy {
-            text-align: left;
-        }
-
-        .about-copy .btn {
-            display: inline-flex;
-            margin: var(--spacing-lg) auto 0;
-        }
-
-        .about-copy-cta {
-            text-align: center;
-        }
-
         .about-portrait {
-            border-radius: 8px;
+            border-radius: 10px;
             overflow: hidden;
             background: #eee5d5;
-            box-shadow: 0 18px 36px rgba(56, 56, 56, 0.1);
-            min-height: 280px;
-            max-width: 300px;
-            justify-self: center;
+            box-shadow: 0 22px 44px rgba(56, 56, 56, 0.12);
+            min-height: 340px;
         }
 
         .about-portrait img {
@@ -478,16 +463,15 @@
         .fun-facts {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-            margin-top: var(--spacing-xl);
+            gap: var(--spacing-2xl);
+            margin-top: var(--spacing-2xl);
         }
 
         .fun-card {
             background: linear-gradient(180deg, #ffffff 0%, #fbf8f2 100%);
             border: 1px solid var(--border);
             border-radius: 10px;
-            padding: 26px;
-            box-shadow: 0 12px 28px rgba(83, 73, 46, 0.05);
+            padding: 30px;
         }
 
         .fun-card h3 {
@@ -1045,19 +1029,17 @@
 
     <section class="section page-intro-section">
         <div class="container">
-            <h1 class="page-banner">About Me</h1>
             <div class="about-intro" id="about">
+                <div class="about-copy">
+                    <h1 class="page-banner">About Me</h1>
+                    <p class="hero-subtext">I’m someone who is energized by people, great food, travel, creativity, and the kinds of experiences that make life feel rich and memorable.</p>
+                    <p>I’m from Ann Arbor, Michigan, and I’ve spent different chapters of my life in Wisconsin and New York City. Those years shaped me in meaningful ways and broadened how I think about culture, connection, community, and the way people move through the world.</p>
+                    <p>Food is one of the great loves of my life, and one of my favorite parts of travel is discovering new places through what people cook, share, and remember. I also love meeting new people, reading, writing, and making art, and I have a deeply visual mind with a strong instinct for color, mood, and atmosphere.</p>
+                    <p>The people I tend to connect with best are thoughtful, curious, and genuinely interested in the world around them. That sense of openness matters to me in work just as much as it does in life.</p>
+                    <a href="../index.html#contact" class="btn" style="margin-top: var(--spacing-lg);">Get in Touch</a>
+                </div>
                 <div class="about-portrait">
                     <img src="../images/IMG_5788_SnapseedCopy.jpg" alt="Caitlin Gardulescu portrait">
-                </div>
-                <div class="about-copy">
-                    <p class="hero-subtext">I’m drawn to beautiful experiences, meaningful conversation, and the kinds of details that make a person or a place unforgettable.</p>
-                    <p>I’m from Ann Arbor, Michigan, and I’ve also spent ten years in Wisconsin and nine in New York City. Each chapter shaped me differently and deepened the way I think about people, culture, community, and the atmosphere of a place.</p>
-                    <p>Food is one of the great loves of my life, and travel feels most exciting to me when it leads to a new table, a neighborhood favorite, or something memorable shared with other people. I’m also an avid reader and writer, a creative artist, and someone with a strong instinct for color, mood, and visual storytelling.</p>
-                    <p>I love meeting new people and tend to connect most with those who are curious, thoughtful, and genuinely interested in the world around them. That sense of openness matters to me in work just as much as it does in life.</p>
-                    <div class="about-copy-cta">
-                        <a href="../index.html#contact" class="btn">Get in Touch</a>
-                    </div>
                 </div>
             </div>
         </div>
@@ -1065,20 +1047,20 @@
 
     <section class="section section--light">
         <div class="container">
-            <h2 style="text-align: center; margin-bottom: var(--spacing-md);">A Few Things I Love</h2>
+            <h2 style="text-align: center; margin-bottom: var(--spacing-md);">A Few Things About Me</h2>
             <p class="section-intro" style="text-align: center; margin-left: auto; margin-right: auto;">A few of the things that shape my perspective and make me, me.</p>
             <div class="fun-facts">
                 <div class="fun-card">
                     <h3>Food & Travel</h3>
-                    <p>I tend to remember places by the meals I had there. I love finding the neighborhood spot, the local market, or the dish that tells you something real about where you are.</p>
+                    <p>I plan trips with food in mind and remember places by the meals I had there. I love finding the neighborhood spot, the market, or the dish that tells you something real about where you are.</p>
                 </div>
                 <div class="fun-card">
                     <h3>Reading, Writing & Art</h3>
-                    <p>I’m an avid reader and writer, and creativity is part of how I process the world. I’m deeply visual and especially drawn to color, composition, and the details that shape mood.</p>
+                    <p>I’m an avid reader and writer, and creativity is a real part of how I process the world. I’m also a visual person, with a strong sensitivity to color and the details that shape mood.</p>
                 </div>
                 <div class="fun-card">
                     <h3>People & Place</h3>
-                    <p>I love meeting new people and hearing how they see the world. Living in Ann Arbor, Wisconsin, and New York City gave me a real appreciation for range, perspective, and connection.</p>
+                    <p>I love meeting new people and hearing how they see the world. Ann Arbor, Wisconsin, and New York City each shaped me differently, and I think that range shows up in how I connect with others.</p>
                 </div>
             </div>
         </div>
@@ -1088,7 +1070,7 @@
         <div class="container">
             <div class="cta-section">
                 <h2>Want to connect?</h2>
-                <p>I always enjoy connecting with thoughtful, interesting people and hearing what matters to them.</p>
+                <p>I always enjoy meeting thoughtful, interesting people from different places and backgrounds.</p>
                 <a href="../index.html#contact" class="btn">Get in Touch</a>
             </div>
         </div>
